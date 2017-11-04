@@ -1,0 +1,8 @@
+# Resources/config/services.yml
+services:
+
+    webeweb.syntaxhighlighter-bundle.twig.extension.syntaxhighlighter:
+        class: WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
+        arguments: ["@=service('kernel').locateResource('@WBWSyntaxHighlighterBundle')", "%kernel.environment%"]
+        tags:
+          - { name: twig.extension }
