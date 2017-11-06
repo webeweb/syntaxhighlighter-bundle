@@ -99,14 +99,13 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 	 * Displays a SyntaxHighlighter script.
 	 *
 	 * @param string $script The script name.
-	 * @param string $subdirectory The sub directory.
 	 * @return string Returns the SyntaxHighlighter script.
 	 * @throws FileNotFoundException Throws a file not found exception if the script is not found.
 	 */
-	public function syntaxHighlighterScriptFunction($script, $subdirectory = "js") {
+	public function syntaxHighlighterScriptFunction($script) {
 
 		// Initialize the filename.
-		$filename = implode("/", [$subdirectory, $script . ".js"]);
+		$filename = implode("/", ["scripts", $script . ".js"]);
 
 		// Return the output.
 		return $this->syntaxHighlighterResourceFunction("<script src=\"/bundles/wbwsyntaxhighlighter/", $filename, "\" type=\"text/javascript\"></script>");
@@ -116,14 +115,13 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 	 * Displays a SyntaxHighlighter style.
 	 *
 	 * @param string $css The CSS name.
-	 * @param string $subdirectory The sub directory.
 	 * @return string Returns the SyntaxHighlighter style.
 	 * @throws FileNotFoundException Throws a file not found exception if the CSS is not found.
 	 */
-	public function syntaxHighlighterStyleFunction($css, $subdirectory = "css") {
+	public function syntaxHighlighterStyleFunction($css) {
 
 		// Initialize the filename.
-		$filename = implode("/", [$subdirectory, $css . ".css"]);
+		$filename = implode("/", ["styles", $css . ".css"]);
 
 		// Return the output.
 		return $this->syntaxHighlighterResourceFunction("<link href=\"/bundles/wbwsyntaxhighlighter/", $filename, "\" rel=\"stylesheet\" type=\"text/css\">");
