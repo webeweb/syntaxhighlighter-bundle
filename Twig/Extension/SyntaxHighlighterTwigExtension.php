@@ -127,13 +127,4 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 		return $this->syntaxHighlighterResourceFunction("<link href=\"/bundles/wbwsyntaxhighlighter/", $filename, "\" rel=\"stylesheet\" type=\"text/css\">");
 	}
 
-	/**
-	 * Determines if the environement is dev.
-	 *
-	 * @return boolean Returns true in case of success, false otherwise.
-	 */
-	private function isDevEnvironment() {
-		return $this->environment === "dev";
-	}
-
 }
