@@ -1,7 +1,7 @@
-WBWSyntaxHighlighterBundle
-==========================
+syntaxhighlighter-bundle
+========================
 
-[![Build Status](https://travis-ci.org/webeweb/WBWSyntaxHighlighterBundle.svg?branch=master)](https://travis-ci.org/webeweb/WBWSyntaxHighlighterBundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/WBWSyntaxHighlighterBundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/WBWSyntaxHighlighterBundle?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/stable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/unstable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![License](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/license)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![composer.lock](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/composerlock)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/778dc4ef-a0d6-4193-a40e-e9a151c8a801/mini.png)](https://insight.sensiolabs.com/projects/778dc4ef-a0d6-4193-a40e-e9a151c8a801)
+[![Build Status](https://travis-ci.org/webeweb/syntaxhighlighter-bundle.svg?branch=master)](https://travis-ci.org/webeweb/syntaxhighlighter-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/syntaxhighlighter-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/syntaxhighlighter-bundle?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/stable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/unstable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![License](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/license)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![composer.lock](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/composerlock)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/778dc4ef-a0d6-4193-a40e-e9a151c8a801/mini.png)](https://insight.sensiolabs.com/projects/778dc4ef-a0d6-4193-a40e-e9a151c8a801)
 
 Integrate SyntaxHighlighter with Symfony2
 
@@ -60,9 +60,9 @@ stable version of this package:
 
 ```bash
 
-$ mkdir WBWSyntaxHighlighterBundle
-$ cd WBWSyntaxHighlighterBundle
-$ git clone git@github.com:webeweb/WBWSyntaxHighlighterBundle.git .
+$ mkdir syntaxhighlighter-bundle
+$ cd syntaxhighlighter-bundle
+$ git clone git@github.com:webeweb/syntaxhighlighter-bundle.git .
 $ composer install
 
 ```
@@ -79,5 +79,5 @@ $ vendor/bin/phpunit
 
 ## License
 
-WBWSyntaxHighlighterBundle is released under the LGPL License. See the bundled
+syntaxhighlighter-bundle is released under the LGPL License. See the bundled
 [LICENSE](LICENSE) file for details.
