@@ -14,7 +14,7 @@ namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\WBWSyntaxHighlighterExtension;
+use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 
 /**
@@ -24,7 +24,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection
  * @final
  */
-final class WBWSyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
+final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
 	 * Locate a resource.
@@ -47,7 +47,7 @@ final class WBWSyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
 		$container->set("kernel", $this);
 
-		$obj = new WBWSyntaxHighlighterExtension();
+		$obj = new SyntaxHighlighterExtension();
 
 		$obj->load([], $container);
 

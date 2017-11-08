@@ -23,7 +23,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  * @package WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection
  * @final
  */
-final class WBWSyntaxHighlighterExtension extends Extension {
+final class SyntaxHighlighterExtension extends Extension {
 
 	/**
 	 * {@inheritdoc}
