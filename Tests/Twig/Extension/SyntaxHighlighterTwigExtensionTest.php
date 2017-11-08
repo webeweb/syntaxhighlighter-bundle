@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the syntaxhighligter-bundle.
+ * This file is part of the syntaxhighligter-bundle package.
  *
  * (c) 2017 NdC/WBW
  *
