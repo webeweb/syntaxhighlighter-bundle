@@ -20,6 +20,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @package WBW\Bundle\SyntaxHighlighterBundle
  * @final
  */
-final class WBWSyntaxHighlighterBundle extends Bundle {
+final class SyntaxHighlighterBundle extends Bundle {
 
 }
