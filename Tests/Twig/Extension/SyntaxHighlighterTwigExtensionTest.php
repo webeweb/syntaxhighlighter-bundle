@@ -35,7 +35,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
 	 */
 	public function testGetFunctions() {
 
-		$obj = new SyntaxHighlighterTwigExtension(getcwd(), "");
+		$obj = new SyntaxHighlighterTwigExtension(getcwd());
 
 		$this->assertCount(2, $obj->getFunctions(), "The method getFunctions() does not return the expected count");
 
@@ -57,7 +57,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
 	 */
 	public function testSyntaxHighlighterScriptFunction() {
 
-		$obj = new SyntaxHighlighterTwigExtension(getcwd(), "");
+		$obj = new SyntaxHighlighterTwigExtension(getcwd());
 
 		try {
 			$obj->syntaxHighlighterScriptFunction("exception");
@@ -155,7 +155,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
 	 */
 	public function testSyntaxHighlighterStyleFunction() {
 
-		$obj = new SyntaxHighlighterTwigExtension(getcwd(), "");
+		$obj = new SyntaxHighlighterTwigExtension(getcwd());
 
 		try {
 			$obj->syntaxHighlighterStyleFunction("exception");

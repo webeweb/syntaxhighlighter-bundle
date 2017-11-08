@@ -37,21 +37,12 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 	private $directory;
 
 	/**
-	 * Environment.
-	 *
-	 * @var string
-	 */
-	private $environment;
-
-	/**
 	 * Constructor.
 	 *
 	 * @param string $directory The directory.
-	 * @param string $environment The environment.
 	 */
-	public final function __construct($directory, $environment) {
-		$this->directory	 = $directory;
-		$this->environment	 = $environment;
+	public final function __construct($directory) {
+		$this->directory = $directory;
 	}
 
 	/**
