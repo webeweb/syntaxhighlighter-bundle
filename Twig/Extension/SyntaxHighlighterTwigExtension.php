@@ -27,7 +27,7 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 	/**
 	 * Service name.
 	 */
-	const SERVICE_NAME = "webeweb.syntaxhighlighter-bundle.twig.extension.syntaxhighlighter";
+	const SERVICE_NAME = "webeweb.bundle.syntaxhighlighterbundle.twig.extension.syntaxhighlighter";
 
 	/**
 	 * Directory.
