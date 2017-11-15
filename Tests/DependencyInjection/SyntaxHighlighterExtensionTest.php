@@ -51,7 +51,7 @@ final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$obj->load([], $container);
 
-		$this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $container->get(SyntaxHighlighterTwigExtension::SERVICE_NAME), "The method load() does not load the expected service");
+		$this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $container->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
 	}
 
 }

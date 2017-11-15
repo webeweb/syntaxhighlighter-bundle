@@ -32,16 +32,16 @@ final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new SyntaxHighlighterDefaults();
 
-		$this->assertEquals(true, $obj->getAutoLinks(), "The method getAutoLinks() does not return the expected value");
-		$this->assertEquals("", $obj->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(false, $obj->getCollapse(), "The method getCollapse() does not return the expected value");
-		$this->assertEquals(1, $obj->getFirstLine(), "The method getFirstLine() does not return the expected value");
-		$this->assertEquals(true, $obj->getGutter(), "The method getGutter() does not return the expected value");
-		$this->assertEquals(null, $obj->getHighlight(), "The method getHighlight() does not return the expected value");
-		$this->assertEquals(false, $obj->getHtmlScript(), "The method getHtmlScript() does not return the expected value");
-		$this->assertEquals(true, $obj->getSmartTabs(), "The method getSmartTabs() does not return the expected value");
-		$this->assertEquals(4, $obj->getTabSize(), "The method getTabSize() does not return the expected value");
-		$this->assertEquals(true, $obj->getToolbar(), "The method getToolbar() does not return the expected value");
+		$this->assertEquals(true, $obj->getAutoLinks());
+		$this->assertEquals("", $obj->getClassName());
+		$this->assertEquals(false, $obj->getCollapse());
+		$this->assertEquals(1, $obj->getFirstLine());
+		$this->assertEquals(true, $obj->getGutter());
+		$this->assertEquals(null, $obj->getHighlight());
+		$this->assertEquals(false, $obj->getHtmlScript());
+		$this->assertEquals(true, $obj->getSmartTabs());
+		$this->assertEquals(4, $obj->getTabSize());
+		$this->assertEquals(true, $obj->getToolbar());
 	}
 
 	/**
@@ -76,7 +76,7 @@ final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
 		$res []	 = "SyntaxHighlighter.defaults['tab-size'] = 8;";
 		$res []	 = "SyntaxHighlighter.defaults['toolbar'] = false;";
 
-		$this->assertEquals(implode("\n", $res), (string) $obj, "The method toString() does not return the expected value");
+		$this->assertEquals(implode("\n", $res), (string) $obj);
 	}
 
 }

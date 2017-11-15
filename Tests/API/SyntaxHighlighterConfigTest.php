@@ -33,10 +33,10 @@ final class SyntaxHighlighterConfigTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new SyntaxHighlighterConfig();
 
-		$this->assertEquals(false, $obj->getBloggerMode(), "The method getBloggerMode() does not return the expected value");
-		$this->assertEquals(null, $obj->getStrings(), "The method getStrings() does not return the expected value");
-		$this->assertEquals(false, $obj->getStripBrs(), "The method getStripBrs() does not return the expected value");
-		$this->assertEquals("pre", $obj->getTagName(), "The method getTagName() does not return the expected value");
+		$this->assertEquals(false, $obj->getBloggerMode());
+		$this->assertEquals(null, $obj->getStrings());
+		$this->assertEquals(false, $obj->getStripBrs());
+		$this->assertEquals("pre", $obj->getTagName());
 	}
 
 	/**
@@ -57,7 +57,7 @@ final class SyntaxHighlighterConfigTest extends PHPUnit_Framework_TestCase {
 		$res []	 = "SyntaxHighlighter.config.stripBrs = true;";
 		$res []	 = "SyntaxHighlighter.config.tagName = \"blocquote\";";
 
-		$this->assertEquals(implode("\n", $res), (string) $obj, "The method toString() does not return the expected value");
+		$this->assertEquals(implode("\n", $res), (string) $obj);
 
 		$obj->setStrings(new SyntaxHighlighterStrings());
 
@@ -72,7 +72,7 @@ final class SyntaxHighlighterConfigTest extends PHPUnit_Framework_TestCase {
 		$res1[]	 = "SyntaxHighlighter.config.strings.print = \"print\";";
 		$res1[]	 = "SyntaxHighlighter.config.strings.viewSource = \"view source\";";
 
-		$this->assertEquals(implode("\n", $res1), (string) $obj, "The method toString() does not return the expected value");
+		$this->assertEquals(implode("\n", $res1), (string) $obj);
 	}
 
 }
