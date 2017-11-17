@@ -3,7 +3,7 @@ syntaxhighlighter-bundle
 
 [![Build Status](https://travis-ci.org/webeweb/syntaxhighlighter-bundle.svg?branch=master)](https://travis-ci.org/webeweb/syntaxhighlighter-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/syntaxhighlighter-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/syntaxhighlighter-bundle?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/stable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/unstable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![License](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/license)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![composer.lock](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/composerlock)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/778dc4ef-a0d6-4193-a40e-e9a151c8a801/mini.png)](https://insight.sensiolabs.com/projects/778dc4ef-a0d6-4193-a40e-e9a151c8a801)
 
-Integrate SyntaxHighlighter with Symfony2
+Integrate SyntaxHighlighter with Symfony2.
 
 /!\ This package is currently in developpment /!\
 
