@@ -11,6 +11,14 @@ Integrate SyntaxHighlighter with Symfony2.
 
 ---
 
+## Compatibility
+
+[![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)](http://php.net) [![PHP 7.0](https://img.shields.io/badge/PHP-7.0-blue.svg)](http://php.net)  [![PHP 7.1](https://img.shields.io/badge/PHP-7.1-blue.svg)](http://php.net)
+
+[![Symfony 2.6](https://img.shields.io/badge/Symfony-2.6-brightgreen.svg)](https://symfony.com)
+
+---
+
 ## Installation
 
 Open a command console, enter your project directory and execute the following
