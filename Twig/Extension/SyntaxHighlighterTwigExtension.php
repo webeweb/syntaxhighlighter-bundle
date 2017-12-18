@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the syntaxhighligter-bundle package.
  *
@@ -40,7 +41,7 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 	 *
 	 * @param string $directory The directory.
 	 */
-	public final function __construct($directory) {
+	public function __construct($directory) {
 		$this->directory = $directory;
 	}
 
