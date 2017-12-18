@@ -35,7 +35,7 @@ final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
 	public function testLoad() {
 
 		// Set the mocks.
-		$kernel = $this->getMockBuilder(KernelInterface::class)->setConstructorArgs(["dev", false])->getMock();
+		$kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
 
 		// We set a container builder with only the necessary.
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
