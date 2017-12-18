@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the syntaxhighligter-bundle package.
  *
@@ -13,7 +14,7 @@ namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\HttpKernel\KernelInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 
@@ -34,7 +35,7 @@ final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
 	public function testLoad() {
 
 		// Set the mocks.
-		$kernel = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["dev", false])->getMock();
+		$kernel = $this->getMockBuilder(KernelInterface::class)->setConstructorArgs(["dev", false])->getMock();
 
 		// We set a container builder with only the necessary.
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
