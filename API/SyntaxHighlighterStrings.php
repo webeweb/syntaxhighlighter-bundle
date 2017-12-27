@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the syntaxhighligter-bundle package.
  *
@@ -103,47 +104,47 @@ final class SyntaxHighlighterStrings {
 		$output = [];
 
 		// Check the alert.
-		if (!is_null($this->alert)) {
+		if (null !== $this->alert) {
 			$output[] = $script . "alert = \"" . $this->alert . "\";";
 		}
 
 		// Check the brush not HTML script.
-		if (!is_null($this->brushNotHtmlScript)) {
+		if (null !== $this->brushNotHtmlScript) {
 			$output[] = $script . "brushNotHtmlScript = \"" . $this->brushNotHtmlScript . "\";";
 		}
 
 		// Check the copy to clipboard.
-		if (!is_null($this->copyToClipboard)) {
+		if (null !== $this->copyToClipboard) {
 			$output[] = $script . "copyToClipboard = \"" . $this->copyToClipboard . "\";";
 		}
 
 		// Check the copy to clipboard confirmation.
-		if (!is_null($this->copyToClipboardConfirmation)) {
+		if (null !== $this->copyToClipboardConfirmation) {
 			$output[] = $script . "copyToClipboardConfirmation = \"" . $this->copyToClipboardConfirmation . "\";";
 		}
 
 		// Check the expand source.
-		if (!is_null($this->expandSource)) {
+		if (null !== $this->expandSource) {
 			$output[] = $script . "expandSource = \"" . $this->expandSource . "\";";
 		}
 
 		// Check the help.
-		if (!is_null($this->help)) {
+		if (null !== $this->help) {
 			$output[] = $script . "help = \"" . $this->help . "\";";
 		}
 
 		// Check the no brush.
-		if (!is_null($this->noBrush)) {
+		if (null !== $this->noBrush) {
 			$output[] = $script . "noBrush = \"" . $this->noBrush . "\";";
 		}
 
 		// Check the print.
-		if (!is_null($this->print)) {
+		if (null !== $this->print) {
 			$output[] = $script . "print = \"" . $this->print . "\";";
 		}
 
 		// Check the view source.
-		if (!is_null($this->viewSource)) {
+		if (null !== $this->viewSource) {
 			$output[] = $script . "viewSource = \"" . $this->viewSource . "\";";
 		}
 

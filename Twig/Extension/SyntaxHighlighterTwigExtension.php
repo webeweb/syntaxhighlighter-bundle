@@ -80,7 +80,7 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
 
 		// Initialize and check the filepath.
 		$filepath = $this->getResourcesDirectory() . "/public/" . $filename;
-		if (!file_exists($filepath)) {
+		if (false === file_exists($filepath)) {
 			throw new FileNotFoundException($filename);
 		}
 

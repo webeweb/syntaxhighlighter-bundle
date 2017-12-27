@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the syntaxhighligter-bundle package.
  *
@@ -9,6 +10,8 @@
  */
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
+
+use WBW\Library\Core\Utility\StringUtility;
 
 /**
  * SyntaxHighlighter config.
@@ -68,22 +71,22 @@ final class SyntaxHighlighterConfig {
 		$output = [];
 
 		// Check the blogger mode.
-		if (!is_null($this->bloggerMode)) {
-			$output[] = $script . "bloggerMode = " . ($this->bloggerMode === true ? "true" : "false") . ";";
+		if (null !== $this->bloggerMode) {
+			$output[] = $script . "bloggerMode = " . StringUtility::parseBoolean($this->bloggerMode) . ";";
 		}
 
 		// Check the strip BRs.
-		if (!is_null($this->stripBrs)) {
-			$output[] = $script . "stripBrs = " . ($this->stripBrs === true ? "true" : "false") . ";";
+		if (null !== $this->stripBrs) {
+			$output[] = $script . "stripBrs = " . StringUtility::parseBoolean($this->stripBrs) . ";";
 		}
 
 		// Check the tag name.
-		if (!is_null($this->tagName)) {
+		if (null !== $this->tagName) {
 			$output[] = $script . "tagName = \"" . $this->tagName . "\";";
 		}
 
 		// Check the strings.
-		if (!is_null($this->strings)) {
+		if (null !== $this->strings) {
 			$output[] = (string) $this->strings;
 		}
 

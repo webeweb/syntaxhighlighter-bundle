@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the syntaxhighligter-bundle package.
  *
@@ -9,6 +10,8 @@
  */
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
+
+use WBW\Library\Core\Utility\StringUtility;
 
 /**
  * SyntaxHighlighter defaults.
@@ -110,53 +113,53 @@ final class SyntaxHighlighterDefaults {
 		$output = [];
 
 		// Check the auto links.
-		if (!is_null($this->autoLinks)) {
-			$output[] = $script . "['auto-links'] = " . ($this->autoLinks === true ? "true" : "false") . ";";
+		if (null !== $this->autoLinks) {
+			$output[] = $script . "['auto-links'] = " . StringUtility::parseBoolean($this->autoLinks) . ";";
 		}
 
 		// Check the class name.
-		if (!is_null($this->className)) {
+		if (null !== $this->className) {
 			$output[] = $script . "['class-name'] = \"" . $this->className . "\";";
 		}
 
 		// Check the collapse.
-		if (!is_null($this->collapse)) {
-			$output[] = $script . "['collapse'] = " . ($this->collapse === true ? "true" : "false") . ";";
+		if (null !== $this->collapse) {
+			$output[] = $script . "['collapse'] = " . StringUtility::parseBoolean($this->collapse) . ";";
 		}
 
 		// Check the first line.
-		if (!is_null($this->firstLine)) {
+		if (null !== $this->firstLine) {
 			$output[] = $script . "['first-line'] = " . $this->firstLine . ";";
 		}
 
 		// Check the gutter.
-		if (!is_null($this->gutter)) {
-			$output[] = $script . "['gutter'] = " . ($this->gutter === true ? "true" : "false") . ";";
+		if (null !== $this->gutter) {
+			$output[] = $script . "['gutter'] = " . StringUtility::parseBoolean($this->gutter) . ";";
 		}
 
 		// Check the highlight.
-		if (!is_null($this->highlight)) {
+		if (null !== $this->highlight) {
 			$output[] = $script . "['highlight'] = [" . implode(", ", $this->highlight) . "];";
 		}
 
 		// Check the HTML script.
-		if (!is_null($this->htmlScript)) {
-			$output[] = $script . "['html-script'] = " . ($this->htmlScript === true ? "true" : "false") . ";";
+		if (null !== $this->htmlScript) {
+			$output[] = $script . "['html-script'] = " . StringUtility::parseBoolean($this->htmlScript) . ";";
 		}
 
 		// Check the smart tabs.
-		if (!is_null($this->smartTabs)) {
-			$output[] = $script . "['smart-tabs'] = " . ($this->smartTabs === true ? "true" : "false") . ";";
+		if (null !== $this->smartTabs) {
+			$output[] = $script . "['smart-tabs'] = " . StringUtility::parseBoolean($this->smartTabs) . ";";
 		}
 
 		// Check the tab size.
-		if (!is_null($this->tabSize)) {
+		if (null !== $this->tabSize) {
 			$output[] = $script . "['tab-size'] = " . $this->tabSize . ";";
 		}
 
 		// Check the toolbar.
-		if (!is_null($this->toolbar)) {
-			$output[] = $script . "['toolbar'] = " . ($this->toolbar === true ? "true" : "false") . ";";
+		if (null !== $this->toolbar) {
+			$output[] = $script . "['toolbar'] = " . StringUtility::parseBoolean($this->toolbar) . ";";
 		}
 
 		// Return the output.
