@@ -4,7 +4,7 @@
 	"description": "Integrate SyntaxHighlighter with Symfony2",
 	"keywords": ["webeweb", "bundle", "symfony", "syntaxhighlighter"],
 	"homepage": "http://github.com/webeweb/syntaxhighlighter-bundle",
-	"license": "LGPL-3.0",
+	"license": "LGPL-3.0-only",
 	"authors": [
 		{
 			"name": "webeweb",
