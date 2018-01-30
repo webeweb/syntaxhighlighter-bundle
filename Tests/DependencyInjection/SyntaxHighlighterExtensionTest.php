@@ -27,24 +27,24 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
  */
 final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the load() method.
-	 *
-	 * @return void
-	 */
-	public function testLoad() {
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoad() {
 
-		// Set the mocks.
-		$kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
+        // Set the mocks.
+        $kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
 
-		// We set a container builder with only the necessary.
-		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-		$container->set("kernel", $kernel);
+        // We set a container builder with only the necessary.
+        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
+        $container->set("kernel", $kernel);
 
-		$obj = new SyntaxHighlighterExtension();
+        $obj = new SyntaxHighlighterExtension();
 
-		$obj->load([], $container);
-		$this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $container->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
-	}
+        $obj->load([], $container);
+        $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $container->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
+    }
 
 }

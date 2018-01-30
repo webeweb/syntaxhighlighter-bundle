@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the syntaxhighligter-bundle package.
  *
@@ -23,55 +24,55 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
  */
 final class SyntaxHighlighterConfigTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstruct() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
 
-		$obj = new SyntaxHighlighterConfig();
+        $obj = new SyntaxHighlighterConfig();
 
-		$this->assertEquals(false, $obj->getBloggerMode());
-		$this->assertEquals(null, $obj->getStrings());
-		$this->assertEquals(false, $obj->getStripBrs());
-		$this->assertEquals("pre", $obj->getTagName());
-	}
+        $this->assertEquals(false, $obj->getBloggerMode());
+        $this->assertEquals(null, $obj->getStrings());
+        $this->assertEquals(false, $obj->getStripBrs());
+        $this->assertEquals("pre", $obj->getTagName());
+    }
 
-	/**
-	 * Tests the __toString() method.
-	 *
-	 * @return void
-	 */
-	public function testToString() {
+    /**
+     * Tests the __toString() method.
+     *
+     * @return void
+     */
+    public function testToString() {
 
-		$obj = new SyntaxHighlighterConfig();
+        $obj = new SyntaxHighlighterConfig();
 
-		$obj->setBloggerMode(true);
-		$obj->setStripBrs(true);
-		$obj->setTagName("blocquote");
+        $obj->setBloggerMode(true);
+        $obj->setStripBrs(true);
+        $obj->setTagName("blocquote");
 
-		$res	 = [];
-		$res []	 = "SyntaxHighlighter.config.bloggerMode = true;";
-		$res []	 = "SyntaxHighlighter.config.stripBrs = true;";
-		$res []	 = "SyntaxHighlighter.config.tagName = \"blocquote\";";
+        $res    = [];
+        $res [] = "SyntaxHighlighter.config.bloggerMode = true;";
+        $res [] = "SyntaxHighlighter.config.stripBrs = true;";
+        $res [] = "SyntaxHighlighter.config.tagName = \"blocquote\";";
 
-		$this->assertEquals(implode("\n", $res), (string) $obj);
+        $this->assertEquals(implode("\n", $res), (string) $obj);
 
-		$obj->setStrings(new SyntaxHighlighterStrings());
+        $obj->setStrings(new SyntaxHighlighterStrings());
 
-		$res1	 = $res;
-		$res1[]	 = "SyntaxHighlighter.config.strings.alert = \"SyntaxHighlighter\n\n\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.brushNotHtmlScript = \"Brush wasn't made for html-script option:\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.copyToClipboard = \"copy to clipboard\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.copyToClipboardConfirmation = \"The code is in your clipboard now\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.expandSource = \"+ expand source\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.help = \"?\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.noBrush = \"Can't find brush for:\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.print = \"print\";";
-		$res1[]	 = "SyntaxHighlighter.config.strings.viewSource = \"view source\";";
+        $res1   = $res;
+        $res1[] = "SyntaxHighlighter.config.strings.alert = \"SyntaxHighlighter\n\n\";";
+        $res1[] = "SyntaxHighlighter.config.strings.brushNotHtmlScript = \"Brush wasn't made for html-script option:\";";
+        $res1[] = "SyntaxHighlighter.config.strings.copyToClipboard = \"copy to clipboard\";";
+        $res1[] = "SyntaxHighlighter.config.strings.copyToClipboardConfirmation = \"The code is in your clipboard now\";";
+        $res1[] = "SyntaxHighlighter.config.strings.expandSource = \"+ expand source\";";
+        $res1[] = "SyntaxHighlighter.config.strings.help = \"?\";";
+        $res1[] = "SyntaxHighlighter.config.strings.noBrush = \"Can't find brush for:\";";
+        $res1[] = "SyntaxHighlighter.config.strings.print = \"print\";";
+        $res1[] = "SyntaxHighlighter.config.strings.viewSource = \"view source\";";
 
-		$this->assertEquals(implode("\n", $res1), (string) $obj);
-	}
+        $this->assertEquals(implode("\n", $res1), (string) $obj);
+    }
 
 }
