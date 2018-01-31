@@ -63,88 +63,88 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
             $obj->syntaxHighlighterScriptFunction("exception");
         } catch (Exception $ex) {
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertEquals("The file \"syntaxhighlighter/scripts/exception.js\" is not found", $ex->getMessage());
+            $this->assertEquals("The file \"syntaxhighlighter-3.0.83/scripts/exception.js\" is not found", $ex->getMessage());
         }
 
-        $res1 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shCore.js\" type=\"text/javascript\"></script>";
+        $res1 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shCore.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res1, $obj->syntaxHighlighterScriptFunction("shCore"));
 
-        $res2 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shLegacy.js\" type=\"text/javascript\"></script>";
+        $res2 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shLegacy.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res2, $obj->syntaxHighlighterScriptFunction("shLegacy"));
 
-        $res3 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/XRegExp.js\" type=\"text/javascript\"></script>";
+        $res3 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/XRegExp.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res3, $obj->syntaxHighlighterScriptFunction("XRegExp"));
 
-        $resB1 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushAS3.js\" type=\"text/javascript\"></script>";
+        $resB1 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushAS3.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB1, $obj->syntaxHighlighterScriptFunction("shBrushAS3"));
 
-        $resB2 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushAppleScript.js\" type=\"text/javascript\"></script>";
+        $resB2 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushAppleScript.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB2, $obj->syntaxHighlighterScriptFunction("shBrushAppleScript"));
 
-        $resB3 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushBash.js\" type=\"text/javascript\"></script>";
+        $resB3 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushBash.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB3, $obj->syntaxHighlighterScriptFunction("shBrushBash"));
 
-        $resB4 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushCSharp.js\" type=\"text/javascript\"></script>";
+        $resB4 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushCSharp.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB4, $obj->syntaxHighlighterScriptFunction("shBrushCSharp"));
 
-        $resB5 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushColdFusion.js\" type=\"text/javascript\"></script>";
+        $resB5 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushColdFusion.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB5, $obj->syntaxHighlighterScriptFunction("shBrushColdFusion"));
 
-        $resB6 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushCpp.js\" type=\"text/javascript\"></script>";
+        $resB6 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushCpp.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB6, $obj->syntaxHighlighterScriptFunction("shBrushCpp"));
 
-        $resB7 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushCss.js\" type=\"text/javascript\"></script>";
+        $resB7 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushCss.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB7, $obj->syntaxHighlighterScriptFunction("shBrushCss"));
 
-        $resB8 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushDelphi.js\" type=\"text/javascript\"></script>";
+        $resB8 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushDelphi.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB8, $obj->syntaxHighlighterScriptFunction("shBrushDelphi"));
 
-        $resB9 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushDiff.js\" type=\"text/javascript\"></script>";
+        $resB9 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushDiff.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB9, $obj->syntaxHighlighterScriptFunction("shBrushDiff"));
 
-        $resB10 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushErlang.js\" type=\"text/javascript\"></script>";
+        $resB10 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushErlang.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB10, $obj->syntaxHighlighterScriptFunction("shBrushErlang"));
 
-        $resB11 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushGroovy.js\" type=\"text/javascript\"></script>";
+        $resB11 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushGroovy.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB11, $obj->syntaxHighlighterScriptFunction("shBrushGroovy"));
 
-        $resB12 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushJScript.js\" type=\"text/javascript\"></script>";
+        $resB12 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushJScript.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB12, $obj->syntaxHighlighterScriptFunction("shBrushJScript"));
 
-        $resB13 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushJava.js\" type=\"text/javascript\"></script>";
+        $resB13 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushJava.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB13, $obj->syntaxHighlighterScriptFunction("shBrushJava"));
 
-        $resB14 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushJavaFX.js\" type=\"text/javascript\"></script>";
+        $resB14 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushJavaFX.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB14, $obj->syntaxHighlighterScriptFunction("shBrushJavaFX"));
 
-        $resB15 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushPerl.js\" type=\"text/javascript\"></script>";
+        $resB15 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushPerl.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB15, $obj->syntaxHighlighterScriptFunction("shBrushPerl"));
 
-        $resB16 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushPhp.js\" type=\"text/javascript\"></script>";
+        $resB16 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushPhp.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB16, $obj->syntaxHighlighterScriptFunction("shBrushPhp"));
 
-        $resB17 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushPlain.js\" type=\"text/javascript\"></script>";
+        $resB17 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushPlain.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB17, $obj->syntaxHighlighterScriptFunction("shBrushPlain"));
 
-        $resB18 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushPowerShell.js\" type=\"text/javascript\"></script>";
+        $resB18 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushPowerShell.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB18, $obj->syntaxHighlighterScriptFunction("shBrushPowerShell"));
 
-        $resB19 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushPython.js\" type=\"text/javascript\"></script>";
+        $resB19 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushPython.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB19, $obj->syntaxHighlighterScriptFunction("shBrushPython"));
 
-        $resB20 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushRuby.js\" type=\"text/javascript\"></script>";
+        $resB20 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushRuby.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB20, $obj->syntaxHighlighterScriptFunction("shBrushRuby"));
 
-        $resB21 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushSass.js\" type=\"text/javascript\"></script>";
+        $resB21 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushSass.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB21, $obj->syntaxHighlighterScriptFunction("shBrushSass"));
 
-        $resB22 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushScala.js\" type=\"text/javascript\"></script>";
+        $resB22 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushScala.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB22, $obj->syntaxHighlighterScriptFunction("shBrushScala"));
 
-        $resB23 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushSql.js\" type=\"text/javascript\"></script>";
+        $resB23 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushSql.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB23, $obj->syntaxHighlighterScriptFunction("shBrushSql"));
 
-        $resB24 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter/scripts/shBrushXml.js\" type=\"text/javascript\"></script>";
+        $resB24 = "<script src=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shBrushXml.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($resB24, $obj->syntaxHighlighterScriptFunction("shBrushXml"));
     }
 
@@ -161,58 +161,58 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
             $obj->syntaxHighlighterStyleFunction("exception");
         } catch (Exception $ex) {
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertEquals("The file \"syntaxhighlighter/styles/exception.css\" is not found", $ex->getMessage());
+            $this->assertEquals("The file \"syntaxhighlighter-3.0.83/styles/exception.css\" is not found", $ex->getMessage());
         }
 
-        $res0 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCore.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $res0 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCore.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($res0, $obj->syntaxHighlighterStyleFunction("shCore"));
 
-        $resC1 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreDefault.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC1 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreDefault.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC1, $obj->syntaxHighlighterStyleFunction("shCoreDefault"));
 
-        $resC2 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreDjango.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC2 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreDjango.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC2, $obj->syntaxHighlighterStyleFunction("shCoreDjango"));
 
-        $resC3 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreEclipse.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC3 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreEclipse.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC3, $obj->syntaxHighlighterStyleFunction("shCoreEclipse"));
 
-        $resC4 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreEmacs.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC4 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreEmacs.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC4, $obj->syntaxHighlighterStyleFunction("shCoreEmacs"));
 
-        $resC5 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreFadeToGrey.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC5 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreFadeToGrey.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC5, $obj->syntaxHighlighterStyleFunction("shCoreFadeToGrey"));
 
-        $resC6 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreMDUltra.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC6 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreMDUltra.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC6, $obj->syntaxHighlighterStyleFunction("shCoreMDUltra"));
 
-        $resC7 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreMidnight.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC7 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreMidnight.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC7, $obj->syntaxHighlighterStyleFunction("shCoreMidnight"));
 
-        $resC8 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shCoreRDark.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resC8 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shCoreRDark.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resC8, $obj->syntaxHighlighterStyleFunction("shCoreRDark"));
 
-        $resT1 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeDefault.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT1 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeDefault.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT1, $obj->syntaxHighlighterStyleFunction("shThemeDefault"));
 
-        $resT2 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeDjango.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT2 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeDjango.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT2, $obj->syntaxHighlighterStyleFunction("shThemeDjango"));
 
-        $resT3 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeEclipse.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT3 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeEclipse.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT3, $obj->syntaxHighlighterStyleFunction("shThemeEclipse"));
 
-        $resT4 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeEmacs.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT4 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeEmacs.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT4, $obj->syntaxHighlighterStyleFunction("shThemeEmacs"));
 
-        $resT5 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeFadeToGrey.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT5 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeFadeToGrey.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT5, $obj->syntaxHighlighterStyleFunction("shThemeFadeToGrey"));
 
-        $resT6 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeMDUltra.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT6 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeMDUltra.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT6, $obj->syntaxHighlighterStyleFunction("shThemeMDUltra"));
 
-        $resT7 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeMidnight.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT7 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeMidnight.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT7, $obj->syntaxHighlighterStyleFunction("shThemeMidnight"));
 
-        $resT8 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter/styles/shThemeRDark.css\" rel=\"stylesheet\" type=\"text/css\">";
+        $resT8 = "<link href=\"/bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/styles/shThemeRDark.css\" rel=\"stylesheet\" type=\"text/css\">";
         $this->assertEquals($resT8, $obj->syntaxHighlighterStyleFunction("shThemeRDark"));
     }
 

@@ -98,7 +98,7 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
     public function syntaxHighlighterScriptFunction($script) {
 
         // Initialize the filename.
-        $filename = implode("/", ["syntaxhighlighter", "scripts", $script . ".js"]);
+        $filename = implode("/", ["syntaxhighlighter-3.0.83", "scripts", $script . ".js"]);
 
         // Return the output.
         return $this->syntaxHighlighterResourceFunction("<script src=\"/bundles/syntaxhighlighter/", $filename, "\" type=\"text/javascript\"></script>");
@@ -114,7 +114,7 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
     public function syntaxHighlighterStyleFunction($css) {
 
         // Initialize the filename.
-        $filename = implode("/", ["syntaxhighlighter", "styles", $css . ".css"]);
+        $filename = implode("/", ["syntaxhighlighter-3.0.83", "styles", $css . ".css"]);
 
         // Return the output.
         return $this->syntaxHighlighterResourceFunction("<link href=\"/bundles/syntaxhighlighter/", $filename, "\" rel=\"stylesheet\" type=\"text/css\">");
