@@ -124,7 +124,7 @@ final class SyntaxHighlighterConfig {
     /**
      * Get the tag name.
      *
-     * @return strng Returns the tag name.
+     * @return string Returns the tag name.
      */
     public function getTagName() {
         return $this->tagName;
@@ -133,7 +133,7 @@ final class SyntaxHighlighterConfig {
     /**
      * Set the blogger mode.
      *
-     * @param type $bloggerMode The blogger mode.
+     * @param boolean $bloggerMode The blogger mode.
      * @return SyntaxHighlighterDefaults Returns the SyntaxHighlighter defaults.
      */
     public function setBloggerMode($bloggerMode = false) {
