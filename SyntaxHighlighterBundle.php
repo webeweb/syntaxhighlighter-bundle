@@ -18,8 +18,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle
- * @final
  */
-final class SyntaxHighlighterBundle extends Bundle {
+class SyntaxHighlighterBundle extends Bundle {
 
 }
