@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
+use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
+
 /**
  * SyntaxHightlighter strings.
  *
@@ -103,50 +105,15 @@ final class SyntaxHighlighterStrings {
         // Initialize the output.
         $output = [];
 
-        // Check the alert.
-        if (null !== $this->alert) {
-            $output[] = $script . "alert = \"" . $this->alert . "\";";
-        }
-
-        // Check the brush not HTML script.
-        if (null !== $this->brushNotHtmlScript) {
-            $output[] = $script . "brushNotHtmlScript = \"" . $this->brushNotHtmlScript . "\";";
-        }
-
-        // Check the copy to clipboard.
-        if (null !== $this->copyToClipboard) {
-            $output[] = $script . "copyToClipboard = \"" . $this->copyToClipboard . "\";";
-        }
-
-        // Check the copy to clipboard confirmation.
-        if (null !== $this->copyToClipboardConfirmation) {
-            $output[] = $script . "copyToClipboardConfirmation = \"" . $this->copyToClipboardConfirmation . "\";";
-        }
-
-        // Check the expand source.
-        if (null !== $this->expandSource) {
-            $output[] = $script . "expandSource = \"" . $this->expandSource . "\";";
-        }
-
-        // Check the help.
-        if (null !== $this->help) {
-            $output[] = $script . "help = \"" . $this->help . "\";";
-        }
-
-        // Check the no brush.
-        if (null !== $this->noBrush) {
-            $output[] = $script . "noBrush = \"" . $this->noBrush . "\";";
-        }
-
-        // Check the print.
-        if (null !== $this->print) {
-            $output[] = $script . "print = \"" . $this->print . "\";";
-        }
-
-        // Check the view source.
-        if (null !== $this->viewSource) {
-            $output[] = $script . "viewSource = \"" . $this->viewSource . "\";";
-        }
+        SyntaxHighlighterEncoder::stringToString($this->alert, $output, $script . "alert = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->brushNotHtmlScript, $output, $script . "brushNotHtmlScript = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->copyToClipboard, $output, $script . "copyToClipboard = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->copyToClipboardConfirmation, $output, $script . "copyToClipboardConfirmation = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->expandSource, $output, $script . "expandSource = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->help, $output, $script . "help = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->noBrush, $output, $script . "noBrush = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->print, $output, $script . "print = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->viewSource, $output, $script . "viewSource = \"", "\";");
 
         // Return the output.
         return implode("\n", $output);
@@ -180,7 +147,7 @@ final class SyntaxHighlighterStrings {
     }
 
     /**
-     * Get the copy to clipboard confitmation.
+     * Get the copy to clipboard confirmation.
      *
      * @return string Returns the copy to clipboard confirmation.
      */
