@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
 
 /**
  * SyntaxHighlighter defaults.
@@ -112,55 +112,16 @@ final class SyntaxHighlighterDefaults {
         // Initialize the output.
         $output = [];
 
-        // Check the auto links.
-        if (null !== $this->autoLinks) {
-            $output[] = $script . "['auto-links'] = " . StringUtility::parseBoolean($this->autoLinks) . ";";
-        }
-
-        // Check the class name.
-        if (null !== $this->className) {
-            $output[] = $script . "['class-name'] = \"" . $this->className . "\";";
-        }
-
-        // Check the collapse.
-        if (null !== $this->collapse) {
-            $output[] = $script . "['collapse'] = " . StringUtility::parseBoolean($this->collapse) . ";";
-        }
-
-        // Check the first line.
-        if (null !== $this->firstLine) {
-            $output[] = $script . "['first-line'] = " . $this->firstLine . ";";
-        }
-
-        // Check the gutter.
-        if (null !== $this->gutter) {
-            $output[] = $script . "['gutter'] = " . StringUtility::parseBoolean($this->gutter) . ";";
-        }
-
-        // Check the highlight.
-        if (null !== $this->highlight) {
-            $output[] = $script . "['highlight'] = [" . implode(", ", $this->highlight) . "];";
-        }
-
-        // Check the HTML script.
-        if (null !== $this->htmlScript) {
-            $output[] = $script . "['html-script'] = " . StringUtility::parseBoolean($this->htmlScript) . ";";
-        }
-
-        // Check the smart tabs.
-        if (null !== $this->smartTabs) {
-            $output[] = $script . "['smart-tabs'] = " . StringUtility::parseBoolean($this->smartTabs) . ";";
-        }
-
-        // Check the tab size.
-        if (null !== $this->tabSize) {
-            $output[] = $script . "['tab-size'] = " . $this->tabSize . ";";
-        }
-
-        // Check the toolbar.
-        if (null !== $this->toolbar) {
-            $output[] = $script . "['toolbar'] = " . StringUtility::parseBoolean($this->toolbar) . ";";
-        }
+        SyntaxHighlighterEncoder::booleanToString($this->autoLinks, $output, $script . "['auto-links'] = ", ";");
+        SyntaxHighlighterEncoder::stringToString($this->className, $output, $script . "['class-name'] = \"", "\";");
+        SyntaxHighlighterEncoder::booleanToString($this->collapse, $output, $script . "['collapse'] = ", ";");
+        SyntaxHighlighterEncoder::stringToString($this->firstLine, $output, $script . "['first-line'] = ", ";");
+        SyntaxHighlighterEncoder::booleanToString($this->gutter, $output, $script . "['gutter'] = ", ";");
+        SyntaxHighlighterEncoder::arrayToString($this->highlight, $output, $script . "['highlight'] = ", ";");
+        SyntaxHighlighterEncoder::booleanToString($this->htmlScript, $output, $script . "['html-script'] = ", ";");
+        SyntaxHighlighterEncoder::booleanToString($this->smartTabs, $output, $script . "['smart-tabs'] = ", ";");
+        SyntaxHighlighterEncoder::stringToString($this->tabSize, $output, $script . "['tab-size'] = ", ";");
+        SyntaxHighlighterEncoder::booleanToString($this->toolbar, $output, $script . "['toolbar'] = ", ";");
 
         // Return the output.
         return implode("\n", $output);
@@ -314,7 +275,7 @@ final class SyntaxHighlighterDefaults {
     /**
      * Set the highlight.
      *
-     * @param array $highlight The Highlight.
+     * @param array $highlight The highlight.
      * @return SyntaxHighlighterDefaults Returns the SyntaxHighlighter defaults.
 
      */
