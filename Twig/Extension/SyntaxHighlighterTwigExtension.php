@@ -13,7 +13,6 @@ namespace WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension;
 
 use Twig_Extension;
 use Twig_SimpleFunction;
-use WBW\Library\Core\Exception\File\FileNotFoundException;
 
 /**
  * SyntaxHighlighter Twig extension.
@@ -32,19 +31,10 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
     const SERVICE_NAME = "webeweb.bundle.syntaxhighlighterbundle.twig.extension.syntaxhighlighter";
 
     /**
-     * Directory.
-     *
-     * @var string
-     */
-    private $directory;
-
-    /**
      * Constructor.
-     *
-     * @param string $directory The directory.
      */
-    public function __construct($directory) {
-        $this->directory = $directory;
+    public function __construct() {
+        // NOTHING TO DO.
     }
 
     /**
@@ -54,70 +44,7 @@ final class SyntaxHighlighterTwigExtension extends Twig_Extension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('syntaxHighlighterScript', [$this, 'syntaxHighlighterScriptFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('syntaxHighlighterStyle', [$this, 'syntaxHighlighterStyleFunction'], ['is_safe' => ['html']]),
         ];
-    }
-
-    /**
-     * Get the resources directory.
-     *
-     * @return string Returns the resources directory.
-     */
-    private function getResourcesDirectory() {
-        return $this->directory . "/Resources";
-    }
-
-    /**
-     * Displays a SyntaxHighlighter resource.
-     *
-     * @param string $open The open.
-     * @param string $filename The filename.
-     * @param string $close The close.
-     * @throws FileNotFoundException Throws a SyntaxHighlighter file not found exception if the resource is not found.
-     */
-    private function syntaxHighlighterResourceFunction($open, $filename, $close) {
-
-        // Initialize and check the filepath.
-        $filepath = $this->getResourcesDirectory() . "/public/" . $filename;
-        if (false === file_exists($filepath)) {
-            throw new FileNotFoundException($filename);
-        }
-
-        // Return the output.
-        return $open . $filename . $close;
-    }
-
-    /**
-     * Displays a SyntaxHighlighter script.
-     *
-     * @param string $script The script name.
-     * @return string Returns the SyntaxHighlighter script.
-     * @throws FileNotFoundException Throws a file not found exception if the script is not found.
-     */
-    public function syntaxHighlighterScriptFunction($script) {
-
-        // Initialize the filename.
-        $filename = implode("/", ["syntaxhighlighter-3.0.83", "scripts", $script . ".js"]);
-
-        // Return the output.
-        return $this->syntaxHighlighterResourceFunction("<script src=\"/bundles/syntaxhighlighter/", $filename, "\" type=\"text/javascript\"></script>");
-    }
-
-    /**
-     * Displays a SyntaxHighlighter style.
-     *
-     * @param string $css The CSS name.
-     * @return string Returns the SyntaxHighlighter style.
-     * @throws FileNotFoundException Throws a file not found exception if the CSS is not found.
-     */
-    public function syntaxHighlighterStyleFunction($css) {
-
-        // Initialize the filename.
-        $filename = implode("/", ["syntaxhighlighter-3.0.83", "styles", $css . ".css"]);
-
-        // Return the output.
-        return $this->syntaxHighlighterResourceFunction("<link href=\"/bundles/syntaxhighlighter/", $filename, "\" rel=\"stylesheet\" type=\"text/css\">");
     }
 
 }
