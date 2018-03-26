@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
 
 /**
  * SyntaxHighlighter config.
@@ -70,25 +70,10 @@ final class SyntaxHighlighterConfig {
         // Initialize the output.
         $output = [];
 
-        // Check the blogger mode.
-        if (null !== $this->bloggerMode) {
-            $output[] = $script . "bloggerMode = " . StringUtility::parseBoolean($this->bloggerMode) . ";";
-        }
-
-        // Check the strip BRs.
-        if (null !== $this->stripBrs) {
-            $output[] = $script . "stripBrs = " . StringUtility::parseBoolean($this->stripBrs) . ";";
-        }
-
-        // Check the tag name.
-        if (null !== $this->tagName) {
-            $output[] = $script . "tagName = \"" . $this->tagName . "\";";
-        }
-
-        // Check the strings.
-        if (null !== $this->strings) {
-            $output[] = (string) $this->strings;
-        }
+        SyntaxHighlighterEncoder::booleanToString($this->bloggerMode, $output, $script . "bloggerMode = ", ";");
+        SyntaxHighlighterEncoder::booleanToString($this->stripBrs, $output, $script . "stripBrs = ", ";");
+        SyntaxHighlighterEncoder::stringToString($this->tagName, $output, $script . "tagName = \"", "\";");
+        SyntaxHighlighterEncoder::stringToString($this->strings, $output, "", "");
 
         // Return the output.
         return implode("\n", $output);
