@@ -1,0 +1,9 @@
+{# Resources/views/layout.html.twig #}
+{% block syntaxhighlighterStyles %}
+    {% include '@SyntaxHighlighter/styles/syntaxhighlighter.html.twig' %}
+    {% include '@SyntaxHighlighter/styles/syntaxhighlighter-theme-default.html.twig' %}
+{% endblock %}
+{% block syntaxhighlighterScripts %}
+    {% include '@SyntaxHighlighter/scripts/syntaxhighlighter.html.twig' %}
+    {% include '@SyntaxHighlighter/scripts/syntaxhighlighter-all-brushes.html.twig' %}
+{% endblock %}
