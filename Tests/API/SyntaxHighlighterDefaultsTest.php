@@ -32,16 +32,16 @@ final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
 
         $obj = new SyntaxHighlighterDefaults();
 
-        $this->assertEquals(true, $obj->getAutoLinks());
+        $this->assertTrue($obj->getAutoLinks());
         $this->assertEquals("", $obj->getClassName());
-        $this->assertEquals(false, $obj->getCollapse());
+        $this->assertFalse($obj->getCollapse());
         $this->assertEquals(1, $obj->getFirstLine());
-        $this->assertEquals(true, $obj->getGutter());
-        $this->assertEquals(null, $obj->getHighlight());
-        $this->assertEquals(false, $obj->getHtmlScript());
-        $this->assertEquals(true, $obj->getSmartTabs());
+        $this->assertTrue($obj->getGutter());
+        $this->assertNull($obj->getHighlight());
+        $this->assertFalse($obj->getHtmlScript());
+        $this->assertTrue($obj->getSmartTabs());
         $this->assertEquals(4, $obj->getTabSize());
-        $this->assertEquals(true, $obj->getToolbar());
+        $this->assertTrue($obj->getToolbar());
     }
 
     /**

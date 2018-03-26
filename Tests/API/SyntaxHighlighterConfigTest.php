@@ -33,9 +33,9 @@ final class SyntaxHighlighterConfigTest extends PHPUnit_Framework_TestCase {
 
         $obj = new SyntaxHighlighterConfig();
 
-        $this->assertEquals(false, $obj->getBloggerMode());
-        $this->assertEquals(null, $obj->getStrings());
-        $this->assertEquals(false, $obj->getStripBrs());
+        $this->assertFalse($obj->getBloggerMode());
+        $this->assertNull($obj->getStrings());
+        $this->assertFalse($obj->getStripBrs());
         $this->assertEquals("pre", $obj->getTagName());
     }
 
