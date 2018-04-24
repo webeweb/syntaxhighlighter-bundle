@@ -21,9 +21,8 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection
- * @final
  */
-final class SyntaxHighlighterExtension extends Extension {
+class SyntaxHighlighterExtension extends Extension {
 
     /**
      * {@inheritdoc}
