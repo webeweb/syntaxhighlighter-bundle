@@ -19,9 +19,8 @@ use Twig_SimpleFunction;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension
- * @final
  */
-final class SyntaxHighlighterTwigExtension extends Twig_Extension {
+class SyntaxHighlighterTwigExtension extends Twig_Extension {
 
     /**
      * Service name.
