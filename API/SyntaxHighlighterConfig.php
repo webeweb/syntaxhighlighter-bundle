@@ -18,9 +18,8 @@ use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\API
- * @final
  */
-final class SyntaxHighlighterConfig {
+class SyntaxHighlighterConfig {
 
     /**
      * Blogger mode.
