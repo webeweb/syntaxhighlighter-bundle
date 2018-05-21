@@ -64,19 +64,20 @@ final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
         $obj->setTabSize(8);
         $obj->setToolbar(false);
 
-        $res    = [];
-        $res [] = "SyntaxHighlighter.defaults['auto-links'] = false;";
-        $res [] = "SyntaxHighlighter.defaults['class-name'] = \"classname\";";
-        $res [] = "SyntaxHighlighter.defaults['collapse'] = true;";
-        $res [] = "SyntaxHighlighter.defaults['first-line'] = 0;";
-        $res [] = "SyntaxHighlighter.defaults['gutter'] = false;";
-        $res [] = "SyntaxHighlighter.defaults['highlight'] = [1, 2, 3];";
-        $res [] = "SyntaxHighlighter.defaults['html-script'] = true;";
-        $res [] = "SyntaxHighlighter.defaults['smart-tabs'] = false;";
-        $res [] = "SyntaxHighlighter.defaults['tab-size'] = 8;";
-        $res [] = "SyntaxHighlighter.defaults['toolbar'] = false;";
+        $res = <<< 'EOTXT'
+SyntaxHighlighter.defaults['auto-links'] = false;
+SyntaxHighlighter.defaults['class-name'] = "classname";
+SyntaxHighlighter.defaults['collapse'] = true;
+SyntaxHighlighter.defaults['first-line'] = 0;
+SyntaxHighlighter.defaults['gutter'] = false;
+SyntaxHighlighter.defaults['highlight'] = [1, 2, 3];
+SyntaxHighlighter.defaults['html-script'] = true;
+SyntaxHighlighter.defaults['smart-tabs'] = false;
+SyntaxHighlighter.defaults['tab-size'] = 8;
+SyntaxHighlighter.defaults['toolbar'] = false;
+EOTXT;
 
-        $this->assertEquals(implode("\n", $res), (string) $obj);
+        $this->assertEquals($res, (string) $obj);
     }
 
 }

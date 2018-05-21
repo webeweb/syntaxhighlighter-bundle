@@ -52,27 +52,32 @@ final class SyntaxHighlighterConfigTest extends PHPUnit_Framework_TestCase {
         $obj->setStripBrs(true);
         $obj->setTagName("blocquote");
 
-        $res    = [];
-        $res [] = "SyntaxHighlighter.config.bloggerMode = true;";
-        $res [] = "SyntaxHighlighter.config.stripBrs = true;";
-        $res [] = "SyntaxHighlighter.config.tagName = \"blocquote\";";
+        $res0 = <<<'EOTXT'
+SyntaxHighlighter.config.bloggerMode = true;
+SyntaxHighlighter.config.stripBrs = true;
+SyntaxHighlighter.config.tagName = "blocquote";
 
-        $this->assertEquals(implode("\n", $res), (string) $obj);
+EOTXT;
+
+        $this->assertEquals($res0, (string) $obj);
 
         $obj->setStrings(new SyntaxHighlighterStrings());
 
-        $res1   = $res;
-        $res1[] = "SyntaxHighlighter.config.strings.alert = \"SyntaxHighlighter\n\n\";";
-        $res1[] = "SyntaxHighlighter.config.strings.brushNotHtmlScript = \"Brush wasn't made for html-script option:\";";
-        $res1[] = "SyntaxHighlighter.config.strings.copyToClipboard = \"copy to clipboard\";";
-        $res1[] = "SyntaxHighlighter.config.strings.copyToClipboardConfirmation = \"The code is in your clipboard now\";";
-        $res1[] = "SyntaxHighlighter.config.strings.expandSource = \"+ expand source\";";
-        $res1[] = "SyntaxHighlighter.config.strings.help = \"?\";";
-        $res1[] = "SyntaxHighlighter.config.strings.noBrush = \"Can't find brush for:\";";
-        $res1[] = "SyntaxHighlighter.config.strings.print = \"print\";";
-        $res1[] = "SyntaxHighlighter.config.strings.viewSource = \"view source\";";
+        $res9 = $res0 . <<<'EOTXT'
+SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter
 
-        $this->assertEquals(implode("\n", $res1), (string) $obj);
+";
+SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for html-script option:";
+SyntaxHighlighter.config.strings.copyToClipboard = "copy to clipboard";
+SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "The code is in your clipboard now";
+SyntaxHighlighter.config.strings.expandSource = "+ expand source";
+SyntaxHighlighter.config.strings.help = "?";
+SyntaxHighlighter.config.strings.noBrush = "Can't find brush for:";
+SyntaxHighlighter.config.strings.print = "print";
+SyntaxHighlighter.config.strings.viewSource = "view source";
+EOTXT;
+
+        $this->assertEquals($res9, (string) $obj);
     }
 
 }

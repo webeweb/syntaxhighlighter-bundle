@@ -62,18 +62,19 @@ final class SyntaxHighlighterStringsTest extends PHPUnit_Framework_TestCase {
         $obj->setPrint("Print");
         $obj->setViewSource("View source");
 
-        $res   = [];
-        $res[] = "SyntaxHighlighter.config.strings.alert = \"SyntaxHighlighter bundle\";";
-        $res[] = "SyntaxHighlighter.config.strings.brushNotHtmlScript = \"Brush wasn't made for HTML-Script option :\";";
-        $res[] = "SyntaxHighlighter.config.strings.copyToClipboard = \"Copy to clipboard\";";
-        $res[] = "SyntaxHighlighter.config.strings.copyToClipboardConfirmation = \"Operation success\";";
-        $res[] = "SyntaxHighlighter.config.strings.expandSource = \"Expand source\";";
-        $res[] = "SyntaxHighlighter.config.strings.help = \"Help\";";
-        $res[] = "SyntaxHighlighter.config.strings.noBrush = \"Can't find brush for :\";";
-        $res[] = "SyntaxHighlighter.config.strings.print = \"Print\";";
-        $res[] = "SyntaxHighlighter.config.strings.viewSource = \"View source\";";
+        $res = <<<'EOTXT'
+SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter bundle";
+SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for HTML-Script option :";
+SyntaxHighlighter.config.strings.copyToClipboard = "Copy to clipboard";
+SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "Operation success";
+SyntaxHighlighter.config.strings.expandSource = "Expand source";
+SyntaxHighlighter.config.strings.help = "Help";
+SyntaxHighlighter.config.strings.noBrush = "Can't find brush for :";
+SyntaxHighlighter.config.strings.print = "Print";
+SyntaxHighlighter.config.strings.viewSource = "View source";
+EOTXT;
 
-        $this->assertEquals(implode("\n", $res), (string) $obj);
+        $this->assertEquals($res, (string) $obj);
     }
 
 }
