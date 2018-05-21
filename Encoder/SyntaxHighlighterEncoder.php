@@ -31,9 +31,7 @@ final class SyntaxHighlighterEncoder {
      * @param string $suffix The suffix.
      */
     public static function arrayToString(array $value, array &$output, $prefix, $suffix) {
-        if (null !== $value) {
-            $output[] = $prefix . "[" . implode(", ", $value) . "]" . $suffix;
-        }
+        $output[] = $prefix . "[" . implode(", ", $value) . "]" . $suffix;
     }
 
     /**
@@ -45,9 +43,7 @@ final class SyntaxHighlighterEncoder {
      * @param string $suffix The suffix.
      */
     public static function booleanToString($value, array &$output, $prefix, $suffix) {
-        if (null !== $value) {
-            $output[] = $prefix . StringUtility::parseBoolean($value) . $suffix;
-        }
+        $output[] = $prefix . StringUtility::parseBoolean($value) . $suffix;
     }
 
     /**
@@ -59,9 +55,7 @@ final class SyntaxHighlighterEncoder {
      * @param string $suffix The suffix.
      */
     public static function stringToString($value, array &$output, $prefix, $suffix) {
-        if (null !== $value) {
-            $output[] = $prefix . $value . $suffix;
-        }
+        $output[] = $prefix . $value . $suffix;
     }
 
 }
