@@ -11,8 +11,10 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension;
 
-use Twig_Extension;
 use Twig_SimpleFunction;
+use WBW\Library\Core\Exception\IO\FileNotFoundException;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Utility\IO\FileUtility;
 
 /**
  * SyntaxHighlighter Twig extension.
@@ -20,7 +22,7 @@ use Twig_SimpleFunction;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension
  */
-class SyntaxHighlighterTwigExtension extends Twig_Extension {
+class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtension {
 
     /**
      * Service name.
@@ -33,7 +35,32 @@ class SyntaxHighlighterTwigExtension extends Twig_Extension {
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct();
+    }
+
+    /**
+     * Displays a SyntaxHighlighter.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the SyntaxHighlighter.
+     * @throws FileNotFoundException Throws a file not found exception if the file does not exists.
+     */
+    public function syntaxHighlighterFunction(array $args = []) {
+
+        // Get the parameters.
+        $language = ArrayUtility::get($args, "language", "php");
+        $filename = ArrayUtility::get($args, "filename");
+        $content  = ArrayUtility::get($args, "content");
+
+        // Check the filename.
+        if (null !== $filename) {
+
+            // Get the file contents.
+            $content = FileUtility::getContents($filename);
+        }
+
+        // Return the HTML.
+        return $this->syntaxHighlighter($language, $content);
     }
 
     /**
@@ -43,6 +70,7 @@ class SyntaxHighlighterTwigExtension extends Twig_Extension {
      */
     public function getFunctions() {
         return [
+            new Twig_SimpleFunction("syntaxHighlighter", [$this, "syntaxHighlighterFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
