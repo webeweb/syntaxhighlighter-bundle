@@ -63,7 +63,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertEquals("The file \"/home/camille/Workspace/github.com/syntaxhighlighter-bundle/SyntaxHighlighterBundle\" is not found", $ex->getMessage());
+            $this->assertContains("syntaxhighlighter-bundle/SyntaxHighlighterBundle\" is not found", $ex->getMessage());
         }
 
         $arg1 = ["content" => "<span>span</span>", "language" => "html"];
