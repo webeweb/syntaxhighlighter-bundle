@@ -18,9 +18,8 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Encoder
- * @final
  */
-final class SyntaxHighlighterEncoder {
+class SyntaxHighlighterEncoder {
 
     /**
      * Convert a array value.
