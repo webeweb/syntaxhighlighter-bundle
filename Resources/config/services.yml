@@ -3,6 +3,5 @@ services:
 
     webeweb.bundle.syntaxhighlighterbundle.twig.extension.syntaxhighlighter:
         class:     WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
-        arguments: ["@=service('kernel').locateResource('@SyntaxHighlighterBundle')", "%kernel.environment%"]
         tags:
           - { name: "twig.extension" }
