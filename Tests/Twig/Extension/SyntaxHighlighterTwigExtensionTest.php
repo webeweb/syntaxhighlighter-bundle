@@ -68,7 +68,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg1 = ["content" => "<span>span</span>", "language" => "html"];
         $res1 = <<< 'EOTXT'
-<pre class="brush: html;">
+<pre class="brush: html">
 &lt;span&gt;span&lt;/span&gt;
 </pre>
 EOTXT;
@@ -77,7 +77,7 @@ EOTXT;
 
         $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
         $res9 = <<< 'EOTXT'
-<pre class="brush: php;">
+<pre class="brush: php">
 &lt;?php
 
 /**
