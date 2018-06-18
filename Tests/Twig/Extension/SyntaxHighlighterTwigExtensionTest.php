@@ -69,7 +69,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
         $arg1 = ["content" => "<span>span</span>", "language" => "html"];
         $res1 = <<< 'EOTXT'
 <pre class="brush: html;">
-<span>span</span>
+&lt;span&gt;span&lt;/span&gt;
 </pre>
 EOTXT;
 
@@ -78,7 +78,7 @@ EOTXT;
         $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
         $res9 = <<< 'EOTXT'
 <pre class="brush: php;">
-<?php
+&lt;?php
 
 /**
  * This file is part of the syntaxhighligter-bundle package.
@@ -96,7 +96,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
  * SyntaxHighlighter bundle.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb &lt;https://github.com/webeweb/&gt;
  * @package WBW\Bundle\SyntaxHighlighterBundle
  */
 class SyntaxHighlighterBundle extends Bundle {
