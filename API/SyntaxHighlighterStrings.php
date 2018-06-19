@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
-use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
-
 /**
  * SyntaxHightlighter strings.
  *
@@ -89,33 +87,6 @@ class SyntaxHighlighterStrings {
      */
     public function __construct() {
         // NOTHING TO DO.
-    }
-
-    /**
-     * Convert into a string representing this instance.
-     *
-     * @return string Returns a string representing this instance.
-     */
-    public function __toString() {
-
-        // Initialize.
-        $script = "SyntaxHighlighter.config.strings.";
-
-        // Initialize the output.
-        $output = [];
-
-        SyntaxHighlighterEncoder::stringToString($this->alert, $output, $script . "alert = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->brushNotHtmlScript, $output, $script . "brushNotHtmlScript = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->copyToClipboard, $output, $script . "copyToClipboard = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->copyToClipboardConfirmation, $output, $script . "copyToClipboardConfirmation = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->expandSource, $output, $script . "expandSource = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->help, $output, $script . "help = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->noBrush, $output, $script . "noBrush = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->print, $output, $script . "print = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->viewSource, $output, $script . "viewSource = \"", "\";");
-
-        // Return the output.
-        return implode("\n", $output);
     }
 
     /**
