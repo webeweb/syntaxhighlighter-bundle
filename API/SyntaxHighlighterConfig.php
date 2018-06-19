@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
-use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
-
 /**
  * SyntaxHighlighter config.
  *
@@ -54,28 +52,6 @@ class SyntaxHighlighterConfig {
      */
     public function __construct() {
         // NOTHING TO DO.
-    }
-
-    /**
-     * Convert into a string representing this instance.
-     *
-     * @return string Returns a string representing this instance.
-     */
-    public function __toString() {
-
-        // Initialize.
-        $script = "SyntaxHighlighter.config.";
-
-        // Initialize the output.
-        $output = [];
-
-        SyntaxHighlighterEncoder::booleanToString($this->bloggerMode, $output, $script . "bloggerMode = ", ";");
-        SyntaxHighlighterEncoder::booleanToString($this->stripBrs, $output, $script . "stripBrs = ", ";");
-        SyntaxHighlighterEncoder::stringToString($this->tagName, $output, $script . "tagName = \"", "\";");
-        SyntaxHighlighterEncoder::stringToString($this->strings, $output, "", "");
-
-        // Return the output.
-        return implode("\n", $output);
     }
 
     /**
