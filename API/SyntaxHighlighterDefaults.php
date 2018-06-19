@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
-use WBW\Bundle\SyntaxHighlighterBundle\Encoder\SyntaxHighlighterEncoder;
-
 /**
  * SyntaxHighlighter defaults.
  *
@@ -96,34 +94,6 @@ class SyntaxHighlighterDefaults {
      */
     public function __construct() {
         // NOTHING TO DO.
-    }
-
-    /**
-     * Convert into a string representing this instance.
-     *
-     * @return string Returns a string representing this instance.
-     */
-    public function __toString() {
-
-        // Initialize.
-        $script = "SyntaxHighlighter.defaults";
-
-        // Initialize the output.
-        $output = [];
-
-        SyntaxHighlighterEncoder::booleanToString($this->autoLinks, $output, $script . "['auto-links'] = ", ";");
-        SyntaxHighlighterEncoder::stringToString($this->className, $output, $script . "['class-name'] = \"", "\";");
-        SyntaxHighlighterEncoder::booleanToString($this->collapse, $output, $script . "['collapse'] = ", ";");
-        SyntaxHighlighterEncoder::stringToString($this->firstLine, $output, $script . "['first-line'] = ", ";");
-        SyntaxHighlighterEncoder::booleanToString($this->gutter, $output, $script . "['gutter'] = ", ";");
-        SyntaxHighlighterEncoder::arrayToString($this->highlight, $output, $script . "['highlight'] = ", ";");
-        SyntaxHighlighterEncoder::booleanToString($this->htmlScript, $output, $script . "['html-script'] = ", ";");
-        SyntaxHighlighterEncoder::booleanToString($this->smartTabs, $output, $script . "['smart-tabs'] = ", ";");
-        SyntaxHighlighterEncoder::stringToString($this->tabSize, $output, $script . "['tab-size'] = ", ";");
-        SyntaxHighlighterEncoder::booleanToString($this->toolbar, $output, $script . "['toolbar'] = ", ";");
-
-        // Return the output.
-        return implode("\n", $output);
     }
 
     /**
