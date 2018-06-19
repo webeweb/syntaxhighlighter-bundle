@@ -43,38 +43,4 @@ final class SyntaxHighlighterStringsTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals("view source", $obj->getViewSource());
     }
 
-    /**
-     * Tests the __toString() method.
-     *
-     * @return void
-     */
-    public function testToString() {
-
-        $obj = new SyntaxHighlighterStrings();
-
-        $obj->setAlert("SyntaxHighlighter bundle");
-        $obj->setBrushNotHtmlScript("Brush wasn't made for HTML-Script option :");
-        $obj->setCopyToClipboard("Copy to clipboard");
-        $obj->setCopyToClipboardConfirmation("Operation success");
-        $obj->setExpandSource("Expand source");
-        $obj->setHelp("Help");
-        $obj->setNoBrush("Can't find brush for :");
-        $obj->setPrint("Print");
-        $obj->setViewSource("View source");
-
-        $res = <<<'EOTXT'
-SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter bundle";
-SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for HTML-Script option :";
-SyntaxHighlighter.config.strings.copyToClipboard = "Copy to clipboard";
-SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "Operation success";
-SyntaxHighlighter.config.strings.expandSource = "Expand source";
-SyntaxHighlighter.config.strings.help = "Help";
-SyntaxHighlighter.config.strings.noBrush = "Can't find brush for :";
-SyntaxHighlighter.config.strings.print = "Print";
-SyntaxHighlighter.config.strings.viewSource = "View source";
-EOTXT;
-
-        $this->assertEquals($res, (string) $obj);
-    }
-
 }
