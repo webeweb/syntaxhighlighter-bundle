@@ -44,40 +44,4 @@ final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($obj->getToolbar());
     }
 
-    /**
-     * Tests the __toString() method.
-     *
-     * @return void
-     */
-    public function testToString() {
-
-        $obj = new SyntaxHighlighterDefaults();
-
-        $obj->setAutoLinks(false);
-        $obj->setClassName("classname");
-        $obj->setCollapse(true);
-        $obj->setFirstLine(0);
-        $obj->setGutter(false);
-        $obj->setHighlight([1, 2, 3]);
-        $obj->setHtmlScript(true);
-        $obj->setSmartTabs(false);
-        $obj->setTabSize(8);
-        $obj->setToolbar(false);
-
-        $res = <<< 'EOTXT'
-SyntaxHighlighter.defaults['auto-links'] = false;
-SyntaxHighlighter.defaults['class-name'] = "classname";
-SyntaxHighlighter.defaults['collapse'] = true;
-SyntaxHighlighter.defaults['first-line'] = 0;
-SyntaxHighlighter.defaults['gutter'] = false;
-SyntaxHighlighter.defaults['highlight'] = [1, 2, 3];
-SyntaxHighlighter.defaults['html-script'] = true;
-SyntaxHighlighter.defaults['smart-tabs'] = false;
-SyntaxHighlighter.defaults['tab-size'] = 8;
-SyntaxHighlighter.defaults['toolbar'] = false;
-EOTXT;
-
-        $this->assertEquals($res, (string) $obj);
-    }
-
 }
