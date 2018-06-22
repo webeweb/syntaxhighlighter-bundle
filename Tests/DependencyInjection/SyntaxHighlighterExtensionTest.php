@@ -29,25 +29,57 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
 final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
+     * Container builder.
+     *
+     * @var ContainerBuilder
+     */
+    protected $containerBuilder;
+
+    /**
+     * Kernel.
+     *
+     * @var KernelInterface
+     */
+    protected $kernel;
+
+    /**
+     * Translator.
+     *
+     * @var TranslatorInterface
+     */
+    protected $translator;
+
+    /**
+     * @{inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Kernel mock.
+        $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
+
+        // Set a Translator mock.
+        $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
+
+        // We set a container builder with only the necessary.
+        $this->containerBuilder = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
+        $this->containerBuilder->set("kernel", $this->kernel);
+        $this->containerBuilder->set("translator", $this->translator);
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
      */
     public function testLoad() {
 
-        // Set the mocks.
-        $kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
-
-        // We set a container builder with only the necessary.
-        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-        $container->set("kernel", $kernel);
-
         $obj = new SyntaxHighlighterExtension();
 
-        $obj->load([], $container);
+        $obj->load([], $this->containerBuilder);
 
-        $this->assertInstanceOf(SyntaxHighlighterStringsProvider::class, $container->get(SyntaxHighlighterStringsProvider::SERVICE_NAME));
-        $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $container->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(SyntaxHighlighterStringsProvider::class, $this->containerBuilder->get(SyntaxHighlighterStringsProvider::SERVICE_NAME));
+        $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $this->containerBuilder->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
     }
 
 }
