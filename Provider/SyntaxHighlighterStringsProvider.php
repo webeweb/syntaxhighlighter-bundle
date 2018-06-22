@@ -37,6 +37,15 @@ class SyntaxHighlighterStringsProvider {
     private $translator;
 
     /**
+     * Constructor.
+     *
+     * @param TranslatorInterface $translator The translator.
+     */
+    public function __construct(TranslatorInterface $translator) {
+        $this->setTranslator($translator);
+    }
+
+    /**
      * Get a SyntaxHighlighter strings.
      *
      * @return SyntaxHighlighterStrings Returns teh SyntaxHighlighter strings.
@@ -74,7 +83,7 @@ class SyntaxHighlighterStringsProvider {
      * @param TranslatorInterafce $translator The translator.
      * @return SyntaxHighlighterStringsProvider Returns this SyntaxHighlighter strings provider.
      */
-    protected function setTranslator(TranslatorInterafce $translator) {
+    protected function setTranslator(TranslatorInterface $translator) {
         $this->translator = $translator;
         return $this;
     }
