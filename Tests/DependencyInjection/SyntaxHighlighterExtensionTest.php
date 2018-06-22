@@ -16,6 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
+use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 
 /**
@@ -44,6 +45,8 @@ final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new SyntaxHighlighterExtension();
 
         $obj->load([], $container);
+
+        $this->assertInstanceOf(SyntaxHighlighterStringsProvider::class, $container->get(SyntaxHighlighterStringsProvider::SERVICE_NAME));
         $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $container->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
     }
 

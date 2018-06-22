@@ -1,6 +1,10 @@
 # Resources/config/services.yml
 services:
 
+    webeweb.bundle.syntaxhighlighterbundle.provider.syntaxhighlighterstrings:
+        class:     WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
+        arguments: ["@translator"]
+
     webeweb.bundle.syntaxhighlighterbundle.twig.extension.syntaxhighlighter:
         class:     WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
         tags:
