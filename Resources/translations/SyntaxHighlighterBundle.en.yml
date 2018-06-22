@@ -1,0 +1,12 @@
+# Resources/translations/SyntaxHighlighterBundle.en.yml
+strings:
+    alert:                           |SyntaxHighlighter
+
+    brush_no_html_script:            "Brush wasn't made for html-script option:"
+    copy_to_clipboard:               "copy to clipboard"
+    copy_to_clipboard_confirmation : "The code is in your clipboard now"
+    expand_source:                   "+ expand source"
+    help:                            "?"
+    no_brush:                        "Can't find brush for:"
+    print:                           "print"
+    view_source:                     "view source"
