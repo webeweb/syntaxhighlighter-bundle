@@ -71,6 +71,9 @@ $ php bin/console assets:install
     // Initialize the SyntaxHighlighter defaults.
     $defaults = new SyntaxHighlighterDefaults();
 
+    // Initialize the SyntaxHighlighter content.
+    $content = "<?php\nphpinfo();";
+
     // Return the response.
     return $this->render("@AppBundle:Controller:action"), [
             "syntaxHighlighterConfig"   => $config,
