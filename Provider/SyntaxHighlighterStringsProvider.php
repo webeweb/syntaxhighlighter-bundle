@@ -80,7 +80,7 @@ class SyntaxHighlighterStringsProvider {
     /**
      * Set the translator.
      *
-     * @param TranslatorInterafce $translator The translator.
+     * @param TranslatorInterface $translator The translator.
      * @return SyntaxHighlighterStringsProvider Returns this SyntaxHighlighter strings provider.
      */
     protected function setTranslator(TranslatorInterface $translator) {
