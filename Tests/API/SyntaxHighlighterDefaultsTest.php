@@ -37,7 +37,7 @@ final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
         $this->assertFalse($obj->getCollapse());
         $this->assertEquals(1, $obj->getFirstLine());
         $this->assertTrue($obj->getGutter());
-        $this->assertNull($obj->getHighlight());
+        $this->assertEquals([], $obj->getHighlight());
         $this->assertFalse($obj->getHtmlScript());
         $this->assertTrue($obj->getSmartTabs());
         $this->assertEquals(4, $obj->getTabSize());
