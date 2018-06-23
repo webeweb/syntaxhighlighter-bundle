@@ -24,7 +24,7 @@ class SyntaxHighlighterConfig {
      *
      * @var boolean
      */
-    private $bloggerMode = false;
+    private $bloggerMode;
 
     /**
      * Strings
@@ -38,20 +38,22 @@ class SyntaxHighlighterConfig {
      *
      * @var boolean
      */
-    private $stripBrs = false;
+    private $stripBrs;
 
     /**
      * Tag name.
      *
      * @var string
      */
-    private $tagName = "pre";
+    private $tagName;
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        $this->setBloggerMode(false);
+        $this->setStripBrs(false);
+        $this->setTagName("pre");
     }
 
     /**
@@ -96,7 +98,7 @@ class SyntaxHighlighterConfig {
      * @param boolean $bloggerMode The blogger mode.
      * @return SyntaxHighlighterConfig Returns this SyntaxHighlighter config.
      */
-    public function setBloggerMode($bloggerMode = false) {
+    public function setBloggerMode($bloggerMode) {
         $this->bloggerMode = $bloggerMode;
         return $this;
     }
@@ -118,7 +120,7 @@ class SyntaxHighlighterConfig {
      * @param boolean $stripBrs The strip BRs.
      * @return SyntaxHighlighterConfig Returns this SyntaxHighlighter config.
      */
-    public function setStripBrs($stripBrs = false) {
+    public function setStripBrs($stripBrs) {
         $this->stripBrs = $stripBrs;
         return $this;
     }
@@ -129,7 +131,7 @@ class SyntaxHighlighterConfig {
      * @param string $tagName The tag name.
      * @return SyntaxHighlighterConfig Returns this SyntaxHighlighter config.
      */
-    public function setTagName($tagName = "pre") {
+    public function setTagName($tagName) {
         $this->tagName = $tagName;
         return $this;
     }
