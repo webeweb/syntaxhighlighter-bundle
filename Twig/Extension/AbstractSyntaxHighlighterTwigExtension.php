@@ -71,7 +71,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
         $attributes = [];
 
         $attributes["class"][] = "brush:";
-        $attributes["class"][] = null !== $language ? $language : "php";
+        $attributes["class"][] = $language;
 
         // Return the HTML.
         return StringUtility::replace($template, ["%tag%", "%attributes%", "%innerHTML%"], [$tag, StringUtility::parseArray($attributes), htmlentities($content)]);
