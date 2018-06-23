@@ -1,6 +1,7 @@
 # Resources/translations/SyntaxHighlighterBundle.en.yml
 strings:
-    alert:                           |SyntaxHighlighter
+    alert: |
+        SyntaxHighlighter
 
     brush_no_html_script:            "Brush wasn't made for html-script option:"
     copy_to_clipboard:               "copy to clipboard"
