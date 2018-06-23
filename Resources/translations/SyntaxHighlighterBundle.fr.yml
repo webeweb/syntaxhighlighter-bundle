@@ -1,6 +1,7 @@
 # Resources/translations/SyntaxHighlighterBundle.fr.yml
 strings:
-    alert:                           |SyntaxHighlighter
+    alert: |
+        SyntaxHighlighter
 
     brush_no_html_script:            "L'interpréteur n'a pas été fait pour l'option html-script:"
     copy_to_clipboard:               "copié dans le presse-papier"
