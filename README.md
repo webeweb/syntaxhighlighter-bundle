@@ -5,10 +5,6 @@ syntaxhighlighter-bundle
 
 Integrate SyntaxHighlighter with Symfony 2.
 
-> IMPORTANT NOTICE: This package is still under development. Any changes will be
-> done without prior notice to consumers of this package. Of course this code
-> will become stable at a certain point, but for now, use at your own risk.
-
 Includes:
 
 - [SyntaxHighlighter 3.0.83](https://github.com/syntaxhighlighter/syntaxhighlighter/)
@@ -95,7 +91,7 @@ $ php bin/console assets:install
 
 {% block content %}
     {{ syntaxHighlighterContent({"tag": "pre", "content": syntaxHighlighterContent, "language": "php"}) }}
-    {# syntaxHighlighterContent({"tag": "pre", "filename": "filename", "language": "php"}) #}
+    {# syntaxHighlighterContent({"tag": "pre", "filename": "/path/to/file.html", "language": "html"}) #}
 {% endblock %}
 
 {% block javascript %}
