@@ -24,69 +24,77 @@ class SyntaxHighlighterStrings {
      *
      * @var string
      */
-    private $alert = "SyntaxHighlighter\n\n";
+    private $alert;
 
     /**
      * Brush not HTML script.
      *
      * @var string
      */
-    private $brushNotHtmlScript = "Brush wasn't made for html-script option:";
+    private $brushNotHtmlScript;
 
     /**
      * Copy to clipboard.
      *
      * @var string
      */
-    private $copyToClipboard = "copy to clipboard";
+    private $copyToClipboard;
 
     /**
      * Copy to clipboard confirmation.
      *
      * @var string
      */
-    private $copyToClipboardConfirmation = "The code is in your clipboard now";
+    private $copyToClipboardConfirmation;
 
     /**
      * Expand source.
      *
      * @var string
      */
-    private $expandSource = "+ expand source";
+    private $expandSource;
 
     /**
      * Help.
      *
      * @var string
      */
-    private $help = "?";
+    private $help;
 
     /**
      * No brush.
      *
      * @var string
      */
-    private $noBrush = "Can't find brush for:";
+    private $noBrush;
 
     /**
      * Print.
      *
      * @var string
      */
-    private $print = "print";
+    private $print;
 
     /**
      * View source.
      *
      * @var string
      */
-    private $viewSource = "view source";
+    private $viewSource;
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        $this->setAlert("SyntaxHighlighter\n\n");
+        $this->setBrushNotHtmlScript("Brush wasn't made for html-script option:");
+        $this->setCopyToClipboard("copy to clipboard");
+        $this->setCopyToClipboardConfirmation("The code is in your clipboard now");
+        $this->setExpandSource("+ expand source");
+        $this->setHelp("?");
+        $this->setNoBrush("Can't find brush for:");
+        $this->setPrint("print");
+        $this->setViewSource("view source");
     }
 
     /**
@@ -176,7 +184,7 @@ class SyntaxHighlighterStrings {
      * @param string $alert The alert.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setAlert($alert = "SyntaxHighlighter\n\n") {
+    public function setAlert($alert) {
         $this->alert = $alert;
         return $this;
     }
@@ -187,7 +195,7 @@ class SyntaxHighlighterStrings {
      * @param string $brushNotHtmlScript The brush not HTML script.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setBrushNotHtmlScript($brushNotHtmlScript = "Brush wasn't made for html-script option:") {
+    public function setBrushNotHtmlScript($brushNotHtmlScript) {
         $this->brushNotHtmlScript = $brushNotHtmlScript;
         return $this;
     }
@@ -198,7 +206,7 @@ class SyntaxHighlighterStrings {
      * @param string $copyToClipboard The copy to clipboard.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setCopyToClipboard($copyToClipboard = "copy to clipboard") {
+    public function setCopyToClipboard($copyToClipboard) {
         $this->copyToClipboard = $copyToClipboard;
         return $this;
     }
@@ -209,7 +217,7 @@ class SyntaxHighlighterStrings {
      * @param string $copyToClipboardConfirmation The copy to clipboard confirmation.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setCopyToClipboardConfirmation($copyToClipboardConfirmation = "The code is in your clipboard now") {
+    public function setCopyToClipboardConfirmation($copyToClipboardConfirmation) {
         $this->copyToClipboardConfirmation = $copyToClipboardConfirmation;
         return $this;
     }
@@ -220,7 +228,7 @@ class SyntaxHighlighterStrings {
      * @param string $expandSource The expand source.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setExpandSource($expandSource = "+ expand source") {
+    public function setExpandSource($expandSource) {
         $this->expandSource = $expandSource;
         return $this;
     }
@@ -231,7 +239,7 @@ class SyntaxHighlighterStrings {
      * @param string $help The help.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setHelp($help = "?") {
+    public function setHelp($help) {
         $this->help = $help;
         return $this;
     }
@@ -242,7 +250,7 @@ class SyntaxHighlighterStrings {
      * @param string $noBrush The no brush.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setNoBrush($noBrush = "Can't find brush for:") {
+    public function setNoBrush($noBrush) {
         $this->noBrush = $noBrush;
         return $this;
     }
@@ -253,7 +261,7 @@ class SyntaxHighlighterStrings {
      * @param string $print The print.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setPrint($print = "print") {
+    public function setPrint($print) {
         $this->print = $print;
         return $this;
     }
@@ -264,7 +272,7 @@ class SyntaxHighlighterStrings {
      * @param string $viewSource The view source.
      * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
      */
-    public function setViewSource($viewSource = "view source") {
+    public function setViewSource($viewSource) {
         $this->viewSource = $viewSource;
         return $this;
     }
