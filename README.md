@@ -58,6 +58,56 @@ $ php bin/console assets:install
 
 ---
 
+## Usage
+
+### 1) Controller
+
+```php
+    // ...
+    // Initialize the SyntaxHighlighter config.
+    $config = new SyntaxHighlighterConfig();
+    $config->setStrings(new SyntaxHighlighterStrings());
+
+    // Initialize the SyntaxHighlighter defaults.
+    $defaults = new SyntaxHighlighterDefaults();
+    // ...
+    // Returns the response.
+    return $this->render("@AppBundle:Controller:action"), [
+            "syntaxHighlighterConfig"   => $config,
+            "syntaxHighlighterContent"  => $content,
+            "syntaxHighlighterDefaults" => $defaults,
+    ]);
+    // ...
+```
+
+### 2) Template
+
+```html
+{# src/AppBundle/Resources/views/Controller/action.html.twig #}
+
+{% block stylesheet %}
+    {{ parent() }}
+    {% include "@SyntaxHighlighter/include/styles.html.twig" with {"theme": "eclipse"} %}
+{% endblock %}
+
+{% block content %}
+    {{ syntaxHighlighterContent({"tag": "pre", "content": syntaxHighlighterContent, "language": "php"}) }}
+    {# syntaxHighlighterContent({"tag": "pre", "filename": "filename", "language": "php"}) #}
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
+    {{ syntaxHighlighterConfig(syntaxHighlighterConfig)|syntaxHighlighterScript() }}
+    {{ syntaxHighlighterDefaults(syntaxHighlighterDefaults)|syntaxHighlighterScript() }}
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+</script>
+{% endblock %}
+```
+
+---
+
 ## Testing
 
 To test the package, is better to clone this repository on your computer.
