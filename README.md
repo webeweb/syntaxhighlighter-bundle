@@ -74,7 +74,7 @@ $ php bin/console assets:install
         $content = "<?php\nphpinfo();";
 
         // Return the response.
-        return $this->render("@AppBundle:Controller:index"), [
+        return $this->render("@AppBundle:DefaultController:index"), [
                 "syntaxHighlighterConfig"   => $config,
                 "syntaxHighlighterContent"  => $content,
                 "syntaxHighlighterDefaults" => $defaults,
@@ -85,7 +85,7 @@ $ php bin/console assets:install
 ### 2) Template
 
 ```html
-{# src/AppBundle/Resources/views/Controller/index.html.twig #}
+{# src/AppBundle/Resources/views/Default/index.html.twig #}
 
 {% block stylesheet %}
     {{ parent() }}
