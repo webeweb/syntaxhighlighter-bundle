@@ -70,7 +70,7 @@ $ php bin/console assets:install
 
     // Initialize the SyntaxHighlighter defaults.
     $defaults = new SyntaxHighlighterDefaults();
-    // ...
+
     // Returns the response.
     return $this->render("@AppBundle:Controller:action"), [
             "syntaxHighlighterConfig"   => $config,
