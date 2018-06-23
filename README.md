@@ -59,30 +59,33 @@ $ php bin/console assets:install
 ### 1) Controller
 
 ```php
-    // ...
-    // Initialize the SyntaxHighlighter config.
-    $config = new SyntaxHighlighterConfig();
-    $config->setStrings(new SyntaxHighlighterStrings());
+    public function indexAction(Request $request) {
 
-    // Initialize the SyntaxHighlighter defaults.
-    $defaults = new SyntaxHighlighterDefaults();
+        // ...
 
-    // Initialize the SyntaxHighlighter content.
-    $content = "<?php\nphpinfo();";
+        // Initialize the SyntaxHighlighter config.
+        $config = new SyntaxHighlighterConfig();
+        $config->setStrings(new SyntaxHighlighterStrings());
 
-    // Return the response.
-    return $this->render("@AppBundle:Controller:action"), [
-            "syntaxHighlighterConfig"   => $config,
-            "syntaxHighlighterContent"  => $content,
-            "syntaxHighlighterDefaults" => $defaults,
-    ]);
-    // ...
+        // Initialize the SyntaxHighlighter defaults.
+        $defaults = new SyntaxHighlighterDefaults();
+
+        // Initialize the SyntaxHighlighter content.
+        $content = "<?php\nphpinfo();";
+
+        // Return the response.
+        return $this->render("@AppBundle:Controller:index"), [
+                "syntaxHighlighterConfig"   => $config,
+                "syntaxHighlighterContent"  => $content,
+                "syntaxHighlighterDefaults" => $defaults,
+        ]);
+    }
 ```
 
 ### 2) Template
 
 ```html
-{# src/AppBundle/Resources/views/Controller/action.html.twig #}
+{# src/AppBundle/Resources/views/Controller/index.html.twig #}
 
 {% block stylesheet %}
     {{ parent() }}
