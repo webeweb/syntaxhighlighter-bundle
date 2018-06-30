@@ -27,7 +27,7 @@ class SyntaxHighlighterStringsProvider {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.syntaxhighlighterbundle.provider.syntaxhighlighterstrings";
+    const SERVICE_NAME = "webeweb.syntaxhighlighterbundle.provider.syntaxhighlighterstrings";
 
     /**
      * Translator.
