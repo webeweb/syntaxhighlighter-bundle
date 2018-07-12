@@ -21,11 +21,6 @@
     "require-dev": {
         "phpunit/phpunit": "5.7.*"
     },
-    "suggest": {
-        "webeweb/highcharts-bundle": "Integrate Highcharts with Symfony 2",
-        "webeweb/jquery-datatables-bundle": "Integrate jQuery DataTables with Symfony 2",
-        "webeweb/jquery-querybuilder-bundle": "Integrate jQuery QueryBuilder with Symfony 2"
-    },
     "support": {
         "issues": "http://github.com/webeweb/syntaxhighlighter-bundle/issues"
     },
@@ -36,6 +31,14 @@
         "exclude-from-classmap": [
             "/Tests/"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WBW\\Bundle\\SyntaxHighlighterBundle\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
