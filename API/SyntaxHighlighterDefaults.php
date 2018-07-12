@@ -255,7 +255,6 @@ class SyntaxHighlighterDefaults {
      *
      * @param array $highlight The highlight.
      * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
-
      */
     public function setHighlight(array $highlight) {
         $this->highlight = $highlight;
@@ -267,7 +266,6 @@ class SyntaxHighlighterDefaults {
      *
      * @param boolean $htmlScript The HTML script.
      * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
-
      */
     public function setHtmlScript($htmlScript) {
         $this->htmlScript = $htmlScript;
@@ -290,7 +288,6 @@ class SyntaxHighlighterDefaults {
      *
      * @param integer $tabSize The tab size.
      * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
-
      */
     public function setTabSize($tabSize) {
         $this->tabSize = $tabSize;
@@ -302,7 +299,6 @@ class SyntaxHighlighterDefaults {
      *
      * @param boolean $toolbar The toolbar.
      * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
-
      */
     public function setToolbar($toolbar) {
         $this->toolbar = $toolbar;
