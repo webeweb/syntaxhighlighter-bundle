@@ -4,6 +4,7 @@ services:
     webeweb.syntaxhighlighterbundle.provider.syntaxhighlighterstrings:
         class:     WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
         arguments: ["@translator"]
+        public:    true
 
     webeweb.syntaxhighlighterbundle.twig.extension.syntaxhighlighter:
         class:     WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
