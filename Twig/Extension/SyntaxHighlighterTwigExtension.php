@@ -17,9 +17,9 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 use WBW\Library\Core\Exception\IO\FileNotFoundException;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
-use WBW\Library\Core\Utility\Argument\StringUtility;
-use WBW\Library\Core\Utility\IO\FileUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Helper\Argument\StringHelper;
+use WBW\Library\Core\Helper\IO\FileHelper;
 
 /**
  * SyntaxHighlighter Twig extension.
@@ -78,16 +78,16 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     public function syntaxHighlighterContentFunction(array $args = []) {
 
         // Get the parameters.
-        $tag      = ArrayUtility::get($args, "tag", "pre");
-        $language = ArrayUtility::get($args, "language", "php");
-        $filename = ArrayUtility::get($args, "filename");
-        $content  = ArrayUtility::get($args, "content");
+        $tag      = ArrayHelper::get($args, "tag", "pre");
+        $language = ArrayHelper::get($args, "language", "php");
+        $filename = ArrayHelper::get($args, "filename");
+        $content  = ArrayHelper::get($args, "content");
 
         // Check the filename.
         if (null !== $filename) {
 
             // Get the file contents.
-            $content = FileUtility::getContents($filename);
+            $content = FileHelper::getContents($filename);
         }
 
         // Return the HTML.
@@ -126,7 +126,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
         $template = "<script type=\"text/javascript\">\n%innerHTML%\n</script>";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%innerHTML%"], [$content]);
+        return StringHelper::replace($template, ["%innerHTML%"], [$content]);
     }
 
     /**

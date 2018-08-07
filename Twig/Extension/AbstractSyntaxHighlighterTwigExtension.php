@@ -15,7 +15,7 @@ use Twig_Extension;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract SyntaxHighlighter Twig extension.
@@ -44,8 +44,8 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
         // Initialize the template.
         $template = [];
 
-        $template[] = "SyntaxHighlighter.config.bloggerMode = " . StringUtility::parseBoolean($config->getBloggerMode()) . ";";
-        $template[] = "SyntaxHighlighter.config.stripBrs = " . StringUtility::parseBoolean($config->getStripBrs()) . ";";
+        $template[] = "SyntaxHighlighter.config.bloggerMode = " . StringHelper::parseBoolean($config->getBloggerMode()) . ";";
+        $template[] = "SyntaxHighlighter.config.stripBrs = " . StringHelper::parseBoolean($config->getStripBrs()) . ";";
         $template[] = "SyntaxHighlighter.config.tagName = \"" . $config->getTagName() . "\";";
         if (null !== $config->getStrings()) {
             $template[] = $this->syntaxHighlighterStrings($config->getStrings());
@@ -74,7 +74,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
         $attributes["class"][] = $language;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%tag%", "%attributes%", "%innerHTML%"], [$tag, StringUtility::parseArray($attributes), htmlentities($content)]);
+        return StringHelper::replace($template, ["%tag%", "%attributes%", "%innerHTML%"], [$tag, StringHelper::parseArray($attributes), htmlentities($content)]);
     }
 
     /**
@@ -88,16 +88,16 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
         // Initialize the template.
         $template = [];
 
-        $template[] = "SyntaxHighlighter.defaults['auto-links'] = " . StringUtility::parseBoolean($defaults->getAutoLinks()) . ";";
+        $template[] = "SyntaxHighlighter.defaults['auto-links'] = " . StringHelper::parseBoolean($defaults->getAutoLinks()) . ";";
         $template[] = "SyntaxHighlighter.defaults['class-name'] = \"" . $defaults->getClassName() . "\";";
-        $template[] = "SyntaxHighlighter.defaults['collapse'] = " . StringUtility::parseBoolean($defaults->getCollapse()) . ";";
+        $template[] = "SyntaxHighlighter.defaults['collapse'] = " . StringHelper::parseBoolean($defaults->getCollapse()) . ";";
         $template[] = "SyntaxHighlighter.defaults['first-line'] = " . $defaults->getFirstLine() . ";";
-        $template[] = "SyntaxHighlighter.defaults['gutter'] = " . StringUtility::parseBoolean($defaults->getGutter()) . ";";
+        $template[] = "SyntaxHighlighter.defaults['gutter'] = " . StringHelper::parseBoolean($defaults->getGutter()) . ";";
         $template[] = "SyntaxHighlighter.defaults['highlight'] = [" . implode(",", $defaults->getHighlight()) . "];";
-        $template[] = "SyntaxHighlighter.defaults['html-script'] = " . StringUtility::parseBoolean($defaults->getHtmlScript()) . ";";
-        $template[] = "SyntaxHighlighter.defaults['smart-tabs'] = " . StringUtility::parseBoolean($defaults->getSmartTabs()) . ";";
+        $template[] = "SyntaxHighlighter.defaults['html-script'] = " . StringHelper::parseBoolean($defaults->getHtmlScript()) . ";";
+        $template[] = "SyntaxHighlighter.defaults['smart-tabs'] = " . StringHelper::parseBoolean($defaults->getSmartTabs()) . ";";
         $template[] = "SyntaxHighlighter.defaults['tab-size'] = " . $defaults->getTabSize() . ";";
-        $template[] = "SyntaxHighlighter.defaults['toolbar'] = " . StringUtility::parseBoolean($defaults->getToolbar()) . ";";
+        $template[] = "SyntaxHighlighter.defaults['toolbar'] = " . StringHelper::parseBoolean($defaults->getToolbar()) . ";";
 
         // Return the HTML.
         return implode("\n", $template);
