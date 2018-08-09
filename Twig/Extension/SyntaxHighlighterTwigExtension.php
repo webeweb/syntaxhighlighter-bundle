@@ -34,7 +34,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.syntaxhighlighterbundle.twig.extension.syntaxhighlighter";
+    const SERVICE_NAME = "webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter";
 
     /**
      * Constructor.
