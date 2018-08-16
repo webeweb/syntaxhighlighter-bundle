@@ -253,7 +253,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the highlight.
      *
-     * @param array $highlight The highlight.
+     * @param array $highlight The highlight.
      * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
      */
     public function setHighlight(array $highlight) {
