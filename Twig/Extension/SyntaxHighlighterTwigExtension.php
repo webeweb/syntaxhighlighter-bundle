@@ -17,9 +17,9 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 use WBW\Library\Core\Exception\IO\FileNotFoundException;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
-use WBW\Library\Core\Helper\Argument\StringHelper;
-use WBW\Library\Core\Helper\IO\FileHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\StringHelper;
+use WBW\Library\Core\IO\FileHelper;
 
 /**
  * SyntaxHighlighter Twig extension.
