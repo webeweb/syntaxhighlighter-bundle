@@ -182,7 +182,7 @@ class SyntaxHighlighterStrings {
      * Set the alert.
      *
      * @param string $alert The alert.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setAlert($alert) {
         $this->alert = $alert;
@@ -193,7 +193,7 @@ class SyntaxHighlighterStrings {
      * Set the brush not HTML script.
      *
      * @param string $brushNotHtmlScript The brush not HTML script.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setBrushNotHtmlScript($brushNotHtmlScript) {
         $this->brushNotHtmlScript = $brushNotHtmlScript;
@@ -204,7 +204,7 @@ class SyntaxHighlighterStrings {
      * Set the copy to clipboard.
      *
      * @param string $copyToClipboard The copy to clipboard.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setCopyToClipboard($copyToClipboard) {
         $this->copyToClipboard = $copyToClipboard;
@@ -215,7 +215,7 @@ class SyntaxHighlighterStrings {
      * Set the copy to clipboard confirmation.
      *
      * @param string $copyToClipboardConfirmation The copy to clipboard confirmation.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setCopyToClipboardConfirmation($copyToClipboardConfirmation) {
         $this->copyToClipboardConfirmation = $copyToClipboardConfirmation;
@@ -226,7 +226,7 @@ class SyntaxHighlighterStrings {
      * Set the expand source.
      *
      * @param string $expandSource The expand source.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setExpandSource($expandSource) {
         $this->expandSource = $expandSource;
@@ -237,7 +237,7 @@ class SyntaxHighlighterStrings {
      * Set the help.
      *
      * @param string $help The help.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setHelp($help) {
         $this->help = $help;
@@ -248,7 +248,7 @@ class SyntaxHighlighterStrings {
      * Set the no brush.
      *
      * @param string $noBrush The no brush.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setNoBrush($noBrush) {
         $this->noBrush = $noBrush;
@@ -259,7 +259,7 @@ class SyntaxHighlighterStrings {
      * Set the print.
      *
      * @param string $print The print.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setPrint($print) {
         $this->print = $print;
@@ -270,7 +270,7 @@ class SyntaxHighlighterStrings {
      * Set the view source.
      *
      * @param string $viewSource The view source.
-     * @return SyntaxHighlighterStrings Returns this SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns this strings.
      */
     public function setViewSource($viewSource) {
         $this->viewSource = $viewSource;

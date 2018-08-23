@@ -199,7 +199,7 @@ class SyntaxHighlighterDefaults {
      * Set the auto links.
      *
      * @param boolean $autoLinks The auto links.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setAutoLinks($autoLinks) {
         $this->autoLinks = $autoLinks;
@@ -210,7 +210,7 @@ class SyntaxHighlighterDefaults {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -221,7 +221,7 @@ class SyntaxHighlighterDefaults {
      * Set the collapse.
      *
      * @param boolean $collapse The collapse.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setCollapse($collapse) {
         $this->collapse = $collapse;
@@ -232,7 +232,7 @@ class SyntaxHighlighterDefaults {
      * Set the first line.
      *
      * @param integer $firstLine The first line.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setFirstLine($firstLine) {
         $this->firstLine = $firstLine;
@@ -243,7 +243,7 @@ class SyntaxHighlighterDefaults {
      * Set the gutter.
      *
      * @param boolean $gutter The gutter.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setGutter($gutter) {
         $this->gutter = $gutter;
@@ -254,7 +254,7 @@ class SyntaxHighlighterDefaults {
      * Set the highlight.
      *
      * @param array $highlight The highlight.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setHighlight(array $highlight) {
         $this->highlight = $highlight;
@@ -265,7 +265,7 @@ class SyntaxHighlighterDefaults {
      * Set the HTML script.
      *
      * @param boolean $htmlScript The HTML script.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setHtmlScript($htmlScript) {
         $this->htmlScript = $htmlScript;
@@ -276,7 +276,7 @@ class SyntaxHighlighterDefaults {
      * Set the smart tabs.
      *
      * @param boolean $smartTabs The smart tabs.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setSmartTabs($smartTabs) {
         $this->smartTabs = $smartTabs;
@@ -287,7 +287,7 @@ class SyntaxHighlighterDefaults {
      * Set the tab size.
      *
      * @param integer $tabSize The tab size.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setTabSize($tabSize) {
         $this->tabSize = $tabSize;
@@ -298,7 +298,7 @@ class SyntaxHighlighterDefaults {
      * Set the toolbar.
      *
      * @param boolean $toolbar The toolbar.
-     * @return SyntaxHighlighterDefaults Returns this SyntaxHighlighter defaults.
+     * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setToolbar($toolbar) {
         $this->toolbar = $toolbar;

@@ -36,7 +36,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
     /**
      * Displays a SyntaxHighlighter config.
      *
-     * @param SyntaxHighlighterConfig $config The SyntaxHighlighter configuration.
+     * @param SyntaxHighlighterConfig $config The configuration.
      * @return string Returns the SyntaxHighlighter config.
      */
     protected function syntaxHighlighterConfig(SyntaxHighlighterConfig $config) {
@@ -80,7 +80,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
     /**
      * Displays a SyntaxHighlighter defaults.
      *
-     * @param SyntaxHighlighterDefaults $defaults The SyntaxHighlighter defaults.
+     * @param SyntaxHighlighterDefaults $defaults The defaults.
      * @return string Returns the SyntaxHighlighter defaults.
      */
     protected function syntaxHighlighterDefaults(SyntaxHighlighterDefaults $defaults) {
@@ -106,7 +106,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
     /**
      * Displays a SyntaxHighlighter strings.
      *
-     * @param SyntaxHighlighterStrings $strings The SyntaxHighlighter strings.
+     * @param SyntaxHighlighterStrings $strings The strings.
      * @return string Returns the SyntaxHighlighter strings.
      */
     protected function syntaxHighlighterStrings(SyntaxHighlighterStrings $strings) {

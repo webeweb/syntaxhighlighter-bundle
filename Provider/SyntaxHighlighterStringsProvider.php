@@ -46,13 +46,13 @@ class SyntaxHighlighterStringsProvider {
     }
 
     /**
-     * Get a SyntaxHighlighter strings.
+     * Get a strings.
      *
-     * @return SyntaxHighlighterStrings Returns teh SyntaxHighlighter strings.
+     * @return SyntaxHighlighterStrings Returns the strings.
      */
     public function getSyntaxHighlighterStrings() {
 
-        // Initialize the SyntaxHighlighter strings.
+        // Initialize the strings.
         $strings = new SyntaxHighlighterStrings();
         $strings->setAlert($this->getTranslator()->trans("strings.alert", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
         $strings->setBrushNotHtmlScript($this->getTranslator()->trans("strings.brush_no_html_script", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
@@ -64,7 +64,7 @@ class SyntaxHighlighterStringsProvider {
         $strings->setPrint($this->getTranslator()->trans("strings.print", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
         $strings->setViewSource($this->getTranslator()->trans("strings.view_source", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
 
-        // Return the SyntaxHighlighter strings.
+        // Return the strings.
         return $strings;
     }
 
@@ -81,7 +81,7 @@ class SyntaxHighlighterStringsProvider {
      * Set the translator.
      *
      * @param TranslatorInterface $translator The translator.
-     * @return SyntaxHighlighterStringsProvider Returns this SyntaxHighlighter strings provider.
+     * @return SyntaxHighlighterStringsProvider Returns this strings provider.
      */
     protected function setTranslator(TranslatorInterface $translator) {
         $this->translator = $translator;
