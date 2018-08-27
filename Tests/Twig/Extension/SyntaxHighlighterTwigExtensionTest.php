@@ -94,6 +94,7 @@ final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $obj = new SyntaxHighlighterTwigExtension();
 
+        //
         $arg = new SyntaxHighlighterConfig();
         $arg->setBloggerMode(true);
         $arg->setStripBrs(true);
@@ -107,6 +108,7 @@ EOTXT;
 
         $this->assertEquals($res0, $obj->syntaxHighlighterConfigFunction($arg));
 
+        //
         $arg->setStrings(new SyntaxHighlighterStrings());
 
         $res9 = $res0 . "\n" . <<<'EOTXT'
@@ -136,6 +138,7 @@ EOTXT;
 
         $obj = new SyntaxHighlighterTwigExtension();
 
+        //
         try {
 
             $arg0 = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
@@ -147,6 +150,7 @@ EOTXT;
             $this->assertContains("syntaxhighlighter-bundle/SyntaxHighlighterBundle\" is not found", $ex->getMessage());
         }
 
+        //
         $arg1 = ["content" => "<span>span</span>", "language" => "html"];
         $res1 = <<< 'EOTXT'
 <pre class="brush: html">
@@ -156,6 +160,7 @@ EOTXT;
 
         $this->assertEquals($res1, $obj->syntaxHighlighterContentFunction($arg1));
 
+        //
         $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
         $res9 = <<< 'EOTXT'
 <pre class="brush: php">
