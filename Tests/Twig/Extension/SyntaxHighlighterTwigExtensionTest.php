@@ -137,6 +137,7 @@ EOTXT;
         $obj = new SyntaxHighlighterTwigExtension();
 
         try {
+
             $arg0 = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
 
             $obj->syntaxHighlighterContentFunction($arg0);
