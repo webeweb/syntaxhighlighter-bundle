@@ -1,7 +1,13 @@
 syntaxhighlighter-bundle
 ========================
 
-[![Build Status](https://travis-ci.org/webeweb/syntaxhighlighter-bundle.svg?branch=master)](https://travis-ci.org/webeweb/syntaxhighlighter-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/syntaxhighlighter-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/syntaxhighlighter-bundle?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/syntaxhighlighter-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/syntaxhighlighter-bundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/stable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/unstable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![License](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/license)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle) [![composer.lock](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/composerlock)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
+[![Build Status](https://travis-ci.org/webeweb/syntaxhighlighter-bundle.svg?branch=master)](https://travis-ci.org/webeweb/syntaxhighlighter-bundle)
+[![Coverage Status](https://coveralls.io/repos/github/webeweb/syntaxhighlighter-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/syntaxhighlighter-bundle?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/syntaxhighlighter-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/syntaxhighlighter-bundle/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/stable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/v/unstable)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
+[![License](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/license)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
+[![composer.lock](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/composerlock)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
 
 Integrate SyntaxHighlighter with Symfony 2.
 
@@ -13,7 +19,9 @@ Includes:
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net) [![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/) [![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
+[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
+[![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/)
+[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
 
 ---
 
