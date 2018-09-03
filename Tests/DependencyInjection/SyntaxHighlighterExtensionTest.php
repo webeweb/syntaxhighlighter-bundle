@@ -11,13 +11,13 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection;
 
-use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 
 /**
@@ -27,7 +27,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection
  * @final
  */
-final class SyntaxHighlighterExtensionTest extends PHPUnit_Framework_TestCase {
+final class SyntaxHighlighterExtensionTest extends AbstractSyntaxHighlighterFrameworkTestCase {
 
     /**
      * Container builder.

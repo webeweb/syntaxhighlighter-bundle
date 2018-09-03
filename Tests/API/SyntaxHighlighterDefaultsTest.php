@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\API;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
 
 /**
  * SyntaxHighlighter defaults test.
@@ -21,7 +21,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\API
  * @final
  */
-final class SyntaxHighlighterDefaultsTest extends PHPUnit_Framework_TestCase {
+final class SyntaxHighlighterDefaultsTest extends AbstractSyntaxHighlighterFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

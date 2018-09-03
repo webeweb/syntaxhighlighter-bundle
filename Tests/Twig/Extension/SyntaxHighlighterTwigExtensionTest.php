@@ -12,13 +12,13 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Twig\Extension;
 
 use Exception;
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 use WBW\Library\Core\Exception\IO\FileNotFoundException;
 
@@ -29,7 +29,7 @@ use WBW\Library\Core\Exception\IO\FileNotFoundException;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Twig\Extension
  * @final
  */
-final class SyntaxHighlighterTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class SyntaxHighlighterTwigExtensionTest extends AbstractSyntaxHighlighterFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.

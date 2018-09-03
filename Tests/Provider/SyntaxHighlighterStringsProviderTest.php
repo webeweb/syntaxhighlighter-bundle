@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Provider;
 
-use PHPUnit_Framework_TestCase;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
 
 /**
  * SyntaxHighlighter strings provider test.
@@ -23,7 +23,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Provider
  * @final
  */
-final class SyntaxHighlighterStringsProviderTest extends PHPUnit_Framework_TestCase {
+final class SyntaxHighlighterStringsProviderTest extends AbstractSyntaxHighlighterFrameworkTestCase {
 
     /**
      * Translator.
