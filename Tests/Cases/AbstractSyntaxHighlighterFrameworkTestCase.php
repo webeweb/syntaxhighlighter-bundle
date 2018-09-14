@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Abstract SyntaxHighlighter framework test case.
@@ -20,6 +20,6 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases
  * @abstract
  */
-abstract class AbstractSyntaxHighlighterFrameworkTestCase extends PHPUnit_Framework_TestCase {
+abstract class AbstractSyntaxHighlighterFrameworkTestCase extends TestCase {
 
 }
