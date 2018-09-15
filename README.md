@@ -11,17 +11,23 @@ syntaxhighlighter-bundle
 
 Integrate SyntaxHighlighter with Symfony 2.
 
+`syntaxhighlighter-bundle` eases the use of SyntaxHighlighter to highlight
+syntax in your Symfony application by providing Twig extensions and PHP
+objects to do the heavy lifting. The bundle include the excellent JS library
+[SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/).
+
+Dry out your DataTables code by writing it all in PHP !
+
 Includes:
 
-- [SyntaxHighlighter 3.0.83](https://github.com/syntaxhighlighter/syntaxhighlighter/)
+- [SyntaxHighlighter 3.0.83](http://alexgorbatchev.com/SyntaxHighlighter/)
 
 ---
 
 ## Compatibility
 
 [![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
-[![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/)
-[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
+[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0%7C%5E4.0-brightgreen.svg)](https://symfony.com)
 
 ---
 
