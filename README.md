@@ -9,14 +9,14 @@ syntaxhighlighter-bundle
 [![License](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/license)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
 [![composer.lock](https://poser.pugx.org/webeweb/syntaxhighlighter-bundle/composerlock)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
 
-Integrate SyntaxHighlighter with Symfony 2.
+Integrate SyntaxHighlighter with Symfony 2 and more.
 
 `syntaxhighlighter-bundle` eases the use of SyntaxHighlighter to highlight
 syntax in your Symfony application by providing Twig extensions and PHP
 objects to do the heavy lifting. The bundle include the excellent JS library
 [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/).
 
-Dry out your DataTables code by writing it all in PHP !
+Dry out your SyntaxHighlighter code by writing it all in PHP !
 
 Includes:
 
