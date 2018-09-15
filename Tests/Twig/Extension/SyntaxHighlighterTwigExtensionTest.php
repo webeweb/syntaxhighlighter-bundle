@@ -20,7 +20,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
-use WBW\Library\Core\Exception\IO\FileNotFoundException;
+use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 
 /**
  * SyntaxHighlighter Twig extension test.
@@ -139,26 +139,14 @@ EOTXT;
         $obj = new SyntaxHighlighterTwigExtension();
 
         // ===
-        try {
-
-            $arg0 = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
-
-            $obj->syntaxHighlighterContentFunction($arg0);
-        } catch (Exception $ex) {
-
-            $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertContains("syntaxhighlighter-bundle/SyntaxHighlighterBundle\" is not found", $ex->getMessage());
-        }
-
-        // ===
-        $arg1 = ["content" => "<span>span</span>", "language" => "html"];
-        $res1 = <<< 'EOTXT'
+        $arg0 = ["content" => "<span>span</span>", "language" => "html"];
+        $res0 = <<< 'EOTXT'
 <pre class="brush: html">
 &lt;span&gt;span&lt;/span&gt;
 </pre>
 EOTXT;
 
-        $this->assertEquals($res1, $obj->syntaxHighlighterContentFunction($arg1));
+        $this->assertEquals($res0, $obj->syntaxHighlighterContentFunction($arg0));
 
         // ===
         $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
@@ -192,6 +180,28 @@ class SyntaxHighlighterBundle extends Bundle {
 </pre>
 EOTXT;
         $this->assertEquals($res9, $obj->syntaxHighlighterContentFunction($arg9));
+    }
+
+    /**
+     * Tests the syntaxHighlighterContentFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testSyntaxHighlighterContentFunctionWithFileNotFoundException() {
+
+        $obj = new SyntaxHighlighterTwigExtension();
+
+        try {
+
+            $arg = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
+
+            $obj->syntaxHighlighterContentFunction($arg);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(FileNotFoundException::class, $ex);
+            $this->assertContains("syntaxhighlighter-bundle/SyntaxHighlighterBundle\" is not found", $ex->getMessage());
+        }
     }
 
     /**
