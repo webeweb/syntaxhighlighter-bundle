@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases;
+namespace WBW\Bundle\SyntaxHighlighterBundle\Tests;
 
 use PHPUnit\Framework\TestCase;
 
