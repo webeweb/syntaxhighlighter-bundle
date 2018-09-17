@@ -12,7 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\API;
 
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractSyntaxHighlighterFrameworkTestCase;
 
 /**
  * SyntaxHighlighter config test.
