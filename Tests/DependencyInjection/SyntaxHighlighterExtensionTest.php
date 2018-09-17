@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractSyntaxHighlighterFrameworkTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 
 /**
