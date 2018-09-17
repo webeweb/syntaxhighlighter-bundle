@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
  * Abstract SyntaxHighlighter framework test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases
+ * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  * @abstract
  */
 abstract class AbstractSyntaxHighlighterFrameworkTestCase extends TestCase {
