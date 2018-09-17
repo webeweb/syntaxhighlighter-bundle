@@ -18,7 +18,7 @@ use Twig_SimpleFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\Cases\AbstractSyntaxHighlighterFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractSyntaxHighlighterFrameworkTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 
