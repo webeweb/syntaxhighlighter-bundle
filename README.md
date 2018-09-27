@@ -20,7 +20,7 @@ Dry out your SyntaxHighlighter code by writing it all in PHP !
 
 Includes:
 
-- [SyntaxHighlighter 3.0.83](https://github.com/syntaxhighlighter/syntaxhighlighter)
+- [SyntaxHighlighter 3.0.83](http://alexgorbatchev.com/SyntaxHighlighter/)
 
 ---
 
