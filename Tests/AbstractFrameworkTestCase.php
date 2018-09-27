@@ -20,6 +20,6 @@ use PHPUnit\Framework\TestCase;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  * @abstract
  */
-abstract class AbstractSyntaxHighlighterFrameworkTestCase extends TestCase {
+abstract class AbstractFrameworkTestCase extends TestCase {
 
 }

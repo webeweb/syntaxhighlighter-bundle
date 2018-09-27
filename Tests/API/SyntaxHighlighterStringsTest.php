@@ -12,7 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\API;
 
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractSyntaxHighlighterFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * SyntaxHightlighter strings test.
@@ -21,7 +21,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractSyntaxHighlighterFrameworkT
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\API
  * @final
  */
-final class SyntaxHighlighterStringsTest extends AbstractSyntaxHighlighterFrameworkTestCase {
+final class SyntaxHighlighterStringsTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

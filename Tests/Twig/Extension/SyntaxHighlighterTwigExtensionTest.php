@@ -18,7 +18,7 @@ use Twig_SimpleFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractSyntaxHighlighterFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 
@@ -29,7 +29,7 @@ use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Twig\Extension
  * @final
  */
-final class SyntaxHighlighterTwigExtensionTest extends AbstractSyntaxHighlighterFrameworkTestCase {
+final class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.
