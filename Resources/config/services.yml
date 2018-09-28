@@ -8,5 +8,6 @@ services:
 
     webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter:
         class:     WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
+        public:    true
         tags:
-          - { name: "twig.extension" }
+            - { name: "twig.extension" }
