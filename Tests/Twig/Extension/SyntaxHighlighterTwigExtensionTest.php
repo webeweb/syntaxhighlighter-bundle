@@ -140,7 +140,7 @@ EOT;
 
         // ===
         $arg0 = ["content" => "<span>span</span>", "language" => "html"];
-        $res0 = <<< 'EOT'
+        $res0 = <<<'EOT'
 <pre class="brush: html">
 &lt;span&gt;span&lt;/span&gt;
 </pre>
@@ -150,7 +150,7 @@ EOT;
 
         // ===
         $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
-        $res9 = <<< 'EOT'
+        $res9 = <<<'EOT'
 <pre class="brush: php">
 &lt;?php
 
@@ -226,7 +226,7 @@ EOT;
         $arg->setTabSize(8);
         $arg->setToolbar(false);
 
-        $res = <<< 'EOT'
+        $res = <<<'EOT'
 SyntaxHighlighter.defaults['auto-links'] = false;
 SyntaxHighlighter.defaults['class-name'] = "classname";
 SyntaxHighlighter.defaults['collapse'] = true;
