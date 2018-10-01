@@ -100,18 +100,18 @@ final class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase
         $arg->setStripBrs(true);
         $arg->setTagName("blocquote");
 
-        $res0 = <<<'EOTXT'
+        $res0 = <<<'EOT'
 SyntaxHighlighter.config.bloggerMode = true;
 SyntaxHighlighter.config.stripBrs = true;
 SyntaxHighlighter.config.tagName = "blocquote";
-EOTXT;
+EOT;
 
         $this->assertEquals($res0, $obj->syntaxHighlighterConfigFunction($arg));
 
         // ===
         $arg->setStrings(new SyntaxHighlighterStrings());
 
-        $res9 = $res0 . "\n" . <<<'EOTXT'
+        $res9 = $res0 . "\n" . <<<'EOT'
 SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter
 
 ";
@@ -123,7 +123,7 @@ SyntaxHighlighter.config.strings.help = "?";
 SyntaxHighlighter.config.strings.noBrush = "Can't find brush for:";
 SyntaxHighlighter.config.strings.print = "print";
 SyntaxHighlighter.config.strings.viewSource = "view source";
-EOTXT;
+EOT;
 
         $this->assertEquals($res9, $obj->syntaxHighlighterConfigFunction($arg));
     }
@@ -140,17 +140,17 @@ EOTXT;
 
         // ===
         $arg0 = ["content" => "<span>span</span>", "language" => "html"];
-        $res0 = <<< 'EOTXT'
+        $res0 = <<< 'EOT'
 <pre class="brush: html">
 &lt;span&gt;span&lt;/span&gt;
 </pre>
-EOTXT;
+EOT;
 
         $this->assertEquals($res0, $obj->syntaxHighlighterContentFunction($arg0));
 
         // ===
         $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
-        $res9 = <<< 'EOTXT'
+        $res9 = <<< 'EOT'
 <pre class="brush: php">
 &lt;?php
 
@@ -178,7 +178,7 @@ class SyntaxHighlighterBundle extends Bundle {
 }
 
 </pre>
-EOTXT;
+EOT;
         $this->assertEquals($res9, $obj->syntaxHighlighterContentFunction($arg9));
     }
 
@@ -226,7 +226,7 @@ EOTXT;
         $arg->setTabSize(8);
         $arg->setToolbar(false);
 
-        $res = <<< 'EOTXT'
+        $res = <<< 'EOT'
 SyntaxHighlighter.defaults['auto-links'] = false;
 SyntaxHighlighter.defaults['class-name'] = "classname";
 SyntaxHighlighter.defaults['collapse'] = true;
@@ -237,7 +237,7 @@ SyntaxHighlighter.defaults['html-script'] = true;
 SyntaxHighlighter.defaults['smart-tabs'] = false;
 SyntaxHighlighter.defaults['tab-size'] = 8;
 SyntaxHighlighter.defaults['toolbar'] = false;
-EOTXT;
+EOT;
 
         $this->assertEquals($res, $obj->syntaxHighlighterDefaultsFunction($arg));
     }
@@ -279,7 +279,7 @@ EOTXT;
         $arg->setPrint("Print");
         $arg->setViewSource("View source");
 
-        $res = <<<'EOTXT'
+        $res = <<<'EOT'
 SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter bundle";
 SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for HTML-Script option :";
 SyntaxHighlighter.config.strings.copyToClipboard = "Copy to clipboard";
@@ -289,7 +289,7 @@ SyntaxHighlighter.config.strings.help = "Help";
 SyntaxHighlighter.config.strings.noBrush = "Can't find brush for :";
 SyntaxHighlighter.config.strings.print = "Print";
 SyntaxHighlighter.config.strings.viewSource = "View source";
-EOTXT;
+EOT;
 
         $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($arg));
     }
