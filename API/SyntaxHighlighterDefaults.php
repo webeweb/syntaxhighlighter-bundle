@@ -22,7 +22,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Auto links.
      *
-     * @var boolean
+     * @var bool
      */
     private $autoLinks;
 
@@ -36,21 +36,21 @@ class SyntaxHighlighterDefaults {
     /**
      * Collapse.
      *
-     * @var boolean
+     * @var bool
      */
     private $collapse;
 
     /**
      * First line.
      *
-     * @var integer
+     * @var int
      */
     private $firstLine;
 
     /**
      * Gutter.
      *
-     * @var boolean
+     * @var bool
      */
     private $gutter;
 
@@ -64,28 +64,28 @@ class SyntaxHighlighterDefaults {
     /**
      * HTML script.
      *
-     * @var boolean
+     * @var bool
      */
     private $htmlScript;
 
     /**
      * Samrt tabs.
      *
-     * @var boolean
+     * @var bool
      */
     private $smartTabs;
 
     /**
      * Tab size.
      *
-     * @var integer
+     * @var int
      */
     private $tabSize;
 
     /**
      * Toolbar.
      *
-     * @var boolean
+     * @var bool
      */
     private $toolbar;
 
@@ -108,7 +108,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the auto links.
      *
-     * @return boolean Returns the auto links.
+     * @return bool Returns the auto links.
      */
     public function getAutoLinks() {
         return $this->autoLinks;
@@ -126,7 +126,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the collapse.
      *
-     * @return boolean Returns the collapse.
+     * @return bool Returns the collapse.
      */
     public function getCollapse() {
         return $this->collapse;
@@ -135,7 +135,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the first line.
      *
-     * @return integer Returns the first line.
+     * @return int Returns the first line.
      */
     public function getFirstLine() {
         return $this->firstLine;
@@ -144,7 +144,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the gutter.
      *
-     * @return boolean Returns the gutter.
+     * @return bool Returns the gutter.
      */
     public function getGutter() {
         return $this->gutter;
@@ -162,7 +162,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the HTML script.
      *
-     * @return boolean Returns the HTML script.
+     * @return bool Returns the HTML script.
      */
     public function getHtmlScript() {
         return $this->htmlScript;
@@ -171,7 +171,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the smart tabs.
      *
-     * @return boolean Returns the smart tabs.
+     * @return bool Returns the smart tabs.
      */
     public function getSmartTabs() {
         return $this->smartTabs;
@@ -180,7 +180,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the tab size.
      *
-     * @return integer Returns the tab size.
+     * @return int Returns the tab size.
      */
     public function getTabSize() {
         return $this->tabSize;
@@ -189,7 +189,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the toolbar.
      *
-     * @return boolean Returns the toolbar.
+     * @return bool Returns the toolbar.
      */
     public function getToolbar() {
         return $this->toolbar;
@@ -198,7 +198,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the auto links.
      *
-     * @param boolean $autoLinks The auto links.
+     * @param bool $autoLinks The auto links.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setAutoLinks($autoLinks) {
@@ -220,7 +220,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the collapse.
      *
-     * @param boolean $collapse The collapse.
+     * @param bool $collapse The collapse.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setCollapse($collapse) {
@@ -231,7 +231,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the first line.
      *
-     * @param integer $firstLine The first line.
+     * @param int $firstLine The first line.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setFirstLine($firstLine) {
@@ -242,7 +242,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the gutter.
      *
-     * @param boolean $gutter The gutter.
+     * @param bool $gutter The gutter.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setGutter($gutter) {
@@ -264,7 +264,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the HTML script.
      *
-     * @param boolean $htmlScript The HTML script.
+     * @param bool $htmlScript The HTML script.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setHtmlScript($htmlScript) {
@@ -275,7 +275,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the smart tabs.
      *
-     * @param boolean $smartTabs The smart tabs.
+     * @param bool $smartTabs The smart tabs.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setSmartTabs($smartTabs) {
@@ -286,7 +286,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the tab size.
      *
-     * @param integer $tabSize The tab size.
+     * @param int $tabSize The tab size.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setTabSize($tabSize) {
@@ -297,7 +297,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Set the toolbar.
      *
-     * @param boolean $toolbar The toolbar.
+     * @param bool $toolbar The toolbar.
      * @return SyntaxHighlighterDefaults Returns this defaults.
      */
     public function setToolbar($toolbar) {

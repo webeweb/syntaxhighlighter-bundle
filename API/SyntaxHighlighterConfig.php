@@ -22,7 +22,7 @@ class SyntaxHighlighterConfig {
     /**
      * Blogger mode.
      *
-     * @var boolean
+     * @var bool
      */
     private $bloggerMode;
 
@@ -36,7 +36,7 @@ class SyntaxHighlighterConfig {
     /**
      * Strip BRs.
      *
-     * @var boolean
+     * @var bool
      */
     private $stripBrs;
 
@@ -59,7 +59,7 @@ class SyntaxHighlighterConfig {
     /**
      * Get the blogger mode.
      *
-     * @return boolean Returns the blogger mode.
+     * @return bool Returns the blogger mode.
      */
     public function getBloggerMode() {
         return $this->bloggerMode;
@@ -77,7 +77,7 @@ class SyntaxHighlighterConfig {
     /**
      * Get the strip BRs.
      *
-     * @return boolean Returns the strip BRs.
+     * @return bool Returns the strip BRs.
      */
     public function getStripBrs() {
         return $this->stripBrs;
@@ -95,7 +95,7 @@ class SyntaxHighlighterConfig {
     /**
      * Set the blogger mode.
      *
-     * @param boolean $bloggerMode The blogger mode.
+     * @param bool $bloggerMode The blogger mode.
      * @return SyntaxHighlighterConfig Returns this config.
      */
     public function setBloggerMode($bloggerMode) {
@@ -117,7 +117,7 @@ class SyntaxHighlighterConfig {
     /**
      * Set the strip BRs.
      *
-     * @param boolean $stripBrs The strip BRs.
+     * @param bool $stripBrs The strip BRs.
      * @return SyntaxHighlighterConfig Returns this config.
      */
     public function setStripBrs($stripBrs) {
