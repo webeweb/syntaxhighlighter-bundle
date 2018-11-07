@@ -27,9 +27,8 @@ use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Twig\Extension
- * @final
  */
-final class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.
