@@ -25,9 +25,8 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection
- * @final
  */
-final class SyntaxHighlighterExtensionTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Container builder.
