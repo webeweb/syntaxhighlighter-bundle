@@ -19,9 +19,8 @@ use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\API
- * @final
  */
-final class SyntaxHighlighterDefaultsTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterDefaultsTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
