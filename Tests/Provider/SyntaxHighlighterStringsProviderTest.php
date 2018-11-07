@@ -21,9 +21,8 @@ use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Provider
- * @final
  */
-final class SyntaxHighlighterStringsProviderTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterStringsProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Translator.
