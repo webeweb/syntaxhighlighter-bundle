@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the syntaxhighligter-bundle package.
+ * This file is part of the syntaxhighlighter-bundle package.
  *
  * (c) 2018 WEBEWEB
  *
