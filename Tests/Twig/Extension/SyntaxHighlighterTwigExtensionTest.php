@@ -31,6 +31,16 @@ use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstrut() {
+
+        $this->assertEquals("webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
+    }
+
+    /**
      * Tests the getFilters() method.
      *
      * @return void
