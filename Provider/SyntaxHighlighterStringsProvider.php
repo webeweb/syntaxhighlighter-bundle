@@ -12,6 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Provider;
 
 use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 
 /**
@@ -20,14 +21,14 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Provider
  */
-class SyntaxHighlighterStringsProvider {
+class SyntaxHighlighterStringsProvider implements ProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.syntaxhighlighter.provider.syntaxhighlighterstrings";
+    const SERVICE_NAME = "webeweb.syntaxhighlighter.provider.syntaxhighlighter_strings";
 
     /**
      * Translator.

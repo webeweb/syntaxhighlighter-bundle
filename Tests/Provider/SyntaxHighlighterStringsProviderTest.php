@@ -44,6 +44,16 @@ class SyntaxHighlighterStringsProviderTest extends AbstractFrameworkTestCase {
     }
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("webeweb.syntaxhighlighter.provider.syntaxhighlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
+    }
+
+    /**
      * Tests the getSyntaxHighlighterStrings() method.
      *
      * @return void

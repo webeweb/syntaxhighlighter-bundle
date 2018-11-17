@@ -1,7 +1,7 @@
 # Resources/config/services.yml
 services:
 
-    webeweb.syntaxhighlighter.provider.syntaxhighlighterstrings:
+    webeweb.syntaxhighlighter.provider.syntaxhighlighter_strings:
         class:     WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
         arguments: ["@translator"]
         public:    true
