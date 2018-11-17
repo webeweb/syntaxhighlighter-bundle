@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add Core bundle dependency
 - Add CHANGELOG.md
 - Remove keyword "final" into unit tests
 - Update Travis-CI configuration
