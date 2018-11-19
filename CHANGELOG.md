@@ -3,6 +3,7 @@ CHANGELOG
 
 ### 2.0.0 (2018-11-19)
 
+- Move public resources
 - Add Core bundle dependency
 - Add CHANGELOG.md
 - Remove keyword "final" into unit tests

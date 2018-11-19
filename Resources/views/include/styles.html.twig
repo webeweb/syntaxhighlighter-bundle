@@ -1,5 +1,5 @@
 {# Resources/views/include/styles.html.twig #}
 {% set themes = ["default", "django", "eclipse", "emacs", "fadetogrey", "mdultra", "midnight", "rdark"] %}
 {% set path = theme|default("") in themes ? theme : "default" %}
-{% include "@SyntaxHighlighter/include/style/syntaxhighlighter.html.twig" %}
-{% include "@SyntaxHighlighter/include/style/syntaxhighlighter-theme-" ~ path ~ ".html.twig" %}
+{% include "@SyntaxHighlighter/include/stylesheet/syntaxhighlighter.html.twig" %}
+{% include "@SyntaxHighlighter/include/stylesheet/syntaxhighlighter-theme-" ~ path ~ ".html.twig" %}
