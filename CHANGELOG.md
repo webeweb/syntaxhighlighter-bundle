@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### 2.0.0 (2018-11-19)
 
 - Add Core bundle dependency
 - Add CHANGELOG.md
