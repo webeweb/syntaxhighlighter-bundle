@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### 2.0.1 (2018-11-19)
+
+- Add Assets provider support
+- Add Symfony 4.2 support
+- Remove Symfony 2.6 support
+
 ### 2.0.0 (2018-11-19)
 
 - Move public resources
