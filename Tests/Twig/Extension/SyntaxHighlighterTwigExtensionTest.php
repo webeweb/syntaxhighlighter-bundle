@@ -31,6 +31,43 @@ use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
+     * SyntaxHighlighter config.
+     *
+     * @var SyntaxHighlighterConfig
+     */
+    private $syntaxHighlighterConfig;
+
+    /**
+     * SyntaxHighlighter defaults.
+     *
+     * @var SyntaxHighlighterDefaults
+     */
+    private $syntaxHighlighterDefaults;
+
+    /**
+     * SyntaxHighlighter strings.
+     *
+     * @var SyntaxHighlighterStrings
+     */
+    private $syntaxHighlighterStrings;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a SyntaxHighlighter config mock.
+        $this->syntaxHighlighterConfig = new SyntaxHighlighterConfig();
+
+        // Set a SyntaxHighlighter defauls mock.
+        $this->syntaxHighlighterDefaults = new SyntaxHighlighterDefaults();
+
+        // Set a SyntaxHighlighter strings mock.
+        $this->syntaxHighlighterStrings = new SyntaxHighlighterStrings();
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -47,10 +84,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFilters() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
@@ -66,10 +102,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(4, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -101,26 +136,42 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testSyntaxHighlighterConfigFunction() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        // Set the SYntaxHighlighter config mock.
+        $this->syntaxHighlighterConfig->setBloggerMode(true);
+        $this->syntaxHighlighterConfig->setStripBrs(true);
+        $this->syntaxHighlighterConfig->setTagName("blocquote");
 
-        // ===
-        $arg = new SyntaxHighlighterConfig();
-        $arg->setBloggerMode(true);
-        $arg->setStripBrs(true);
-        $arg->setTagName("blocquote");
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res0 = <<<'EOT'
+        $res = <<< EOT
 SyntaxHighlighter.config.bloggerMode = true;
 SyntaxHighlighter.config.stripBrs = true;
 SyntaxHighlighter.config.tagName = "blocquote";
 EOT;
+        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig));
+    }
 
-        $this->assertEquals($res0, $obj->syntaxHighlighterConfigFunction($arg));
+    /**
+     * Tests the syntaxHighlighterConfigFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testSyntaxHighlighterConfigFunctionWithStrings() {
 
-        // ===
-        $arg->setStrings(new SyntaxHighlighterStrings());
+        // Set the SYntaxHighlighter config mock.
+        $this->syntaxHighlighterConfig->setBloggerMode(true);
+        $this->syntaxHighlighterConfig->setStripBrs(true);
+        $this->syntaxHighlighterConfig->setTagName("blocquote");
 
-        $res9 = $res0 . "\n" . <<<'EOT'
+        $this->syntaxHighlighterConfig->setStrings($this->syntaxHighlighterStrings);
+
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
+
+        $res = <<< EOT
+SyntaxHighlighter.config.bloggerMode = true;
+SyntaxHighlighter.config.stripBrs = true;
+SyntaxHighlighter.config.tagName = "blocquote";
 SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter
 
 ";
@@ -133,8 +184,7 @@ SyntaxHighlighter.config.strings.noBrush = "Can't find brush for:";
 SyntaxHighlighter.config.strings.print = "print";
 SyntaxHighlighter.config.strings.viewSource = "view source";
 EOT;
-
-        $this->assertEquals($res9, $obj->syntaxHighlighterConfigFunction($arg));
+        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig));
     }
 
     /**
@@ -145,21 +195,29 @@ EOT;
      */
     public function testSyntaxHighlighterContentFunction() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        // ===
-        $arg0 = ["content" => "<span>span</span>", "language" => "html"];
-        $res0 = <<<'EOT'
+        $arg = ["content" => "<span>span</span>", "language" => "html"];
+        $res = <<< EOT
 <pre class="brush: html">
 &lt;span&gt;span&lt;/span&gt;
 </pre>
 EOT;
+        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg));
+    }
 
-        $this->assertEquals($res0, $obj->syntaxHighlighterContentFunction($arg0));
+    /**
+     * Tests the syntaxHighlighterContentFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testSyntaxHighlighterContentFunctionWithFilename() {
 
-        // ===
-        $arg9 = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
-        $res9 = <<<'EOT'
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
+
+        $arg = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
+        $res = <<< EOT
 <pre class="brush: php">
 &lt;?php
 
@@ -196,7 +254,7 @@ class SyntaxHighlighterBundle extends Bundle implements AssetsProviderInterface 
 
 </pre>
 EOT;
-        $this->assertEquals($res9, $obj->syntaxHighlighterContentFunction($arg9));
+        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg));
     }
 
     /**
@@ -207,11 +265,11 @@ EOT;
      */
     public function testSyntaxHighlighterContentFunctionWithFileNotFoundException() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
+
+        $arg = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
 
         try {
-
-            $arg = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
 
             $obj->syntaxHighlighterContentFunction($arg);
         } catch (Exception $ex) {
@@ -229,19 +287,19 @@ EOT;
      */
     public function testSyntaxHighlighterDefaultsFunction() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        // Set the SyntaxHighlighter defaults mock.
+        $this->syntaxHighlighterDefaults->setAutoLinks(false);
+        $this->syntaxHighlighterDefaults->setClassName("classname");
+        $this->syntaxHighlighterDefaults->setCollapse(true);
+        $this->syntaxHighlighterDefaults->setFirstLine(0);
+        $this->syntaxHighlighterDefaults->setGutter(false);
+        $this->syntaxHighlighterDefaults->setHighlight([1, 2, 3]);
+        $this->syntaxHighlighterDefaults->setHtmlScript(true);
+        $this->syntaxHighlighterDefaults->setSmartTabs(false);
+        $this->syntaxHighlighterDefaults->setTabSize(8);
+        $this->syntaxHighlighterDefaults->setToolbar(false);
 
-        $arg = new SyntaxHighlighterDefaults();
-        $arg->setAutoLinks(false);
-        $arg->setClassName("classname");
-        $arg->setCollapse(true);
-        $arg->setFirstLine(0);
-        $arg->setGutter(false);
-        $arg->setHighlight([1, 2, 3]);
-        $arg->setHtmlScript(true);
-        $arg->setSmartTabs(false);
-        $arg->setTabSize(8);
-        $arg->setToolbar(false);
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = <<<'EOT'
 SyntaxHighlighter.defaults['auto-links'] = false;
@@ -255,8 +313,7 @@ SyntaxHighlighter.defaults['smart-tabs'] = false;
 SyntaxHighlighter.defaults['tab-size'] = 8;
 SyntaxHighlighter.defaults['toolbar'] = false;
 EOT;
-
-        $this->assertEquals($res, $obj->syntaxHighlighterDefaultsFunction($arg));
+        $this->assertEquals($res, $obj->syntaxHighlighterDefaultsFunction($this->syntaxHighlighterDefaults));
     }
 
     /**
@@ -267,10 +324,9 @@ EOT;
      */
     public function testSyntaxHighlighterScriptFilter() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = "<script type=\"text/javascript\">\ncontent\n</script>";
-
         $this->assertEquals($res, $obj->syntaxHighlighterScriptFilter("content"));
     }
 
@@ -282,21 +338,20 @@ EOT;
      */
     public function testSyntaxHighlighterStringsFunction() {
 
-        $obj = new SyntaxHighlighterTwigExtension();
+        // Set the SyntaxHighlighter strings mock.
+        $this->syntaxHighlighterStrings->setAlert("SyntaxHighlighter bundle");
+        $this->syntaxHighlighterStrings->setBrushNotHtmlScript("Brush wasn't made for HTML-Script option :");
+        $this->syntaxHighlighterStrings->setCopyToClipboard("Copy to clipboard");
+        $this->syntaxHighlighterStrings->setCopyToClipboardConfirmation("Operation success");
+        $this->syntaxHighlighterStrings->setExpandSource("Expand source");
+        $this->syntaxHighlighterStrings->setHelp("Help");
+        $this->syntaxHighlighterStrings->setNoBrush("Can't find brush for :");
+        $this->syntaxHighlighterStrings->setPrint("Print");
+        $this->syntaxHighlighterStrings->setViewSource("View source");
 
-        $arg = new SyntaxHighlighterStrings();
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $arg->setAlert("SyntaxHighlighter bundle");
-        $arg->setBrushNotHtmlScript("Brush wasn't made for HTML-Script option :");
-        $arg->setCopyToClipboard("Copy to clipboard");
-        $arg->setCopyToClipboardConfirmation("Operation success");
-        $arg->setExpandSource("Expand source");
-        $arg->setHelp("Help");
-        $arg->setNoBrush("Can't find brush for :");
-        $arg->setPrint("Print");
-        $arg->setViewSource("View source");
-
-        $res = <<<'EOT'
+        $res = <<< EOT
 SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter bundle";
 SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for HTML-Script option :";
 SyntaxHighlighter.config.strings.copyToClipboard = "Copy to clipboard";
@@ -307,8 +362,7 @@ SyntaxHighlighter.config.strings.noBrush = "Can't find brush for :";
 SyntaxHighlighter.config.strings.print = "Print";
 SyntaxHighlighter.config.strings.viewSource = "View source";
 EOT;
-
-        $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($arg));
+        $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings));
     }
 
 }
