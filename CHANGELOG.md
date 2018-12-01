@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 2.0.1 (2018-11-19)
+### 2.0.1 (2018-12-01)
 
 - Add Assets provider support
 - Add Symfony 4.2 support
