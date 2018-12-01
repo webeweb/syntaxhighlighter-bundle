@@ -64,6 +64,7 @@ in the `app/AppKernel.php` file of your project:
 Once the bundle is added then do:
 
 ```bash
+$ php bin/console wbw:core:unzip-assets
 $ php bin/console assets:install
 ```
 
@@ -102,9 +103,9 @@ $ php bin/console assets:install
 ```html
 {# src/AppBundle/Resources/views/Default/index.html.twig #}
 
-{% block stylesheet %}
+{% block stylesheets %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/include/styles.html.twig" with {"theme": "eclipse"} %}
+    {% include "@SyntaxHighlighter/include/stylesheets.html.twig" with {"theme": "eclipse"} %}
 {% endblock %}
 
 {% block content %}
@@ -112,9 +113,9 @@ $ php bin/console assets:install
     {# syntaxHighlighterContent({"tag": "pre", "filename": "/path/to/file.html", "language": "html"}) #}
 {% endblock %}
 
-{% block javascript %}
+{% block javascripts %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
+    {% include "@SyntaxHighlighter/include/javascripts.html.twig" %}
     {{ syntaxHighlighterConfig(syntaxHighlighterConfig)|syntaxHighlighterScript() }}
     {{ syntaxHighlighterDefaults(syntaxHighlighterDefaults)|syntaxHighlighterScript() }}
 <script type="text/javascript">
@@ -134,7 +135,7 @@ stable version of this package:
 ```bash
 $ mkdir syntaxhighlighter-bundle
 $ cd syntaxhighlighter-bundle
-$ git clone git@github.com:webeweb/syntaxhighlighter-bundle.git .
+$ git clone https://github.com/webeweb/syntaxhighlighter-bundle.git .
 $ composer install
 ```
 
