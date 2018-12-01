@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension;
 
-use Twig_Extension;
+use Twig_Environment;
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
@@ -24,13 +25,15 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension
  * @abstract
  */
-abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
+abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        // NOTHING TO DO.
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -64,9 +67,6 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
      */
     protected function syntaxHighlighterContent($tag, $language, $content) {
 
-        // Initialize the template.
-        $template = "<%tag% %attributes%>\n%innerHTML%\n</%tag%>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -74,7 +74,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends Twig_Extension {
         $attributes["class"][] = $language;
 
         // Return the HTML.
-        return StringHelper::replace($template, ["%tag%", "%attributes%", "%innerHTML%"], [$tag, StringHelper::parseArray($attributes), htmlentities($content)]);
+        return static::coreHTMLElement($tag, implode("", ["\n", htmlentities($content), "\n"]), $attributes);
     }
 
     /**

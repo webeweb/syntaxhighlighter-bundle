@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension;
 
+use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
@@ -38,9 +39,11 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**

@@ -7,7 +7,8 @@ services:
         public:    true
 
     webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter:
-        class:  WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
-        public: true
+        class:     WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
+        arguments: ["@twig"]
+        public:    true
         tags:
             - { name: "twig.extension" }
