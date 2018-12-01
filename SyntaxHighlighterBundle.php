@@ -12,6 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * SyntaxHighlighter bundle.
@@ -19,6 +20,13 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle
  */
-class SyntaxHighlighterBundle extends Bundle {
+class SyntaxHighlighterBundle extends Bundle implements AssetsProviderInterface {
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssetsRelativeDirectory() {
+        return "/Resources/assets";
+    }
 
 }
