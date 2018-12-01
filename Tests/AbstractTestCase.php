@@ -14,12 +14,12 @@ namespace WBW\Bundle\SyntaxHighlighterBundle\Tests;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as TestCase;
 
 /**
- * Abstract SyntaxHighlighter framework test case.
+ * Abstract test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  * @abstract
  */
-abstract class AbstractFrameworkTestCase extends TestCase {
+abstract class AbstractTestCase extends TestCase {
 
 }

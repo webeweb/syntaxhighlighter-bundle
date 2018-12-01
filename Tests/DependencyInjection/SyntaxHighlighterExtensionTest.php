@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 
 /**
@@ -26,7 +26,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection
  */
-class SyntaxHighlighterExtensionTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the load() method.

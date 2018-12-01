@@ -12,7 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\API;
 
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
 
 /**
  * SyntaxHighlighter defaults test.
@@ -20,7 +20,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\API
  */
-class SyntaxHighlighterDefaultsTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterDefaultsTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

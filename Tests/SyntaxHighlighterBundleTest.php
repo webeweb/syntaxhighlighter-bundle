@@ -19,7 +19,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  */
-class SyntaxHighlighterBundleTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterBundleTest extends AbstractTestCase {
 
     /**
      * Tests the getAssetsRelativeDirectory() method.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Helper;
 
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
 
 /**
  * Assets helper test
@@ -20,7 +20,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Helper
  */
-class AssetsHelperTest extends AbstractFrameworkTestCase {
+class AssetsHelperTest extends AbstractTestCase {
 
     /**
      * Directory "assets".

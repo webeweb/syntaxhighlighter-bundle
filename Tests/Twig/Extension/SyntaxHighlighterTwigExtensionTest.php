@@ -18,7 +18,7 @@ use Twig_SimpleFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
-use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
 use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 
@@ -28,7 +28,7 @@ use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\Twig\Extension
  */
-class SyntaxHighlighterTwigExtensionTest extends AbstractFrameworkTestCase {
+class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
     /**
      * SyntaxHighlighter config.
