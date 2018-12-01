@@ -13,6 +13,7 @@ namespace WBW\Bundle\SyntaxHighlighterBundle\Provider;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
+use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 
 /**
@@ -23,19 +24,14 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
  */
 class SyntaxHighlighterStringsProvider implements ProviderInterface {
 
+    use TranslatorTrait;
+
     /**
      * Service name.
      *
      * @var string
      */
     const SERVICE_NAME = "webeweb.syntaxhighlighter.provider.syntaxhighlighter_strings";
-
-    /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    private $translator;
 
     /**
      * Constructor.
@@ -67,26 +63,6 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
 
         // Return the strings.
         return $strings;
-    }
-
-    /**
-     * Get the translator.
-     *
-     * @return TranslatorInterface Returns the translator.
-     */
-    public function getTranslator() {
-        return $this->translator;
-    }
-
-    /**
-     * Set the translator.
-     *
-     * @param TranslatorInterface $translator The translator.
-     * @return SyntaxHighlighterStringsProvider Returns this strings provider.
-     */
-    protected function setTranslator(TranslatorInterface $translator) {
-        $this->translator = $translator;
-        return $this;
     }
 
 }
