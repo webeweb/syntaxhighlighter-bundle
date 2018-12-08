@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 2.1.1 (2018-12-08)
+### 2.2.0 (2018-12-08)
 
 - Add layout functional tests
 - Move layout templates
