@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### 2.1.1 (2018-12-08)
+
+- Add layout functional tests
+- Move layout templates
+
 ### 2.1.0 (2018-12-03)
 
 - Add Assets provider support
