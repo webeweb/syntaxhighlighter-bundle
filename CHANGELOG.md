@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### 2.3.0 (2018-12-18)
+
+- Refactoring layout templates
+- Add SyntaxHighlighter version constant
+
 ### 2.2.0 (2018-12-08)
 
 - Add layout functional tests
