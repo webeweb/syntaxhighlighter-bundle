@@ -22,6 +22,16 @@ use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle;
 class SyntaxHighlighterBundleTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("3.0.83", SyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION);
+    }
+
+    /**
      * Tests the getAssetsRelativeDirectory() method.
      *
      * @return void

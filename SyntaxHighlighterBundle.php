@@ -23,6 +23,13 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class SyntaxHighlighterBundle extends Bundle implements AssetsProviderInterface {
 
     /**
+     * SyntaxHighlighter version.
+     *
+     * @var string
+     */
+    const SYNTAXHIGHLIGHTER_VERSION = "3.0.83";
+
+    /**
      * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory() {
