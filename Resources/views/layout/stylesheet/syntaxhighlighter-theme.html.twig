@@ -1,0 +1,6 @@
+{# Resources/views/layout/javascript/syntaxhighlighter-brush.html.twig #}
+{% set _version = constant("WBW\\Bundle\\SyntaxHighlighterBundle\\SyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION") %}
+{% set _themes = ["Default", "Django", "Eclipse", "Emacs", "FadeToGrey", "MDUltra", "Midnight", "RDark"] %}
+{% set _theme = shTheme|default("") in _themes ? shTheme : "Default" %}
+<!-- SyntaxHighlighter {{ _theme }} theme -->
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/styles/shTheme" ~ _theme ~ ".css") }}">

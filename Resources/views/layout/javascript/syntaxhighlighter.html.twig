@@ -1,6 +1,7 @@
 {# Resources/views/layout/javascript/syntaxhighlighter.html.twig #}
+{% set _version = constant("WBW\\Bundle\\SyntaxHighlighterBundle\\SyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION") %}
 <!-- SyntaxHighlighter -->
-<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/XRegExp.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shCore.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shAutoloader.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-3.0.83/scripts/shLegacy.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/XRegExp.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shCore.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shAutoloader.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shLegacy.js") }}"></script>
