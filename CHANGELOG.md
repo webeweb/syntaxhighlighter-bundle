@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### 2.3.0 (2018-12-18)
 
 - Refactoring layout templates
