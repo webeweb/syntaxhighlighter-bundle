@@ -67,14 +67,18 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $this->syntaxHighlighterStrings = new SyntaxHighlighterStrings();
     }
 
+
     /**
      * Tests the __construct() method.
      *
      * @return void
      */
-    public function testConstrut() {
+    public function testConstruct() {
+
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $this->assertEquals("webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
     /**
