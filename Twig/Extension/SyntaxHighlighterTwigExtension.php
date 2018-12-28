@@ -72,6 +72,16 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     }
 
     /**
+     * Displays a SyntaxHighlighter config.
+     *
+     * @param SyntaxHighlighterConfig $config The SyntaxHighlighter config.
+     * @return string Returns the SyntaxHighlighter config.
+     */
+    public function syntaxHighlighterConfigFunction(SyntaxHighlighterConfig $config) {
+        return $this->syntaxHighlighterConfig($config);
+    }
+
+    /**
      * Displays a SyntaxHighlighter content.
      *
      * @param array $args The arguments.
@@ -95,16 +105,6 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
 
         // Return the HTML.
         return $this->syntaxHighlighterContent($tag, $language, $content);
-    }
-
-    /**
-     * Displays a SyntaxHighlighter config.
-     *
-     * @param SyntaxHighlighterConfig $config The SyntaxHighlighter config.
-     * @return string Returns the SyntaxHighlighter config.
-     */
-    public function syntaxHighlighterConfigFunction(SyntaxHighlighterConfig $config) {
-        return $this->syntaxHighlighterConfig($config);
     }
 
     /**
