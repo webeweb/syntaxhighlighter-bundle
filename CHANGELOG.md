@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### 2.3.1 (2018-12-28)
 
 - Code style
