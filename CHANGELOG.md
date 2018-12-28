@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### 2.3.1 (2018-12-28)
 
 - Code style
 - Update PHPDoc
