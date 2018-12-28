@@ -67,7 +67,6 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $this->syntaxHighlighterStrings = new SyntaxHighlighterStrings();
     }
 
-
     /**
      * Tests the __construct() method.
      *
@@ -136,11 +135,10 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      * Tests the syntaxHighlighterConfigFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testSyntaxHighlighterConfigFunction() {
 
-        // Set the SYntaxHighlighter config mock.
+        // Set the SyntaxHighlighter config mock.
         $this->syntaxHighlighterConfig->setBloggerMode(true);
         $this->syntaxHighlighterConfig->setStripBrs(true);
         $this->syntaxHighlighterConfig->setTagName("blocquote");
@@ -159,11 +157,10 @@ EOT;
      * Tests the syntaxHighlighterConfigFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testSyntaxHighlighterConfigFunctionWithStrings() {
 
-        // Set the SYntaxHighlighter config mock.
+        // Set the SyntaxHighlighter config mock.
         $this->syntaxHighlighterConfig->setBloggerMode(true);
         $this->syntaxHighlighterConfig->setStripBrs(true);
         $this->syntaxHighlighterConfig->setTagName("blocquote");
@@ -195,7 +192,6 @@ EOT;
      * Tests the syntaxHighlighterContentFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testSyntaxHighlighterContentFunction() {
 
@@ -214,13 +210,40 @@ EOT;
      * Tests the syntaxHighlighterContentFunction() method.
      *
      * @return void
+     */
+    public function testSyntaxHighlighterContentFunctionWithFileNotFoundException() {
+
+        // Set a Filename mock.
+        $filename = getcwd() . "/Tests/Twig/Extension/SyntaxHighlighterTwigExtensionTest";
+
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
+
+        $arg = ["filename" => $filename];
+
+        try {
+
+            $obj->syntaxHighlighterContentFunction($arg);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(FileNotFoundException::class, $ex);
+            $this->assertContains("syntaxhighlighter-bundle/Tests/Twig/Extension/SyntaxHighlighterTwigExtensionTest\" is not found", $ex->getMessage());
+        }
+    }
+
+    /**
+     * Tests the syntaxHighlighterContentFunction() method.
+     *
+     * @return void
      * @depends testGetFunctions
      */
     public function testSyntaxHighlighterContentFunctionWithFilename() {
 
+        // Set a Filename mock.
+        $filename = getcwd() . "/Tests/Twig/Extension/SyntaxHighlighterTwigExtensionTest.txt";
+
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $arg = ["filename" => getcwd() . "/SyntaxHighlighterBundle.php", "language" => "php"];
+        $arg = ["filename" => $filename, "language" => "php"];
         $res = <<< EOT
 <pre class="brush: php">
 &lt;?php
@@ -237,7 +260,6 @@ EOT;
 namespace WBW\Bundle\SyntaxHighlighterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * SyntaxHighlighter bundle.
@@ -245,49 +267,13 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * @author webeweb &lt;https://github.com/webeweb/&gt;
  * @package WBW\Bundle\SyntaxHighlighterBundle
  */
-class SyntaxHighlighterBundle extends Bundle implements AssetsProviderInterface {
-
-    /**
-     * SyntaxHighlighter version.
-     *
-     * @var string
-     */
-    const SYNTAXHIGHLIGHTER_VERSION = &quot;3.0.83&quot;;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getAssetsRelativeDirectory() {
-        return &quot;/Resources/assets&quot;;
-    }
+class SyntaxHighlighterBundle extends Bundle {
 
 }
 
 </pre>
 EOT;
         $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg));
-    }
-
-    /**
-     * Tests the syntaxHighlighterContentFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testSyntaxHighlighterContentFunctionWithFileNotFoundException() {
-
-        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
-
-        $arg = ["filename" => getcwd() . "/SyntaxHighlighterBundle"];
-
-        try {
-
-            $obj->syntaxHighlighterContentFunction($arg);
-        } catch (Exception $ex) {
-
-            $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertContains("syntaxhighlighter-bundle/SyntaxHighlighterBundle\" is not found", $ex->getMessage());
-        }
     }
 
     /**
