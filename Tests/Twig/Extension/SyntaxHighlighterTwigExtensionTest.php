@@ -234,7 +234,6 @@ EOT;
      * Tests the syntaxHighlighterContentFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testSyntaxHighlighterContentFunctionWithFilename() {
 
@@ -280,7 +279,6 @@ EOT;
      * Tests the syntaxHighlighterDefaultsFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testSyntaxHighlighterDefaultsFunction() {
 
@@ -317,7 +315,6 @@ EOT;
      * Tests the syntaxHighlighterScriptFilter() method.
      *
      * @return void
-     * @depends testGetFilters
      */
     public function testSyntaxHighlighterScriptFilter() {
 
@@ -331,7 +328,6 @@ EOT;
      * Tests the syntaxHighlighterStringsFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testSyntaxHighlighterStringsFunction() {
 
