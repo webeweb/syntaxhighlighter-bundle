@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * SyntaxHiglighter extension.
+ * SyntaxHighlighter extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection
