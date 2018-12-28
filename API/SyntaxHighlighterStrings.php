@@ -12,7 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\API;
 
 /**
- * SyntaxHightlighter strings.
+ * SyntaxHighlighter strings.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\API
