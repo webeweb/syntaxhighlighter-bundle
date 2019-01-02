@@ -8,13 +8,13 @@ CHANGELOG
 ### 2.3.1 (2018-12-28)
 
 - Code style
-- Update PHPDoc
 - Improve unit tests
+- Update PHPDoc
 
 ### 2.3.0 (2018-12-18)
 
-- Refactoring layout templates
 - Add SyntaxHighlighter version constant
+- Refactoring layout templates
 
 ### 2.2.0 (2018-12-08)
 
@@ -29,9 +29,9 @@ CHANGELOG
 
 ### 2.0.0 (2018-11-19)
 
-- Move public resources
 - Add Core bundle dependency
 - Add CHANGELOG.md
+- Move public resources
 - Remove keyword "final" into unit tests
 - Update Travis-CI configuration
 
@@ -46,14 +46,14 @@ CHANGELOG
 ### 1.0.8 (2018-09-28)
 
 - Improve coding style
-- Update PHPDoc
 - Improve unit tests
+- Update PHPDoc
 
 ### 1.0.7 (2018-09-15)
 
 - Add compatibility with Symfony 4.x
-- Update dependencies (core-library 5.0.0)
 - Improve unit tests
+- Update dependencies (core-library 5.0.0)
 
 ### 1.0.6 (2018-08-22)
 
@@ -80,8 +80,8 @@ CHANGELOG
 ### 1.0.1 (2018-07-12)
 
 - Fix ScrutinizerCI issues
-- Update dependencies
 - Remove keyword "bundle" into service constants
+- Update dependencies
 
 ### 1.0.0 (2018-06-23)
 
