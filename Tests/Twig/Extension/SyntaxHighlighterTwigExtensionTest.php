@@ -108,7 +108,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(4, $res);
+        $this->assertCount(8, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("syntaxHighlighterConfig", $res[0]->getName());
@@ -129,6 +129,26 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("syntaxHighlighterStrings", $res[3]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("shConfig", $res[4]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterConfigFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertEquals("shContent", $res[5]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[5]->getCallable());
+        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertEquals("shDefaults", $res[6]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[6]->getCallable());
+        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertEquals("shStrings", $res[7]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[7]->getCallable());
+        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
     }
 
     /**

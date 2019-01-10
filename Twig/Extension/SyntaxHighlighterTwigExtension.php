@@ -68,6 +68,10 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
             new Twig_SimpleFunction("syntaxHighlighterContent", [$this, "syntaxHighlighterContentFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("syntaxHighlighterDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("syntaxHighlighterStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("shConfig", [$this, "syntaxHighlighterConfigFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("shContent", [$this, "syntaxHighlighterContentFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("shDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("shStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
