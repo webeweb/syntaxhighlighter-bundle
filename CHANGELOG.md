@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### 2.4.0 (2019-01-10)
 
+- Add SyntaxHighlighter Twig extension aliases
 - Improve unit tests
 
 ### 2.3.1 (2018-12-28)
