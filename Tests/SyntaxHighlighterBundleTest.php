@@ -42,5 +42,4 @@ class SyntaxHighlighterBundleTest extends AbstractTestCase {
 
         $this->assertEquals("/Resources/assets", $obj->getAssetsRelativeDirectory());
     }
-
 }

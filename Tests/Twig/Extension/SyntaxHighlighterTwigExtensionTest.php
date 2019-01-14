@@ -377,5 +377,4 @@ SyntaxHighlighter.config.strings.viewSource = "View source";
 EOT;
         $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings));
     }
-
 }

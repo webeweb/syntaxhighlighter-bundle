@@ -135,5 +135,4 @@ class SyntaxHighlighterConfig {
         $this->tagName = $tagName;
         return $this;
     }
-
 }

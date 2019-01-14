@@ -35,5 +35,4 @@ class SyntaxHighlighterBundle extends Bundle implements AssetsProviderInterface 
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
     }
-
 }

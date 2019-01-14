@@ -64,5 +64,4 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
 
         $this->assertInstanceOf(SyntaxHighlighterStrings::class, $obj->getSyntaxHighlighterStrings());
     }
-
 }

@@ -36,5 +36,4 @@ class SyntaxHighlighterConfigTest extends AbstractTestCase {
         $this->assertFalse($obj->getStripBrs());
         $this->assertEquals("pre", $obj->getTagName());
     }
-
 }

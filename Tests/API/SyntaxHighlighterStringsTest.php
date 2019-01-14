@@ -41,5 +41,4 @@ class SyntaxHighlighterStringsTest extends AbstractTestCase {
         $this->assertEquals("print", $obj->getPrint());
         $this->assertEquals("view source", $obj->getViewSource());
     }
-
 }

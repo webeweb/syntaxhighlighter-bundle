@@ -42,5 +42,4 @@ class SyntaxHighlighterDefaultsTest extends AbstractTestCase {
         $this->assertEquals(4, $obj->getTabSize());
         $this->assertTrue($obj->getToolbar());
     }
-
 }

@@ -145,5 +145,4 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     public function syntaxHighlighterStringsFunction(SyntaxHighlighterStrings $strings) {
         return $this->syntaxHighlighterStrings($strings);
     }
-
 }

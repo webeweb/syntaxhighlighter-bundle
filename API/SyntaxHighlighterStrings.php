@@ -276,5 +276,4 @@ class SyntaxHighlighterStrings {
         $this->viewSource = $viewSource;
         return $this;
     }
-
 }

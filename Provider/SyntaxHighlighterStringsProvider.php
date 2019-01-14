@@ -64,5 +64,4 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
         // Return the strings.
         return $strings;
     }
-
 }

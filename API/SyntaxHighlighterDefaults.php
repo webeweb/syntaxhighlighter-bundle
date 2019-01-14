@@ -304,5 +304,4 @@ class SyntaxHighlighterDefaults {
         $this->toolbar = $toolbar;
         return $this;
     }
-
 }

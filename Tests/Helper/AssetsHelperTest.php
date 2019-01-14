@@ -51,5 +51,4 @@ class AssetsHelperTest extends AbstractTestCase {
 
         $this->assertRegexp("/syntaxhighlighter\-.*\.zip$/", $res[0]);
     }
-
 }

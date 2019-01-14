@@ -127,5 +127,4 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
         // Return the HTML.
         return implode("\n", $template);
     }
-
 }

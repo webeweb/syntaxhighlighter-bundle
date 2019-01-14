@@ -42,5 +42,4 @@ class TestLayoutController extends AbstractController {
         // Return the response.
         return $this->render("@SyntaxHighlighter/layout/stylesheets.html.twig");
     }
-
 }
