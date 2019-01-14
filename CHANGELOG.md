@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 2.4.1 (2019-01-14)
+
+- Improve code style
+
 ### 2.4.0 (2019-01-10)
 
 - Add SyntaxHighlighter Twig extension aliases
