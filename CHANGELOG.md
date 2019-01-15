@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### 2.4.1 (2019-01-14)
 
 - Improve code style
