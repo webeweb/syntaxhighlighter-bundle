@@ -106,7 +106,7 @@ class SyntaxHighlighterConfig {
     /**
      * Set the strings.
      *
-     * @param SyntaxHighlighterStrings $strings The strings.
+     * @param SyntaxHighlighterStrings|null $strings The strings.
      * @return SyntaxHighlighterConfig Returns this config.
      */
     public function setStrings(SyntaxHighlighterStrings $strings = null) {
