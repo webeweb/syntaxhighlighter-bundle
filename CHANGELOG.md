@@ -1,8 +1,11 @@
 CHANGELOG
 =========
 
-### master
+### 2.5.0 (2019-01-28)
 
+- Add shScript() alias (syntaxHighlighterScript() Twig filter)
+- Add shScript() and syntaxHighlighterScript() as Twig function
+- Clean up comments
 - Improve PHPDoc
 
 ### 2.4.1 (2019-01-14)
