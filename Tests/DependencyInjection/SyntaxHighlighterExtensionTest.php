@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection;
 
+use Exception;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
@@ -28,6 +29,7 @@ class SyntaxHighlighterExtensionTest extends AbstractTestCase {
      * Tests the load() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testLoad() {
 

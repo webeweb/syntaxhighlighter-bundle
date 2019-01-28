@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Helper;
 
+use Exception;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
 use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
 
@@ -43,6 +44,7 @@ class AssetsHelperTest extends AbstractTestCase {
      * Tests the listAssets() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testListAssets() {
 
