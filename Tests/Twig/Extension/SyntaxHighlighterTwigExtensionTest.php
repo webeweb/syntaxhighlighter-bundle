@@ -113,7 +113,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(8, $res);
+        $this->assertCount(10, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("syntaxHighlighterConfig", $res[0]->getName());
@@ -146,14 +146,24 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("syntaxHighlighterStrings", $res[6]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[6]->getCallable());
+        $this->assertEquals("syntaxHighlighterScript", $res[6]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
-        $this->assertEquals("shStrings", $res[7]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[7]->getCallable());
+        $this->assertEquals("shScript", $res[7]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[8]);
+        $this->assertEquals("syntaxHighlighterStrings", $res[8]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[8]->getCallable());
+        $this->assertEquals(["html"], $res[8]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[9]);
+        $this->assertEquals("shStrings", $res[9]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[9]->getCallable());
+        $this->assertEquals(["html"], $res[9]->getSafe(new Twig_Node()));
     }
 
     /**

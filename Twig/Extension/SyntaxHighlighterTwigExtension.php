@@ -18,7 +18,6 @@ use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 use WBW\Library\Core\Argument\ArrayHelper;
-use WBW\Library\Core\Argument\StringHelper;
 use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 use WBW\Library\Core\FileSystem\FileHelper;
 
@@ -74,6 +73,9 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
             new Twig_SimpleFunction("syntaxHighlighterDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("shDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
 
+            new Twig_SimpleFunction("syntaxHighlighterScript", [$this, "syntaxHighlighterScriptFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("shScript", [$this, "syntaxHighlighterScriptFilter"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("syntaxHighlighterStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("shStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
         ];
@@ -98,20 +100,15 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      */
     public function syntaxHighlighterContentFunction(array $args = []) {
 
-        // Get the parameters.
         $tag      = ArrayHelper::get($args, "tag", "pre");
         $language = ArrayHelper::get($args, "language", "php");
         $filename = ArrayHelper::get($args, "filename");
         $content  = ArrayHelper::get($args, "content");
 
-        // Check the filename.
         if (null !== $filename) {
-
-            // Get the file contents.
             $content = FileHelper::getContents($filename);
         }
 
-        // Return the HTML.
         return $this->syntaxHighlighterContent($tag, $language, $content);
     }
 
@@ -132,12 +129,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @return string Returns the SyntaxHighlighter script.
      */
     public function syntaxHighlighterScriptFilter($content) {
-
-        // Initialize the template.
-        $template = "<script type=\"text/javascript\">\n%innerHTML%\n</script>";
-
-        // Return the HTML.
-        return StringHelper::replace($template, ["%innerHTML%"], [$content]);
+        return static::coreHTMLElement("script", "\n" . $content . "\n", ["type" => "text/javascript"]);
     }
 
     /**
