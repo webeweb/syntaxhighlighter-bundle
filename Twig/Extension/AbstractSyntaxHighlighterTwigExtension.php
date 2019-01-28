@@ -44,7 +44,6 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      */
     protected function syntaxHighlighterConfig(SyntaxHighlighterConfig $config) {
 
-        // Initialize the template.
         $template = [];
 
         $template[] = "SyntaxHighlighter.config.bloggerMode = " . StringHelper::parseBoolean($config->getBloggerMode()) . ";";
@@ -54,26 +53,24 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
             $template[] = $this->syntaxHighlighterStrings($config->getStrings());
         }
 
-        // Return the HTML.
         return implode("\n", $template);
     }
 
     /**
      * Displays a SyntaxHighlighter content.
      *
+     * @param string $tag The tag.
      * @param string $language The language.
      * @param string $content The content.
      * @return string Returns the SyntaxHightlighter content.
      */
     protected function syntaxHighlighterContent($tag, $language, $content) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"][] = "brush:";
         $attributes["class"][] = $language;
 
-        // Return the HTML.
         return static::coreHTMLElement($tag, implode("", ["\n", htmlentities($content), "\n"]), $attributes);
     }
 
@@ -85,7 +82,6 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      */
     protected function syntaxHighlighterDefaults(SyntaxHighlighterDefaults $defaults) {
 
-        // Initialize the template.
         $template = [];
 
         $template[] = "SyntaxHighlighter.defaults['auto-links'] = " . StringHelper::parseBoolean($defaults->getAutoLinks()) . ";";
@@ -99,7 +95,6 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
         $template[] = "SyntaxHighlighter.defaults['tab-size'] = " . $defaults->getTabSize() . ";";
         $template[] = "SyntaxHighlighter.defaults['toolbar'] = " . StringHelper::parseBoolean($defaults->getToolbar()) . ";";
 
-        // Return the HTML.
         return implode("\n", $template);
     }
 
@@ -111,7 +106,6 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      */
     protected function syntaxHighlighterStrings(SyntaxHighlighterStrings $strings) {
 
-        // Initialize the template.
         $template = [];
 
         $template[] = "SyntaxHighlighter.config.strings.alert = \"" . $strings->getAlert() . "\";";
@@ -124,7 +118,6 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
         $template[] = "SyntaxHighlighter.config.strings.print = \"" . $strings->getPrint() . "\";";
         $template[] = "SyntaxHighlighter.config.strings.viewSource = \"" . $strings->getViewSource() . "\";";
 
-        // Return the HTML.
         return implode("\n", $template);
     }
 }
