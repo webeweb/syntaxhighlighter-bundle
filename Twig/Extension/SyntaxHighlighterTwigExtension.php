@@ -54,6 +54,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     public function getFilters() {
         return [
             new Twig_SimpleFilter("syntaxHighlighterScript", [$this, "syntaxHighlighterScriptFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("shScript", [$this, "syntaxHighlighterScriptFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -65,12 +66,15 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("syntaxHighlighterConfig", [$this, "syntaxHighlighterConfigFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("syntaxHighlighterContent", [$this, "syntaxHighlighterContentFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("syntaxHighlighterDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("syntaxHighlighterStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("shConfig", [$this, "syntaxHighlighterConfigFunction"], ["is_safe" => ["html"]]),
+
+            new Twig_SimpleFunction("syntaxHighlighterContent", [$this, "syntaxHighlighterContentFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("shContent", [$this, "syntaxHighlighterContentFunction"], ["is_safe" => ["html"]]),
+
+            new Twig_SimpleFunction("syntaxHighlighterDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("shDefaults", [$this, "syntaxHighlighterDefaultsFunction"], ["is_safe" => ["html"]]),
+
+            new Twig_SimpleFunction("syntaxHighlighterStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("shStrings", [$this, "syntaxHighlighterStringsFunction"], ["is_safe" => ["html"]]),
         ];
     }

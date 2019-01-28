@@ -90,12 +90,17 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
         $this->assertEquals("syntaxHighlighterScript", $res[0]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
+        $this->assertEquals("shScript", $res[1]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -116,33 +121,33 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("syntaxHighlighterContent", $res[1]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[1]->getCallable());
+        $this->assertEquals("shConfig", $res[1]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterConfigFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("syntaxHighlighterDefaults", $res[2]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[2]->getCallable());
+        $this->assertEquals("syntaxHighlighterContent", $res[2]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("syntaxHighlighterStrings", $res[3]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[3]->getCallable());
+        $this->assertEquals("shContent", $res[3]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("shConfig", $res[4]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterConfigFunction"], $res[4]->getCallable());
+        $this->assertEquals("syntaxHighlighterDefaults", $res[4]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("shContent", $res[5]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[5]->getCallable());
+        $this->assertEquals("shDefaults", $res[5]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("shDefaults", $res[6]->getName());
-        $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[6]->getCallable());
+        $this->assertEquals("syntaxHighlighterStrings", $res[6]->getName());
+        $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
@@ -212,6 +217,7 @@ EOT;
      * Tests the syntaxHighlighterContentFunction() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSyntaxHighlighterContentFunction() {
 
@@ -254,6 +260,7 @@ EOT;
      * Tests the syntaxHighlighterContentFunction() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSyntaxHighlighterContentFunctionWithFilename() {
 
