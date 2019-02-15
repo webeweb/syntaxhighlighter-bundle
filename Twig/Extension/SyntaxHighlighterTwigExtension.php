@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension;
 
-use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
@@ -35,15 +34,6 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @var string
      */
     const SERVICE_NAME = "webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Get the Twig filters.
