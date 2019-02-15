@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.5.1](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.1) (2019-02-15)
+
+- Remove all unnecessary Twig extension constructors
+
 ### [2.5.0](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.0) (2019-01-28)
 
 - Add shScript() alias (syntaxHighlighterScript() Twig filter)
