@@ -133,9 +133,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir syntaxhighlighter-bundle
+$ git clone https://github.com/webeweb/syntaxhighlighter-bundle.git
 $ cd syntaxhighlighter-bundle
-$ git clone https://github.com/webeweb/syntaxhighlighter-bundle.git .
 $ composer install
 ```
 
