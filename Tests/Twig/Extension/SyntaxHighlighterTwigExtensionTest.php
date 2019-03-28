@@ -12,9 +12,9 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Twig\Extension;
 
 use Exception;
-use Twig_Node;
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
@@ -92,15 +92,15 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFilters();
         $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
+        $this->assertInstanceOf(TwigFilter::class, $res[0]);
         $this->assertEquals("syntaxHighlighterScript", $res[0]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
+        $this->assertInstanceOf(TwigFilter::class, $res[1]);
         $this->assertEquals("shScript", $res[1]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
     }
 
     /**
@@ -115,55 +115,55 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(10, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("syntaxHighlighterConfig", $res[0]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterConfigFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("shConfig", $res[1]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterConfigFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
         $this->assertEquals("syntaxHighlighterContent", $res[2]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertInstanceOf(TwigFunction::class, $res[3]);
         $this->assertEquals("shContent", $res[3]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterContentFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertInstanceOf(TwigFunction::class, $res[4]);
         $this->assertEquals("syntaxHighlighterDefaults", $res[4]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertInstanceOf(TwigFunction::class, $res[5]);
         $this->assertEquals("shDefaults", $res[5]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterDefaultsFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertInstanceOf(TwigFunction::class, $res[6]);
         $this->assertEquals("syntaxHighlighterScript", $res[6]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertInstanceOf(TwigFunction::class, $res[7]);
         $this->assertEquals("shScript", $res[7]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterScriptFilter"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[8]);
+        $this->assertInstanceOf(TwigFunction::class, $res[8]);
         $this->assertEquals("syntaxHighlighterStrings", $res[8]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[8]->getCallable());
-        $this->assertEquals(["html"], $res[8]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[9]);
+        $this->assertInstanceOf(TwigFunction::class, $res[9]);
         $this->assertEquals("shStrings", $res[9]->getName());
         $this->assertEquals([$obj, "syntaxHighlighterStringsFunction"], $res[9]->getCallable());
-        $this->assertEquals(["html"], $res[9]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
     }
 
     /**
