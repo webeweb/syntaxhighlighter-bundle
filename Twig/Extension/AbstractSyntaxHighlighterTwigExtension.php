@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension;
 
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
@@ -30,9 +30,9 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      */
-    public function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
     }
 
