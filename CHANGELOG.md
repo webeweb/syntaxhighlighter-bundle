@@ -3,7 +3,7 @@ CHANGELOG
 
 ### [2.5.2](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.2) (2019-03-28)
 
-- Replace deprecated Twig classes
+- Fix deprecated Twig classes
 
 ### [2.5.1](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.1) (2019-02-15)
 
