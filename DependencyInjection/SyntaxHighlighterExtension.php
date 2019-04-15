@@ -25,7 +25,14 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class SyntaxHighlighterExtension extends Extension {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     */
+    public function getAlias() {
+        return parent::getAlias();
+    }
+
+    /**
+     * {@inheritDoc}
      */
     public function load(array $configs, ContainerBuilder $container) {
 

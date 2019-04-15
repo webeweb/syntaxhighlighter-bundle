@@ -26,6 +26,18 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
 class SyntaxHighlighterExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new SyntaxHighlighterExtension();
+
+        $this->assertEquals("syntax_highlighter", $obj->getAlias());
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
