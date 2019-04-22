@@ -28,7 +28,7 @@ class SyntaxHighlighterExtension extends Extension {
      * {@inheritDoc}
      */
     public function getAlias() {
-        return parent::getAlias();
+        return "wbw_" . parent::getAlias();
     }
 
     /**

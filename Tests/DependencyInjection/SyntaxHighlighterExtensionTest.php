@@ -34,7 +34,7 @@ class SyntaxHighlighterExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterExtension();
 
-        $this->assertEquals("syntax_highlighter", $obj->getAlias());
+        $this->assertEquals("wbw_syntax_highlighter", $obj->getAlias());
     }
 
     /**
