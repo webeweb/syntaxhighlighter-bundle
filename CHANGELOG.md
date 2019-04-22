@@ -4,8 +4,8 @@ CHANGELOG
 ### master
 
 - Add SyntaxHighlighter interface
+- Better support of Symfony's bundle recommendations
 - Improve PHPDoc
-- Improve Symfony recommendations guidelines
 
 ### [2.5.2](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.2) (2019-03-29)
 
