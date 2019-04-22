@@ -1,5 +1,5 @@
 {# Resources/views/layout/javascript/syntaxhighlighter-brush.html.twig #}
-{% set _version = constant("WBW\\Bundle\\SyntaxHighlighterBundle\\SyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION") %}
+{% set _version = constant("WBW\\Bundle\\SyntaxHighlighterBundle\\SyntaxHighlighterInterface::SYNTAXHIGHLIGHTER_VERSION") %}
 {% set _brushes = [
     "AppleScript",
     "AS3",
@@ -29,4 +29,4 @@
 ] %}
 {% set _brush = shBrush|default("") in _brushes ? shBrush : "Php" %}
 <!-- SyntaxHighlighter {{ _brush }} brush -->
-<script type="text/javascript" src="{{ asset("bundles/syntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shBrush" ~ _brush ~ ".js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shBrush" ~ _brush ~ ".js") }}"></script>

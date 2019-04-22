@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractKernel;
 class TestKernel extends AbstractKernel {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function registerBundles() {
         $bundles = [
@@ -28,7 +28,7 @@ class TestKernel extends AbstractKernel {
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
         return $bundles;
     }

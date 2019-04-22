@@ -30,7 +30,7 @@ class TestLayoutController extends AbstractController {
     public function javascriptsAction() {
 
         // Return the response.
-        return $this->render("@SyntaxHighlighter/layout/javascripts.html.twig");
+        return $this->render("@WBWSyntaxHighlighter/layout/javascripts.html.twig");
     }
 
     /**
@@ -41,6 +41,6 @@ class TestLayoutController extends AbstractController {
     public function stylesheetsAction() {
 
         // Return the response.
-        return $this->render("@SyntaxHighlighter/layout/stylesheets.html.twig");
+        return $this->render("@WBWSyntaxHighlighter/layout/stylesheets.html.twig");
     }
 }

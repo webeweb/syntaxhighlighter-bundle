@@ -11,7 +11,9 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests;
 
-use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle;
+use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
+use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterInterface;
+use WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle;
 
 /**
  * SyntaxHighlighter bundle test
@@ -19,7 +21,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  */
-class SyntaxHighlighterBundleTest extends AbstractTestCase {
+class WBWSyntaxHighlighterBundleTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -28,7 +30,7 @@ class SyntaxHighlighterBundleTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("3.0.83", SyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION);
+        $this->assertEquals(SyntaxHighlighterInterface::SYNTAXHIGHLIGHTER_VERSION, WBWSyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION);
     }
 
     /**
@@ -38,8 +40,21 @@ class SyntaxHighlighterBundleTest extends AbstractTestCase {
      */
     public function testGetAssetsRelativeDirectory() {
 
-        $obj = new SyntaxHighlighterBundle();
+        $obj = new WBWSyntaxHighlighterBundle();
 
         $this->assertEquals("/Resources/assets", $obj->getAssetsRelativeDirectory());
+    }
+
+    /**
+     * Tests the getContainerExtension() method.
+     *
+     * @return void
+     */
+    public function testGetContainerExtension() {
+
+        $obj = new WBWSyntaxHighlighterBundle();
+
+        $res = $obj->getContainerExtension();
+        $this->assertInstanceOf(SyntaxHighlighterExtension::class, $res);
     }
 }
