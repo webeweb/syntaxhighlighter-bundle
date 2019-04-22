@@ -52,7 +52,7 @@ in the `app/AppKernel.php` file of your project:
         $bundles = [
             // ...
             new WBW\Bundle\CoreBundle\CoreBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
 
         // ...
