@@ -50,7 +50,7 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.syntaxhighlighter.provider.syntaxhighlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.syntaxhighlighter.provider.syntaxhighlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
     }
 
     /**

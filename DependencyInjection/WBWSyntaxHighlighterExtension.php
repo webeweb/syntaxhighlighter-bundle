@@ -22,14 +22,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection
  */
-class SyntaxHighlighterExtension extends Extension {
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAlias() {
-        return "wbw_" . parent::getAlias();
-    }
+class WBWSyntaxHighlighterExtension extends Extension {
 
     /**
      * {@inheritDoc}

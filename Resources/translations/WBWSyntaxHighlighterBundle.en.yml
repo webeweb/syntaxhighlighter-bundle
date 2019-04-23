@@ -1,4 +1,4 @@
-# Resources/translations/SyntaxHighlighterBundle.en.yml
+# Resources/translations/WBWSyntaxHighlighterBundle.en.yml
 strings:
     alert: |
         SyntaxHighlighter

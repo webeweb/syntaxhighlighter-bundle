@@ -12,7 +12,7 @@
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection;
 
 use Exception;
-use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
+use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\WBWSyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
 use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension;
@@ -23,19 +23,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExten
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests\DependencyInjection
  */
-class SyntaxHighlighterExtensionTest extends AbstractTestCase {
-
-    /**
-     * Tests the getAlias() method.
-     *
-     * @return void
-     */
-    public function testGetAlias() {
-
-        $obj = new SyntaxHighlighterExtension();
-
-        $this->assertEquals("wbw_syntax_highlighter", $obj->getAlias());
-    }
+class WBWSyntaxHighlighterExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the load() method.
@@ -45,7 +33,7 @@ class SyntaxHighlighterExtensionTest extends AbstractTestCase {
      */
     public function testLoad() {
 
-        $obj = new SyntaxHighlighterExtension();
+        $obj = new WBWSyntaxHighlighterExtension();
 
         $obj->load([], $this->containerBuilder);
 

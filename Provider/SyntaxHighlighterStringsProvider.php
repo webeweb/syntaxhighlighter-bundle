@@ -31,7 +31,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.syntaxhighlighter.provider.syntaxhighlighter_strings";
+    const SERVICE_NAME = "wbw.syntaxhighlighter.provider.syntaxhighlighter_strings";
 
     /**
      * Constructor.
@@ -49,19 +49,17 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      */
     public function getSyntaxHighlighterStrings() {
 
-        // Initialize the strings.
         $strings = new SyntaxHighlighterStrings();
-        $strings->setAlert($this->getTranslator()->trans("strings.alert", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setBrushNotHtmlScript($this->getTranslator()->trans("strings.brush_no_html_script", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setCopyToClipboard($this->getTranslator()->trans("strings.copy_to_clipboard", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setCopyToClipboardConfirmation($this->getTranslator()->trans("strings.copy_to_clipboard_confirmation", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setExpandSource($this->getTranslator()->trans("strings.expand_source", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setHelp($this->getTranslator()->trans("strings.help", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setNoBrush($this->getTranslator()->trans("strings.no_brush", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setPrint($this->getTranslator()->trans("strings.print", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
-        $strings->setViewSource($this->getTranslator()->trans("strings.view_source", [], "SyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setAlert($this->getTranslator()->trans("strings.alert", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setBrushNotHtmlScript($this->getTranslator()->trans("strings.brush_no_html_script", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setCopyToClipboard($this->getTranslator()->trans("strings.copy_to_clipboard", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setCopyToClipboardConfirmation($this->getTranslator()->trans("strings.copy_to_clipboard_confirmation", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setExpandSource($this->getTranslator()->trans("strings.expand_source", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setHelp($this->getTranslator()->trans("strings.help", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setNoBrush($this->getTranslator()->trans("strings.no_brush", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setPrint($this->getTranslator()->trans("strings.print", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
+        $strings->setViewSource($this->getTranslator()->trans("strings.view_source", [], "WBWSyntaxHighlighterBundle", $this->getTranslator()->getLocale()));
 
-        // Return the strings.
         return $strings;
     }
 }

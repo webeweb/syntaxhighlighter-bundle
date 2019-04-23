@@ -13,7 +13,7 @@ namespace WBW\Bundle\SyntaxHighlighterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
-use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
+use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\WBWSyntaxHighlighterExtension;
 
 /**
  * SyntaxHighlighter bundle.
@@ -22,13 +22,6 @@ use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExte
  * @package WBW\Bundle\SyntaxHighlighterBundle
  */
 class WBWSyntaxHighlighterBundle extends Bundle implements AssetsProviderInterface {
-
-    /**
-     * SyntaxHighlighter version.
-     *
-     * @var string
-     */
-    const SYNTAXHIGHLIGHTER_VERSION = SyntaxHighlighterInterface::SYNTAXHIGHLIGHTER_VERSION;
 
     /**
      * {@inheritDoc}
@@ -41,6 +34,6 @@ class WBWSyntaxHighlighterBundle extends Bundle implements AssetsProviderInterfa
      * {@inheritDoc}
      */
     public function getContainerExtension() {
-        return new SyntaxHighlighterExtension();
+        return new WBWSyntaxHighlighterExtension();
     }
 }

@@ -11,8 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests;
 
-use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\SyntaxHighlighterExtension;
-use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterInterface;
+use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\WBWSyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle;
 
 /**
@@ -22,16 +21,6 @@ use WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle;
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  */
 class WBWSyntaxHighlighterBundleTest extends AbstractTestCase {
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals(SyntaxHighlighterInterface::SYNTAXHIGHLIGHTER_VERSION, WBWSyntaxHighlighterBundle::SYNTAXHIGHLIGHTER_VERSION);
-    }
 
     /**
      * Tests the getAssetsRelativeDirectory() method.
@@ -55,6 +44,6 @@ class WBWSyntaxHighlighterBundleTest extends AbstractTestCase {
         $obj = new WBWSyntaxHighlighterBundle();
 
         $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(SyntaxHighlighterExtension::class, $res);
+        $this->assertInstanceOf(WBWSyntaxHighlighterExtension::class, $res);
     }
 }

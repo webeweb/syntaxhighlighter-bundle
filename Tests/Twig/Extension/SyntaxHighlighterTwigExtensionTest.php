@@ -76,7 +76,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.syntaxhighlighter.twig.extension.syntaxhighlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.syntaxhighlighter.twig.extension.syntaxhighlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
