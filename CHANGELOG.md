@@ -8,6 +8,7 @@ CHANGELOG
 - Improve PHPDoc
 - Rename service constants
 - Update dependencies
+- Update SERVICE_NAME constants
 
 ### [2.5.2](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.2) (2019-03-29)
 
