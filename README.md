@@ -105,7 +105,7 @@ $ php bin/console assets:install
 
 {% block stylesheets %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/layout/stylesheets.html.twig" with {"shTheme": "eclipse"} %}
+    {% include "@WBWSyntaxHighlighter/layout/stylesheets.html.twig" with {"shTheme": "eclipse"} %}
 {% endblock %}
 
 {% block content %}
@@ -115,7 +115,7 @@ $ php bin/console assets:install
 
 {% block javascripts %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/layout/javascripts.html.twig" %}
+    {% include "@WBWSyntaxHighlighter/layout/javascripts.html.twig" %}
     {{ syntaxHighlighterConfig(syntaxHighlighterConfig)|syntaxHighlighterScript() }}
     {{ syntaxHighlighterDefaults(syntaxHighlighterDefaults)|syntaxHighlighterScript() }}
 <script type="text/javascript">
