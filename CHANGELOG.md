@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.0.0](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.0.0) (2019-05-11)
 
 - Add SyntaxHighlighter interface
 - Better support of Symfony's bundle recommendations
