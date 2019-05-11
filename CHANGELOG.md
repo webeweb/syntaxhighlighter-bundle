@@ -7,6 +7,7 @@ CHANGELOG
 - Better support of Symfony's bundle recommendations
 - Improve PHPDoc
 - Rename service constants
+- Update dependencies
 
 ### [2.5.2](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v2.5.2) (2019-03-29)
 
