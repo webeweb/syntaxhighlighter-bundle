@@ -1,10 +1,10 @@
 # Tests/Fixtures/app/config/routing_test.yml
-wbw_syntaxhighlighter_javascripts_action:
+wbw_syntaxhighlighter_javascripts:
     path:     "/javascripts"
     defaults: { _controller: "WBW\\Bundle\\SyntaxHighlighterBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
     methods:  ["GET"]
 
-wbw_syntaxhighlighter_stylesheets_action:
+wbw_syntaxhighlighter_stylesheets:
     path:     "/stylesheets"
     defaults: { _controller: "WBW\\Bundle\\SyntaxHighlighterBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
     methods:  ["GET"]
