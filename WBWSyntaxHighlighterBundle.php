@@ -13,7 +13,6 @@ namespace WBW\Bundle\SyntaxHighlighterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
-use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\WBWSyntaxHighlighterExtension;
 
 /**
  * SyntaxHighlighter bundle.
@@ -28,12 +27,5 @@ class WBWSyntaxHighlighterBundle extends Bundle implements AssetsProviderInterfa
      */
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getContainerExtension() {
-        return new WBWSyntaxHighlighterExtension();
     }
 }
