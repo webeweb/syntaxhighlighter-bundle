@@ -1,0 +1,9 @@
+# Resources/config/twig.yml
+services:
+
+    wbw.syntaxhighlighter.twig.extension.syntaxhighlighter:
+        class:     WBW\Bundle\SyntaxHighlighterBundle\Twig\Extension\SyntaxHighlighterTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
