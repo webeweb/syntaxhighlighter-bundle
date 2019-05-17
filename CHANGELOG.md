@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.0.1](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.0.1) (2019-05-17)
 
 - Add a separate DOCUMENTATION
 - Split Resources/config/services.yml (twig.yml)
