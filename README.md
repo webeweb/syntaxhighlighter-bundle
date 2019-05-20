@@ -72,7 +72,7 @@ $ php bin/console assets:install
 
 ## Usage
 
-Read the [documentation](DOCUMENTATION.md).
+Read the [documentation](Resources/doc/index.md).
 
 ---
 
