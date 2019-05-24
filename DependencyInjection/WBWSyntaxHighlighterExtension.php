@@ -34,6 +34,12 @@ class WBWSyntaxHighlighterExtension extends Extension {
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
 
-        $serviceLoader->load("twig.yml");
+        $configuration = $this->getConfiguration($configs, $container);
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        if (true === $config["twig"]) {
+            $serviceLoader->load("twig.yml");
+        }
     }
 }
