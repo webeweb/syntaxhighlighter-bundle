@@ -28,6 +28,13 @@ class WBWSyntaxHighlighterExtension extends Extension {
     /**
      * {@inheritDoc}
      */
+    public function getAlias() {
+        return "wbw_syntaxhighlighter";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container) {
 
         $fileLocator = new FileLocator(__DIR__ . "/../Resources/config");

@@ -49,6 +49,18 @@ class WBWSyntaxHighlighterExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new WBWSyntaxHighlighterExtension();
+
+        $this->assertEquals("wbw_syntaxhighlighter", $obj->getAlias());
+    }
+
+    /**
      * Tests the getConfiguration() method.
      *
      * @return void
