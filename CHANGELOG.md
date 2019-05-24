@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.1.1](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.1.1) (2019-05-24)
+
+- Fix extension alias
+
 ### [3.1.0](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.1.0) (2019-05-24)
 
 - Add Configuration
