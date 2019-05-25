@@ -19,7 +19,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\SyntaxHighlighterBundle\Tests
  */
-class SyntaxHighlighterInterfaceTest {
+class SyntaxHighlighterInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
