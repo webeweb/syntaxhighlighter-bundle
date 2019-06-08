@@ -26,10 +26,17 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class WBWSyntaxHighlighterExtension extends Extension {
 
     /**
+     * Extension alias.
+     *
+     * @var string
+     */
+    const EXTENSION_ALIAS = "wbw_syntaxhighlighter";
+
+    /**
      * {@inheritDoc}
      */
     public function getAlias() {
-        return "wbw_syntaxhighlighter";
+        return self::EXTENSION_ALIAS;
     }
 
     /**

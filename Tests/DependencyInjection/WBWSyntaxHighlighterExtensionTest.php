@@ -42,10 +42,20 @@ class WBWSyntaxHighlighterExtensionTest extends AbstractTestCase {
 
         // Set a configs array mock.
         $this->configs = [
-            "wbw_syntaxhighlighter" => [
+            WBWSyntaxHighlighterExtension::EXTENSION_ALIAS => [
                 "twig" => true,
             ],
         ];
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("wbw_syntaxhighlighter", WBWSyntaxHighlighterExtension::EXTENSION_ALIAS);
     }
 
     /**
@@ -57,7 +67,7 @@ class WBWSyntaxHighlighterExtensionTest extends AbstractTestCase {
 
         $obj = new WBWSyntaxHighlighterExtension();
 
-        $this->assertEquals("wbw_syntaxhighlighter", $obj->getAlias());
+        $this->assertEquals(WBWSyntaxHighlighterExtension::EXTENSION_ALIAS, $obj->getAlias());
     }
 
     /**
@@ -99,7 +109,7 @@ class WBWSyntaxHighlighterExtensionTest extends AbstractTestCase {
     public function testLoadWithoutTwig() {
 
         // Set the configs mock.
-        $this->configs["wbw_syntaxhighlighter"]["twig"] = false;
+        $this->configs[WBWSyntaxHighlighterExtension::EXTENSION_ALIAS]["twig"] = false;
 
         $obj = new WBWSyntaxHighlighterExtension();
 

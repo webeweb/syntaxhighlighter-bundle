@@ -28,9 +28,9 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
-        $treeBuilder = new TreeBuilder("wbw_syntaxhighligter");
+        $treeBuilder = new TreeBuilder(WBWSyntaxHighlighterExtension::EXTENSION_ALIAS);
 
-        $rootNode = ConfigurationHelper::getRootNode($treeBuilder, "wbw_syntaxhighlighter");
+        $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWSyntaxHighlighterExtension::EXTENSION_ALIAS);
         $rootNode->children()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
             ->end();
