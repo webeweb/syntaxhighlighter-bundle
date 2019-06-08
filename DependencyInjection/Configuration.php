@@ -13,6 +13,7 @@ namespace WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 
 /**
  * Configuration.
@@ -29,12 +30,7 @@ class Configuration implements ConfigurationInterface {
 
         $treeBuilder = new TreeBuilder("wbw_syntaxhighligter");
 
-        if (true === method_exists($treeBuilder, "getRootNode")) {
-            $rootNode = $treeBuilder->getRootNode();
-        } else {
-            $rootNode = $treeBuilder->root("wbw_syntax_highlighter");
-        }
-
+        $rootNode = ConfigurationHelper::getRootNode($treeBuilder, "wbw_syntaxhighlighter");
         $rootNode->children()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
             ->end();
