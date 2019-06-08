@@ -98,5 +98,5 @@ $ vendor/bin/phpunit
 
 ## License
 
-`syntaxhighlighter-bundle` is released under the LGPL License. See the bundled
+`syntaxhighlighter-bundle` is released under the MIT License. See the bundled
 [LICENSE](LICENSE) file for details.
