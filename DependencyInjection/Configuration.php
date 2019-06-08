@@ -27,9 +27,14 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder("wbw_syntaxhighligter");
 
-        $rootNode = $treeBuilder->root("wbw_syntaxhighligter");
+        if (true === method_exists($treeBuilder, "getRootNode")) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            $rootNode = $treeBuilder->root("wbw_syntax_highlighter");
+        }
+
         $rootNode->children()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
             ->end();
