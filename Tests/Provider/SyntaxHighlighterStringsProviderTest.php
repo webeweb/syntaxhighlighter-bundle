@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests\Provider;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterStrings;
 use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\SyntaxHighlighterBundle\Tests\AbstractTestCase;
@@ -38,8 +38,7 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Translator mock.
-        $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
-        $this->translator->expects($this->any())->method("getLocale")->willReturn("en");
+        $this->translator = $this->getMockBuilder(BaseTranslatorInterface::class)->getMock();
         $this->translator->expects($this->any())->method("trans")->willReturn("");
     }
 
