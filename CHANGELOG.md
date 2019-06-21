@@ -1,10 +1,6 @@
 CHANGELOG
 =========
 
-### [3.2.2](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.2.2) (2019-06-20)
-
-- Fix dependency compatibility
-
 ### [3.2.1](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.2.1) (2019-06-08)
 
 - Fix deprecated root() call on TreeBuilder
