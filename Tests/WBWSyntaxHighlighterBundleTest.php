@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\SyntaxHighlighterBundle\Tests;
 
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 use WBW\Bundle\SyntaxHighlighterBundle\DependencyInjection\WBWSyntaxHighlighterExtension;
 use WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle;
 
@@ -31,7 +32,7 @@ class WBWSyntaxHighlighterBundleTest extends AbstractTestCase {
 
         $obj = new WBWSyntaxHighlighterBundle();
 
-        $this->assertEquals("/Resources/assets", $obj->getAssetsRelativeDirectory());
+        $this->assertEquals(AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY, $obj->getAssetsRelativeDirectory());
     }
 
     /**
@@ -43,7 +44,6 @@ class WBWSyntaxHighlighterBundleTest extends AbstractTestCase {
 
         $obj = new WBWSyntaxHighlighterBundle();
 
-        $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(WBWSyntaxHighlighterExtension::class, $res);
+        $this->assertInstanceOf(WBWSyntaxHighlighterExtension::class, $obj->getContainerExtension());
     }
 }
