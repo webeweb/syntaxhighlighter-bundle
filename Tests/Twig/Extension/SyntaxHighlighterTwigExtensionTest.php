@@ -177,16 +177,12 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         // Set the SyntaxHighlighter config mock.
         $this->syntaxHighlighterConfig->setBloggerMode(true);
         $this->syntaxHighlighterConfig->setStripBrs(true);
-        $this->syntaxHighlighterConfig->setTagName("blocquote");
+        $this->syntaxHighlighterConfig->setTagName("blockquote");
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = <<< EOT
-SyntaxHighlighter.config.bloggerMode = true;
-SyntaxHighlighter.config.stripBrs = true;
-SyntaxHighlighter.config.tagName = "blocquote";
-EOT;
-        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig));
+        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterConfigFunction.html.txt");
+        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig) . "\n");
     }
 
     /**
@@ -199,29 +195,14 @@ EOT;
         // Set the SyntaxHighlighter config mock.
         $this->syntaxHighlighterConfig->setBloggerMode(true);
         $this->syntaxHighlighterConfig->setStripBrs(true);
-        $this->syntaxHighlighterConfig->setTagName("blocquote");
+        $this->syntaxHighlighterConfig->setTagName("blockquote");
 
         $this->syntaxHighlighterConfig->setStrings($this->syntaxHighlighterStrings);
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = <<< EOT
-SyntaxHighlighter.config.bloggerMode = true;
-SyntaxHighlighter.config.stripBrs = true;
-SyntaxHighlighter.config.tagName = "blocquote";
-SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter
-
-";
-SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for html-script option:";
-SyntaxHighlighter.config.strings.copyToClipboard = "copy to clipboard";
-SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "The code is in your clipboard now";
-SyntaxHighlighter.config.strings.expandSource = "+ expand source";
-SyntaxHighlighter.config.strings.help = "?";
-SyntaxHighlighter.config.strings.noBrush = "Can't find brush for:";
-SyntaxHighlighter.config.strings.print = "print";
-SyntaxHighlighter.config.strings.viewSource = "view source";
-EOT;
-        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig));
+        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterConfigFunctionWithStrings.html.txt");
+        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig) . "\n");
     }
 
     /**
@@ -235,12 +216,8 @@ EOT;
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "<span>span</span>", "language" => "html"];
-        $res = <<< EOT
-<pre class="brush: html">
-&lt;span&gt;span&lt;/span&gt;
-</pre>
-EOT;
-        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunction.html.txt");
+        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg) . "\n");
     }
 
     /**
@@ -281,36 +258,8 @@ EOT;
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
         $arg = ["filename" => $filename, "language" => "php"];
-        $res = <<< EOT
-<pre class="brush: php">
-&lt;?php
-
-/*
- * This file is part of the syntaxhighligter-bundle package.
- *
- * (c) 2017 WEBEWEB
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace WBW\Bundle\SyntaxHighlighterBundle;
-
-use Symfony\Component\HttpKernel\Bundle\Bundle;
-
-/**
- * SyntaxHighlighter bundle.
- *
- * @author webeweb &lt;https://github.com/webeweb/&gt;
- * @package WBW\Bundle\SyntaxHighlighterBundle
- */
-class SyntaxHighlighterBundle extends Bundle {
-
-}
-
-</pre>
-EOT;
-        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunctionWithFilename.html.txt");
+        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg) . "\n");
     }
 
     /**
@@ -334,19 +283,8 @@ EOT;
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = <<<'EOT'
-SyntaxHighlighter.defaults['auto-links'] = false;
-SyntaxHighlighter.defaults['class-name'] = "classname";
-SyntaxHighlighter.defaults['collapse'] = true;
-SyntaxHighlighter.defaults['first-line'] = 0;
-SyntaxHighlighter.defaults['gutter'] = false;
-SyntaxHighlighter.defaults['highlight'] = [1,2,3];
-SyntaxHighlighter.defaults['html-script'] = true;
-SyntaxHighlighter.defaults['smart-tabs'] = false;
-SyntaxHighlighter.defaults['tab-size'] = 8;
-SyntaxHighlighter.defaults['toolbar'] = false;
-EOT;
-        $this->assertEquals($res, $obj->syntaxHighlighterDefaultsFunction($this->syntaxHighlighterDefaults));
+        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterDefaultsFunction.html.txt");
+        $this->assertEquals($res, $obj->syntaxHighlighterDefaultsFunction($this->syntaxHighlighterDefaults) . "\n");
     }
 
     /**
@@ -382,17 +320,7 @@ EOT;
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = <<< EOT
-SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter bundle";
-SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for HTML-Script option :";
-SyntaxHighlighter.config.strings.copyToClipboard = "Copy to clipboard";
-SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "Operation success";
-SyntaxHighlighter.config.strings.expandSource = "Expand source";
-SyntaxHighlighter.config.strings.help = "Help";
-SyntaxHighlighter.config.strings.noBrush = "Can't find brush for :";
-SyntaxHighlighter.config.strings.print = "Print";
-SyntaxHighlighter.config.strings.viewSource = "View source";
-EOT;
-        $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings));
+        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterStringsFunction.html.txt");
+        $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings) . "\n");
     }
 }

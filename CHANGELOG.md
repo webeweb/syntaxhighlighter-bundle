@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.2.3](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.2.3) (2019-09-04)
+
+- Improve unit tests
+
 ### [3.2.2](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.2.2) (2019-07-05)
 
 - Replace string by constant into getAssetsRelativeDirectory()
