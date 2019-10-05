@@ -1,7 +1,7 @@
 syntaxhighlighter-bundle
 ========================
 
-[![Build Status](https://img.shields.io/travis/webeweb/syntaxhighlighter-bundle/master.svg?style=flat-square)](https://travis-ci.org/webeweb/syntaxhighlighter-bundle)
+[![Build Status](https://img.shields.io/travis/webeweb/syntaxhighlighter-bundle/master.svg?style=flat-square)](https://travis-ci.com/webeweb/syntaxhighlighter-bundle)
 [![Coverage Status](https://img.shields.io/coveralls/webeweb/syntaxhighlighter-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/syntaxhighlighter-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/syntaxhighlighter-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/syntaxhighlighter-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/syntaxhighlighter-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/syntaxhighlighter-bundle)
