@@ -57,5 +57,7 @@ class WBWSyntaxHighlighterExtension extends Extension {
         if (true === $config["twig"]) {
             $serviceLoader->load("twig.yml");
         }
+
+        $container->setParameter(implode(".", [$this->getAlias(), "twig"]), $config["twig"]);
     }
 }
