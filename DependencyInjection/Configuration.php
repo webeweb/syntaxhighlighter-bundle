@@ -53,7 +53,7 @@ class Configuration implements ConfigurationInterface {
                     ->end()
                 ->end()
                 ->arrayNode("brushes")->info("Use SyntaxHightlighter brushes")
-                    ->scalarPrototype()
+                    ->prototype("scalar")
                         ->validate()
                             ->ifNotInArray($brushes)
                             ->thenInvalid("The SyntaxHighlighter brush %s is not supported. Please choose one of " . json_encode($brushes))
