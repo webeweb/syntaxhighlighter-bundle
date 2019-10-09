@@ -1,3 +1,6 @@
 {# Resources/views/layout/stylesheets.html.twig #}
-{% include "@WBWSyntaxHighlighter/layout/stylesheet/syntaxhighlighter.html.twig" %}
-{% include "@WBWSyntaxHighlighter/layout/stylesheet/syntaxhighlighter-theme.html.twig" with {"shTheme": shTheme|default("Default")} %}
+{% set _version = getContainerParameter("wbw.syntaxhighlighter.asset.syntaxhighlighter").version %}
+{% set _theme   = getContainerParameter("wbw_syntaxhighlighter.theme") %}
+<!-- SyntaxHighlighter -->
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/styles/shCore.css") }}">
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/styles/shTheme" ~ _theme ~ ".css") }}">

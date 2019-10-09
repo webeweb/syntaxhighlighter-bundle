@@ -16,6 +16,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 
 /**
  * SyntaxHighlighter extension.
@@ -58,6 +59,11 @@ class WBWSyntaxHighlighterExtension extends Extension {
             $serviceLoader->load("twig.yml");
         }
 
-        $container->setParameter(implode(".", [$this->getAlias(), "twig"]), $config["twig"]);
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "theme");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "brushes");
+
+        $assets = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
+        ConfigurationHelper::registerContainerParameters($container, $assets["assets"]);
     }
 }
