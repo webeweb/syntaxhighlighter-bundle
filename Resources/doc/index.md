@@ -1,6 +1,17 @@
 DOCUMENTATION
 =============
 
+Add the following lines in the `app/config/config.yml` file of your project:
+
+```yaml
+wbw_syntaxhighlighter:
+    theme:   "Default"
+    brushes:
+        - "Php"
+        - "Css"
+        - "JScript"
+```
+
 Add the following code in a controller class:
 
 ```php
@@ -34,7 +45,7 @@ Add the following code in the corresponding template:
 
 {% block stylesheets %}
     {{ parent() }}
-    {% include "@WBWSyntaxHighlighter/layout/stylesheets.html.twig" with {"shTheme": "eclipse"} %}
+    {% include "@WBWSyntaxHighlighter/layout/stylesheets.html.twig" %}
 {% endblock %}
 
 {% block content %}
