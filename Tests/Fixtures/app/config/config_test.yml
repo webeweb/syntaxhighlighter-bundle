@@ -22,6 +22,21 @@ framework:
     validation:
         enabled: false
 
+doctrine:
+    dbal:
+        driver: "pdo_sqlite"
+        path:   "%kernel.root_dir%/var/test.sqlite"
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping:                true
+        mappings:
+            WBWCoreBundle:
+                dir:       "Tests/Fixtures/app/config/doctrine"
+                type:      "yml"
+                is_bundle: true
+                prefix:    "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Entity"
+        naming_strategy:             "doctrine.orm.naming_strategy.underscore"
+
 monolog:
     handlers:
         main:
@@ -32,3 +47,7 @@ monolog:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+
+wbw_syntaxhighlighter:
+    theme:   "Default"
+    brushes: ["Php", "Css", "JScript"]
