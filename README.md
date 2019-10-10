@@ -51,6 +51,7 @@ in the `app/AppKernel.php` file of your project:
     public function registerBundles() {
         $bundles = [
             // ...
+            new WBW\Bundle\CoreBundle\WBWCoreBundle(),
             new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
 

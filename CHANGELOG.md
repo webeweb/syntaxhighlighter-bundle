@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.3.1](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.3.1) (2019-10-10)
+
+- Fix README
+
 ### [3.3.0](https://github.com/webeweb/syntaxhighlighter-bundle/tree/v3.3.0) (2019-10-09)
 
 - Update Configuration with new parameters (theme, brushes)
