@@ -1,11 +1,12 @@
 {# Resources/views/layout/javascripts.html.twig #}
+{% set _webPath = "bundles/wbwsyntaxhighlighter" %}
 {% set _version = getContainerParameter("wbw.syntaxhighlighter.asset.syntaxhighlighter").version %}
 {% set _brushes = getContainerParameter("wbw_syntaxhighlighter.brushes") %}
 <!-- SyntaxHighlighter -->
-<script type="text/javascript" src="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/XRegExp.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shCore.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shAutoloader.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shLegacy.js") }}"></script>
+<script type="text/javascript" src="{{ asset(_webPath ~ "/syntaxhighlighter-" ~ _version ~ "/scripts/XRegExp.js") }}"></script>
+<script type="text/javascript" src="{{ asset(_webPath ~ "/syntaxhighlighter-" ~ _version ~ "/scripts/shCore.js") }}"></script>
+<script type="text/javascript" src="{{ asset(_webPath ~ "/syntaxhighlighter-" ~ _version ~ "/scripts/shAutoloader.js") }}"></script>
+<script type="text/javascript" src="{{ asset(_webPath ~ "/syntaxhighlighter-" ~ _version ~ "/scripts/shLegacy.js") }}"></script>
 {% for _brush in _brushes %}
-    <script type="text/javascript" src="{{ asset("bundles/wbwsyntaxhighlighter/syntaxhighlighter-" ~ _version ~ "/scripts/shBrush" ~ _brush ~ ".js") }}"></script>
+    <script type="text/javascript" src="{{ asset(_webPath ~ "/syntaxhighlighter-" ~ _version ~ "/scripts/shBrush" ~ _brush ~ ".js") }}"></script>
 {% endfor %}
