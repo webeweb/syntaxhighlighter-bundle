@@ -11,6 +11,10 @@ syntaxhighlighter-bundle
 
 Integrate SyntaxHighlighter with Symfony 2 and more.
 
+> IMPORTANT NOTICE: This package is no longer maintained and its classes have
+> been migrated into package "core-bundle" (available into version up to 2.15.0
+> and more) [Core bundle](https://github.com/webeweb/core-bundle/)
+
 `syntaxhighlighter-bundle` eases the use of SyntaxHighlighter to highlight
 syntax in your Symfony application by providing Twig extensions and PHP
 objects to do the heavy lifting. The bundle include the excellent JS library
